@@ -1,0 +1,189 @@
+---
+const navLinks = [
+  { name: "Home", url: "/" },
+  { name: "About Us", url: "/aboutUs" },
+  {
+    name: "Products",
+    url: "#",
+    dropdown: [
+      { name: "Biometric Attendance Machine", url: "/products/biometric-attendance-machine" },
+      { name: "Student Response System", url: "/student-response-system" },
+      { name: "Bus Attendance System", url: "/bus-attendance-system" },
+      { name: "UHF Reader", url: "/uhf-rfid-reader" },
+      { name: "RFID Card", url: "/rfid-cards" },
+      { name: "Access Control System", url: "/4-door-access-control-panel" },
+      { name: "UHF RFID Card", url: "/uhf-card" },
+      { name: "Tripod Turnstile", url: "/tripod-turnstile" },
+      { name: "Near Field Communication", url: "/nfc-card" },
+      { name: "Face Recognition Attendance System", url: "/face-recognition-attendance-system" }
+    ]
+  },
+  { name: "Become a Partner", url: "/become-a-partner" },
+  { name: "Contact Us", url: "/contactUs" },
+  { name: "API Docs", url: "/docs" },
+  {
+    name: "More",
+    url: "#",
+    dropdown: [
+      { name: "Blog", url: "https://blogs.nialabs.in" },
+      { name: "FAQs", url: "/faqs" },
+      { name: "AI vs Traditional Attendance Systems", url: "/ai-biometric-vs-traditional-attendance-systems" },
+      { name: "Biometric Attendance System in Ahmedabad", url: "/biometric-attendance-system-in-ahmedabad" },
+      { name: "Biometric Attendance System in Bangalore", url: "/biometric-attendance-system-in-bangalore" },
+      { name: "Biometric Attendance System in Chandigarh", url: "/biometric-attendance-system-in-chandigarh" },
+      { name: "Biometric Attendance System in Chennai", url: "/biometric-attendance-system-in-chennai" },
+      { name: "Biometric Attendance System in Coimbatore", url: "/biometric-attendance-system-in-coimbatore" },
+      { name: "Biometric Attendance System in Delhi", url: "/biometric-attendance-system-in-delhi" },
+      { name: "Biometric Attendance System in Gujarat", url: "/biometric-attendance-system-in-gujarat" },
+      { name: "Biometric Attendance System in Gurugram", url: "/biometric-attendance-system-in-gurugram" },
+      { name: "Biometric Attendance System in Hyderabad", url: "/biometric-attendance-system-in-hyderabad" },
+      { name: "Biometric Attendance System in Maharashtra", url: "/biometric-attendance-system-in-maharashtra" },
+      { name: "Biometric Attendance System in Nagpur", url: "/biometric-attendance-system-in-nagpur" },
+      { name: "Biometric Attendance System in Pune", url: "/biometric-attendance-system-in-pune" },
+    ]
+  }
+];
+---
+
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-lg border-b border-gray-100 shadow-sm transition-all duration-300">
+  <div class="mx-auto flex h-16 lg:h-20 max-w-7xl items-center justify-between px-2 sm:px-4 xl:px-8">
+    
+    <!-- Logo area -->
+    <div class="flex items-center">
+      <a href="/" class="flex items-center transition-transform hover:scale-105 active:scale-95 shrink-0">
+        <img src="/mainImages/nialabs-logo.png" alt="Nialabs Logo" class="h-8 sm:h-10 lg:h-16 w-auto object-contain" />
+      </a>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden font-medium text-slate-600 lg:block">
+      <ul class="flex items-center gap-1 xl:gap-4">
+        {navLinks.map((link) => (
+          <li class="relative group">
+            {link.dropdown ? (
+              <button class="flex items-center gap-1 rounded-md px-3 py-2 text-sm transition-colors hover:bg-slate-50 hover:text-blue-600 focus:outline-none">
+                {link.name}
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              <!-- Desktop Dropdown -->
+              <ul class="absolute -right-4 lg:right-auto lg:left-0 mt-2 hidden w-max min-w-[240px] max-h-[70vh] overflow-y-auto overscroll-contain origin-top bg-white p-2 shadow-xl border border-gray-100 rounded-xl opacity-0 transition-opacity duration-200 group-hover:flex group-hover:opacity-100 flex-col space-y-1">
+                {link.dropdown.map((subLink) => (
+                  <li>
+                    <a 
+                      href={subLink.url} 
+                      target={subLink.url.startsWith('http') ? '_blank' : '_self'}
+                      rel={subLink.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                      class="block rounded-lg px-4 py-2 text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-colors whitespace-nowrap"
+                    >
+                      {subLink.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <a href={link.url} class="block rounded-md px-3 py-2 text-sm transition-colors hover:bg-slate-50 hover:text-blue-600">
+                {link.name}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <!-- Actions (Get Started) & Mobile Toggle -->
+    <div class="flex items-center gap-1 sm:gap-2 lg:gap-4 ml-auto">
+      <!-- Contact / Demo -->
+      <a href="/contactUs" class="flex items-center gap-1 lg:gap-2 rounded-full border-2 border-blue-600 px-2 py-1 sm:px-3 sm:py-1.5 lg:px-5 lg:py-2 text-[10px] sm:text-xs lg:text-sm font-semibold text-blue-600 transition-all hover:bg-blue-50 active:scale-95 shrink-0">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 lg:h-4 lg:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <span class="hidden lg:inline">Get Free Demo</span>
+        <span class="hidden min-[360px]:inline lg:hidden">Demo</span>
+      </a>
+      
+      <!-- Login -->
+      <a href="/login" class="block rounded-full bg-blue-600 px-3 py-1 sm:px-4 sm:py-1.5 lg:px-6 lg:py-2.5 text-[10px] sm:text-xs lg:text-sm font-semibold text-white shadow-md shadow-blue-500/20 transition-all hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 active:scale-95 shrink-0">
+        Login
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="block rounded bg-slate-100 p-1.5 sm:p-2 md:p-2.5 text-slate-600 transition hover:bg-slate-200 hover:text-slate-900 lg:hidden ml-1 shrink-0" aria-label="Toggle Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Nav (Hidden by default) -->
+  <div id="mobile-menu" class="absolute left-0 top-16 lg:top-20 w-full max-h-[calc(100vh-4rem)] overflow-y-auto overscroll-contain origin-top border-t border-gray-100 bg-white p-4 shadow-xl hidden lg:hidden">
+    <nav class="flex flex-col space-y-2">
+      {navLinks.map((link) => (
+        link.dropdown ? (
+          <details class="group rounded-lg bg-slate-50 p-2 open:bg-white open:shadow-sm">
+            <summary class="flex cursor-pointer items-center justify-between px-2 py-2 font-medium text-slate-700 marker:content-none hover:text-blue-600">
+              {link.name}
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <ul class="mt-2 space-y-1 border-l-2 border-slate-100 pl-4">
+              {link.dropdown.map((subLink) => (
+                <li>
+                  <a 
+                    href={subLink.url} 
+                    target={subLink.url.startsWith('http') ? '_blank' : '_self'}
+                    rel={subLink.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    class="block rounded py-2 pl-2 text-sm text-slate-500 hover:text-blue-600"
+                  >
+                    {subLink.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        ) : (
+          <a href={link.url} class="block rounded-lg px-4 py-3 font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600">
+            {link.name}
+          </a>
+        )
+      ))}
+      <div class="flex flex-col gap-3 pt-4">
+        <a href="/contactUs" class="flex w-full items-center justify-center gap-2 rounded-full border-2 border-blue-600 px-4 py-3 text-center font-semibold text-blue-600 transition-colors hover:bg-blue-50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-line join="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Get Free Demo
+        </a>
+        <a href="/login" class="block w-full rounded-full bg-blue-600 px-4 py-3 text-center font-semibold text-white shadow-md transition-colors hover:bg-blue-700">
+          Login
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Simple Vanilla JS to handle mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (btn && menu && menuIcon) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        
+        // Transform hamburger to X or back
+        if (menu.classList.contains('hidden')) {
+          menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+        } else {
+          menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+        }
+      });
+    }
+  });
+</script>

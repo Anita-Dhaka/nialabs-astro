@@ -1,0 +1,51 @@
+---
+interface IndustryItem {
+  image: string;
+  title: string;
+  text: string;
+}
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  items: IndustryItem[];
+}
+
+const { title, subtitle, items } = Astro.props;
+---
+
+<section class="py-16 bg-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-20">
+      <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
+        {title}
+      </h2>
+      <div class="w-16 h-1.5 bg-blue-600 rounded-full mx-auto mb-8"></div>
+      {subtitle && <p class="text-lg text-slate-600 font-medium">{subtitle}</p>}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      {items.map((item) => (
+        <div class="group relative bg-slate-50/50 rounded-[40px] overflow-hidden border border-slate-100 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 flex flex-col sm:flex-row">
+          <div class="w-full sm:w-2/5 relative h-48 sm:h-auto overflow-hidden">
+            <img 
+              src={item.image} 
+              alt={item.title}
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent to-slate-50/50 hidden sm:block"></div>
+          </div>
+          
+          <div class="w-full sm:w-3/5 p-8 flex flex-col justify-center">
+            <h3 class="text-xl md:text-2xl font-black text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">
+              {item.title}
+            </h3>
+            <p class="text-slate-600 font-medium leading-relaxed text-sm lg:text-base">
+              {item.text}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

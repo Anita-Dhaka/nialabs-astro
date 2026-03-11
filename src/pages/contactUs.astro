@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ContactHero from '../components/ContactHero.astro';
+import ContactInfo from '../components/ContactInfo.astro';
+import ContactForm from '../components/ContactForm.astro';
+
+// SEO data
+const title = "Contact Us – Nialabs India";
+const description = "Get in touch with Nialabs for biometric attendance, access control systems, and partner support. Let's talk about your workforce management needs.";
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-white relative overflow-hidden">
+        <!-- Background Decorations -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+          <div class="absolute top-[10%] right-[5%] w-[500px] h-[500px] bg-blue-50 rounded-full blur-[120px] opacity-60"></div>
+          <div class="absolute bottom-[20%] left-[5%] w-[400px] h-[400px] bg-indigo-50 rounded-full blur-[100px] opacity-40"></div>
+          <div class="absolute inset-0 bg-[url('/mainImages/grid.svg')] bg-center opacity-[0.03]"></div>
+        </div>
+
+        <div class="relative z-10">
+          <ContactHero />
+          
+          <section class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 sticky top-32">
+                  <ContactInfo />
+                </div>
+                
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                  <ContactForm />
+                </div>
+              </div>
+              
+              <!-- Map Container -->
+              <div class="mt-32 relative group">
+                <div class="absolute -inset-4 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-[52px] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <div class="relative rounded-[48px] overflow-hidden border border-slate-200 shadow-2xl h-[400px]">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3559.0844145281126!2d75.720137!3d26.869059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDUyJzA4LjYiTiA3NcKwNDMnMTIuNSJF!5e0!3m2!1sen!2sin!4v1767430361350!5m2!1sen!2sin"
+                    class="absolute inset-0 w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Nialabs Office Location"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+    </main>
+</Layout>

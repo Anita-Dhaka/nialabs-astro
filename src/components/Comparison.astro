@@ -1,0 +1,322 @@
+---
+const comparisonData = {
+  education: {
+    challenges: [
+      {
+        icon: "error",
+        head: "Manual Attendance Errors",
+        text: "Teachers spend valuable time marking attendance manually.",
+      },
+      {
+        icon: "proxy",
+        head: "Proxy & Manipulated Attendance",
+        text: "Students can easily mark proxies for friends without detection.",
+      },
+      {
+        icon: "no-view",
+        head: "No Real-Time Visibility",
+        text: "Parents have no instant updates on their child's presence.",
+      },
+      {
+        icon: "admin",
+        head: "Time-Consuming Administration",
+        text: "Non-automated attendance consumes hours of administrative time.",
+      },
+      {
+        icon: "report",
+        head: "Chaotic Report Generation",
+        text: "Compiling attendance data manually is inaccurate and hectic.",
+      },
+    ],
+    solutions: [
+      {
+        icon: "robot",
+        head: "Automated Biometrics",
+        text: "Records attendance instantly and accurately—no manual entry, no errors.",
+      },
+      {
+        icon: "face-id",
+        head: "AI-Based Face Recognition",
+        text: "Detects live faces, preventing photo-based or proxy attendance.",
+      },
+      {
+        icon: "notify",
+        head: "Instant Parent Notifications",
+        text: "Parents receive automatic SMS or app alerts immediately.",
+      },
+      {
+        icon: "cloud-sync",
+        head: "Cloud-Based Automation",
+        text: "Attendance data is automatically synced to the school ERP.",
+      },
+      {
+        icon: "analytics",
+        head: "Smart Analytics",
+        text: "Generate daily, weekly, or monthly reports with one click.",
+      },
+    ]
+  },
+  business: {
+    challenges: [
+      {
+        icon: "workforce",
+        head: "Inefficient Management",
+        text: "Manual attendance makes it hard to track and manage employees.",
+      },
+      {
+        icon: "payroll",
+        head: "Payroll Inaccuracies",
+        text: "Lagging or incorrect data leads to salary errors and overpayments.",
+      },
+      {
+        icon: "buddy",
+        head: "Attendance Manipulation",
+        text: "Employees can mark attendance on behalf of others easily.",
+      },
+      {
+        icon: "metrics",
+        head: "Lack of Data Insights",
+        text: "Difficult to measure performance, absenteeism, or overtime trends.",
+      },
+      {
+        icon: "security",
+        head: "Security & Access Concerns",
+        text: "Unmonitored entries create significant security risks for premises.",
+      },
+    ],
+    solutions: [
+      {
+        icon: "ai-track",
+        head: "AI-Powered Tracking",
+        text: "Automate attendance to ensure real-time employee tracking.",
+      },
+      {
+        icon: "integration",
+        head: "Seamless Payroll Integration",
+        text: "Attendance data syncs directly with major payroll software.",
+      },
+      {
+        icon: "access",
+        head: "Live Face Access Control",
+        text: "Prevent 'buddy punching' with biometric verification.",
+      },
+      {
+        icon: "dashboard",
+        head: "Advanced Analytics",
+        text: "Get real-time reports on attendance trends and absenteeism.",
+      },
+      {
+        icon: "gatekeeper",
+        head: "Integrated Access System",
+        text: "Control all entry and exit points with biometric verification.",
+      },
+    ]
+  }
+};
+
+const icons = {
+  // Challenges (Amber/Red)
+  error: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`,
+  proxy: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  "no-view": `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>`,
+  admin: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+  report: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
+  workforce: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  payroll: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="2" y1="12" x2="22" y2="12"/></svg>`,
+  buddy: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  metrics: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>`,
+  security: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+
+  // Solutions (Blue)
+  robot: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>`,
+  "face-id": `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`,
+  notify: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`,
+  "cloud-sync": `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19c2.5 0 4.5-2 4.5-4.5 0-2.3-1.7-4.2-3.9-4.5-1-3.6-4.5-6.3-8.6-6.3-3.4 0-6.4 1.8-8 4.6-1.9.4-3.5 2.1-3.5 4.2 0 2.5 2 4.5 4.5 4.5H17.5z"/><polyline points="9 13 12 16 15 13"/></svg>`,
+  analytics: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>`,
+  "ai-track": `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+  integration: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>`,
+  access: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`,
+  dashboard: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M3 9h6"/><path d="M3 15h6"/></svg>`,
+  gatekeeper: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/><path d="M7 2a10 10 0 0 1 10 0"/></svg>`
+};
+---
+
+<section class="py-10 bg-white" id="comparison">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        Why Traditional Attendance Systems <br class="hidden md:block" />
+        <span class="text-red-600">No Longer Work</span>
+      </h2>
+      <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">
+        From schools to offices, manual or outdated attendance-tracking systems lead to inefficiency, data errors, and security risks. Here’s what organizations face without a biometric system.
+      </p>
+    </div>
+
+    <!-- Tab Switcher -->
+    <div class="flex justify-center mb-16">
+      <div class="inline-flex p-1 bg-slate-100 rounded-2xl shadow-inner">
+        <button 
+          id="tab-education"
+          class="px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300 bg-white text-blue-600 shadow-sm"
+          onclick="switchTab('education')"
+        >
+          Educational Institutions
+        </button>
+        <button 
+          id="tab-business"
+          class="px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300 text-slate-500 hover:text-slate-700"
+          onclick="switchTab('business')"
+        >
+          Businesses & Organizations
+        </button>
+      </div>
+    </div>
+
+    <!-- Comparison Panels -->
+    <div class="relative min-h-[600px]">
+      <!-- Education Section -->
+      <div id="panel-education" class="transition-all duration-500 opacity-100 block">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-[40px] overflow-hidden border border-slate-100 shadow-2xl">
+          <!-- Challenges (Left) -->
+          <div class="bg-red-50/50 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-red-100">
+            <h3 class="text-2xl font-bold text-red-900 mb-8 flex items-center gap-3">
+              <span class="p-2 bg-red-100 text-red-600 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </span>
+              Challenges Faced
+            </h3>
+            <div class="space-y-6">
+              {comparisonData.education.challenges.map((item) => (
+                <div class="flex gap-4 group">
+                  <div class="flex-none p-2 rounded-lg bg-orange-100/50 text-orange-600 h-10 w-10 flex items-center justify-center">
+                    <Fragment set:html={icons[item.icon]} />
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 mb-1">{item.head}</h4>
+                    <p class="text-sm text-slate-600">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <!-- Solutions (Right) -->
+          <div class="bg-slate-700 p-8 md:p-12 text-white relative">
+            <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+              <span class="p-2 bg-slate-600 text-white rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Nialabs Smart Solutions
+            </h3>
+            <div class="space-y-6">
+              {comparisonData.education.solutions.map((item) => (
+                <div class="flex gap-4 group">
+                  <div class="flex-none p-2 rounded-lg bg-slate-600 text-white border border-slate-400 h-10 w-10 flex items-center justify-center">
+                    <Fragment set:html={icons[item.icon]} />
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white mb-1">{item.head}</h4>
+                    <p class="text-sm text-blue-50">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <!-- Background Decoration -->
+            <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-500 rounded-full opacity-20 blur-3xl"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Section -->
+      <div id="panel-business" class="transition-all duration-500 opacity-0 hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-[40px] overflow-hidden border border-slate-100 shadow-2xl">
+          <!-- Challenges (Left) -->
+          <div class="bg-red-50/50 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-red-100">
+            <h3 class="text-2xl font-bold text-red-900 mb-8 flex items-center gap-3">
+              <span class="p-2 bg-red-100 text-red-600 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </span>
+              Challenges Faced
+            </h3>
+            <div class="space-y-6">
+              {comparisonData.business.challenges.map((item) => (
+                <div class="flex gap-4 group">
+                  <div class="flex-none p-2 rounded-lg bg-orange-100/50 text-orange-600 h-10 w-10 flex items-center justify-center">
+                    <Fragment set:html={icons[item.icon]} />
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-800 mb-1">{item.head}</h4>
+                    <p class="text-sm text-slate-600">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <!-- Solutions (Right) -->
+          <div class="bg-slate-700 p-8 md:p-12 text-white relative">
+            <h3 class="text-2xl font-bold mb-8 flex items-center gap-3">
+              <span class="p-2 bg-slate-600 text-white rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              Nialabs Smart Solutions
+            </h3>
+            <div class="space-y-6">
+              {comparisonData.business.solutions.map((item) => (
+                <div class="flex gap-4 group">
+                  <div class="flex-none p-2 rounded-lg bg-slate-600 border border-slate-700 text-blue-400 h-10 w-10 flex items-center justify-center">
+                    <Fragment set:html={icons[item.icon]} />
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-white mb-1">{item.head}</h4>
+                    <p class="text-sm text-slate-400">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <!-- Background Decoration -->
+            <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-600 rounded-full opacity-10 blur-3xl"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  function switchTab(type) {
+    const panels = {
+      education: document.getElementById('panel-education'),
+      business: document.getElementById('panel-business')
+    };
+    const tabs = {
+      education: document.getElementById('tab-education'),
+      business: document.getElementById('tab-business')
+    };
+
+    if (type === 'education') {
+      panels.education.classList.remove('hidden', 'opacity-0');
+      panels.education.classList.add('block', 'opacity-100');
+      panels.business.classList.add('hidden', 'opacity-0');
+      panels.business.classList.remove('block', 'opacity-100');
+
+      tabs.education.classList.add('bg-white', 'text-blue-600', 'shadow-sm');
+      tabs.education.classList.remove('text-slate-500');
+      tabs.business.classList.remove('bg-white', 'text-blue-600', 'shadow-sm');
+      tabs.business.classList.add('text-slate-500');
+    } else {
+      panels.business.classList.remove('hidden', 'opacity-0');
+      panels.business.classList.add('block', 'opacity-100');
+      panels.education.classList.add('hidden', 'opacity-0');
+      panels.education.classList.remove('block', 'opacity-100');
+
+      tabs.business.classList.add('bg-white', 'text-blue-600', 'shadow-sm');
+      tabs.business.classList.remove('text-slate-500');
+      tabs.education.classList.remove('bg-white', 'text-blue-600', 'shadow-sm');
+      tabs.education.classList.add('text-slate-500');
+    }
+  }
+</script>

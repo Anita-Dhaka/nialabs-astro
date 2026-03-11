@@ -1,0 +1,75 @@
+---
+const industries = [
+  {
+    title: "Schools & Colleges",
+    text: "Simplifying student and staff attendance",
+    src: "/headerImages/school.webp",
+  },
+  {
+    title: "Offices & Enterprises",
+    text: "Streamlined payroll and workforce management",
+    src: "/headerImages/cowork.webp",
+  },
+  {
+    title: "Institutions & Organizations",
+    text: "Secure access control and monitoring",
+    src: "/headerImages/enterprise.webp",
+  },
+];
+
+const lastdesc = "Nialabs ensures every biometric device works seamlessly with your existing systems.";
+---
+
+<section class="py-24 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">
+        Industries We <span class="text-blue-600">Serve</span>
+      </h2>
+      <p class="text-lg text-slate-600 font-medium">
+        We are proud to serve:
+      </p>
+      <div class="mt-4 flex justify-center">
+        <div class="w-16 h-1.5 bg-blue-600 rounded-full"></div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {industries.map((item) => (
+        <div class="group relative bg-slate-50 rounded-[32px] overflow-hidden border border-slate-100 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500">
+          <!-- Image Container -->
+          <div class="aspect-[4/3] overflow-hidden">
+            <img 
+              src={item.src} 
+              alt={item.title} 
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+          </div>
+          
+          <!-- Content Container -->
+          <div class="p-8">
+            <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+              {item.title}
+            </h3>
+            <p class="text-slate-600 leading-relaxed">
+              {item.text}
+            </p>
+          </div>
+          
+          <!-- Decorative overlay on hover -->
+          <div class="absolute inset-x-0 bottom-0 h-1.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-20 text-center">
+      <div class="inline-block p-8 rounded-3xl bg-blue-50 border border-blue-100 max-w-3xl">
+        <p class="text-xl md:text-2xl font-bold text-slate-800 leading-relaxed italic">
+          "{lastdesc}"
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>

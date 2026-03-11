@@ -1,0 +1,231 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ProductHero from '../components/ProductHero.astro';
+import ProductExplainer from '../components/ProductExplainer.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import ProductFeatures from '../components/ProductFeatures.astro';
+import ProductBenefits from '../components/ProductBenefits.astro';
+import ProductIndustries from '../components/ProductIndustries.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+import WhyChooseNialabs from '../components/WhyChooseNialabs.astro';
+import SecurityPrivacy from '../components/SecurityPrivacy.astro';
+
+const headerData = {
+    title: "Face Recognition Attendance System for Schools, Offices & Industries",
+    desc: "AI-driven attendance with real-time tracking, seamless integration, and zero manual effort.",
+    image: "/headerImages/faceReco.webp",
+};
+
+const whatData = {
+    title: "What is the Face Recognition Attendance System",
+    desc: [
+        "A face recognition attendance system is a software-based on artificial intelligence and machine learning that allows you to take attendance by simply detecting a person’s face. It allows contactless, speed, and accuracy attendance tracking, thereby doing away with the use of manual registers, rfid cards, or even fingerprint scanners.",
+        "The system takes a facial image, extracts unique facial features, and compares them to the pre- registered database to record attendance in real-time. It is very popular among corporate offices, industries, schools, colleges and healthcare institutions which helps eliminate proxy attendance, ensure better transparency, and ensure dependable attendance.",
+    ],
+};
+
+const howItWorks = {
+  title: "How Face Recognition Attendance System work?",
+  subtitle: "A face recognition attendance system employing AI-enabled cameras to capture the face of an individual for recognition. After enrolling a face, the system performs real-time verification and timestamps the attendance with the time, date, and location, resulting in a fast, accurate, and contactless way of conducting attendance.",
+  steps: [
+    {
+      title: "Face Enrollment & Registration",
+      icon: "enrollment",
+      details: [
+        "Face enrollment is the process by which one’s face is captured and registered in the system for the first time. During face enrollment, multiple images are captured to achieve good accuracy in varying illumination and poses.",
+        "Each registered face is securely associated with an employee ID or a student ID, allowing for accurate identification of individuals when taking attendance."
+      ]
+    },
+    {
+      title: "Real-Time Face Detection & Matching",
+      icon: "matching",
+      details: [
+        "When the individual stands before the camera, our system uses AI-based algorithms to detect the face and extract unique features, and then compares them on the spot with the registered facial templates in your database.",
+        "Current face recognition systems include anti-spoofing and liveness detection, which implies that you can’t use photos, videos, or masks to mark attendance."
+      ]
+    },
+    {
+      title: "Attendance Capture (Time, Date, Location)",
+      icon: "capture",
+      details: [
+        "After a face is verified successfully, the system records automatically:",
+        "• Attendance time & date",
+        "• The device or location that was used to check in",
+        "• Records of entry and exit (if this function is customized)",
+        "In addition, for mobile & field staff, GPS based attendance is captured as well, to ensure that attendance is only taken at approved locations."
+      ]
+    }
+  ]
+};
+
+const keyFeatures = {
+    title: "Key Features of Face Recognition Attendance System",
+    points: [
+        {
+            text: "AI-driven, contact-free face recognition",
+        },
+        {
+            text: "Real-time attendance and reporting",
+        },
+        {
+            text: "Anti-spoofing and Liveness Detection",
+        },
+        {
+            text: "Attendance support cloud and offline",
+        },
+        {
+            text: "GPS and Geo Fencing Features",
+        },
+        {
+            text: "HRMS, Payroll, and School ERP integration",
+        },
+        {
+            text: "Automated attendance reports and analytics",
+        },
+        {
+            text: "Supports kiosk-based attendance and mobile attendance modes",
+        },
+    ]
+};
+
+const productBenefits = {
+    title: "Benefits of Face Recognition Attendance System",
+    points: [
+        "Prevents proxy attendance and buddy punching",
+        "Save time and labor for administrators",
+        "Improves the accuracy and clarity of records",
+        "Better hygiene during no-contact verification",
+        "Enables real-time management monitoring"
+    ]
+};
+
+const useCases = {
+    title: "Use Cases & Industries",
+    items: [
+        {
+            image: "/headerImages/industries/enterprise.webp",
+            title: "Office Corporations & Enterprises",
+            text: "Employee attendance gets automated, shift management is supported, and branches are monitored centrally.",
+        },
+        {
+            image: "/headerImages/industries/warehouse.webp",
+            title: "Manufacturing & Factories",
+            text: "High-footfall areas are catered to with precision, shift-wise attendance, and robust implementation.",
+        },
+        {
+            image: "/headerImages/industries/school.webp",
+            title: "Schools, Colleges & Universities",
+            text: "Face recognition enables automatic, accurate attendance across campus, prevents proxy attendance, and integrates with School ERP for reporting and parent communication.",
+        },
+        {
+            image: "/headerImages/industries/construction.webp",
+            title: "Construction & Field Workforce",
+            text: "Mobile face attendance with GPS lock verifies the on-site attendance of your staff from your approved locations.",
+        },
+    ]
+};
+
+const whyChooseData = {
+    title: "Why Choose Nialabs Face Recognition Attendance System",
+    desc: [
+        "Nialabs face recognition attendance system is the best combination of the latest AI technology and hardware with software customization features. It provides fast and accurate recognition even in a harsh environment.",
+        "The system enables cloud reporting, offline attendance, anti-spoofing, and integration with HRMS, payroll, and school ERP platforms. With scalable architecture and dependable support, Nialab solutions are the natural choice for organizations, industry, and education."
+    ]
+};
+
+const securityData = {
+    title: "Data Security & Privacy",
+    desc: "The face recognition attendance system is designed with high security to protect the biometric data. Attendance records and face templates are encrypted, and this helps in protecting privacy. It ensures that only the right users can see the data via role-based data visibility. The organizations are encouraged to apply adequate consent and privacy policies and to be compliant with the applicable data protection rules."
+};
+
+const productFaqs = [
+  {
+    question: "What is the accuracy of face recognition attendance in low light condition?",
+    solution: "Advanced technology employs intelligent cameras and infrared technology to perform accurate recognition outdoors/ natural light or in dark/ dim environments."
+  },
+  {
+    question: "How to prevent the fake or proxy attendance?",
+    solution: "Yes, the platform includes AI- powered liveness detection and anti-spoofing to prevent attendance from being taken via photos, videos, or impersonation."
+  },
+  {
+    question: "Can face recognition attendance be linked with payroll?",
+    solution: "The attendance data can be automatically pushed to HRMS and payroll for processing the salary."
+  },
+  {
+    question: "Can attendance be taken without an internet connection?",
+    solution: "Yes, attendance can be taken offline, and it will automatically sync when online."
+  },
+  {
+    question: "Can students take attendance on the app for attendance tracking by class or period?",
+    solution: "Yes, it can take period-wise as well as subject-wise attendance with the School ERP/ timetable system integrated, so it is the best for schools and colleges."
+  },
+  {
+    question: "Can face recognition attendance be integrated with schools for parent communication?",
+    solution: "Yes, the attendance data can be integrated with school systems to alert parents and send reports instantly, providing greater transparency and accountability."
+  }
+];
+
+const title = "Face Recognition Attendance System | Nialabs";
+const description = "AI-powered face recognition attendance system for offices, schools & industries. Contactless, accurate & secure attendance tracking with real-time cloud reporting.";
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-white">
+        <ProductHero 
+            title={headerData.title}
+            desc={headerData.desc}
+            image={headerData.image}
+            badge="Advanced Biometrics"
+        />
+
+        <ProductExplainer 
+            title={whatData.title}
+            desc={whatData.desc}
+            image="/headerImages/generated-image.png"
+        />
+
+        <ProcessSteps 
+            title={howItWorks.title}
+            subtitle={howItWorks.subtitle}
+            steps={howItWorks.steps}
+        />
+
+        <ProductFeatures 
+            title={keyFeatures.title}
+            features={keyFeatures.points}
+        />
+
+        <ProductBenefits 
+            title={productBenefits.title}
+            benefits={productBenefits.points}
+        />
+
+        <ProductIndustries 
+            title={useCases.title}
+            items={useCases.items}
+        />
+
+        <WhyChooseNialabs 
+            title={whyChooseData.title}
+            points={whyChooseData.desc}
+            image="/headerImages/why-choose-nialabs.png"
+        />
+
+        <SecurityPrivacy 
+            title={securityData.title}
+            desc={securityData.desc}
+            image="/headerImages/data-security.png"
+        />
+
+        <!-- More sections can be added here as we progress -->
+        
+        <Faq 
+            faqs={productFaqs}
+            title="Product FAQs"
+        />
+    </main>
+    <Footer />
+</Layout>

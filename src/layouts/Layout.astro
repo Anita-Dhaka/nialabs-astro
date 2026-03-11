@@ -1,0 +1,79 @@
+---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+	title?: string;
+	description?: string;
+	canonical?: string;
+}
+
+const {
+	title = "Best Biometric Attendance System in India ",
+	description = "Nialabs offers the best biometric attendance system in India with fast face recognition, accurate attendance tracking, cloud reports, and seamless integration for all industries.",
+	canonical = "https://nialabs.in/",
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Primary Meta Tags (Ensuring exact SEO preservation) -->
+		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="application-name" content="Nialabs Cloud Biometric Devices and APIS"/>
+		<link rel="manifest" href="/site.webmanifest"/>
+		<meta name="keywords" content="Nialabs, Nialabs biometric,Biometric api, AI Face biometric, Biometric Device Cloud Sdk, Cloud biometric Api, ESSL Cloud Api,  Biometric attendance api, Fingerprint api, Palm api, Face api, Cloud api, Biometric devices, Biometric sdk, Biometric attendance machine, Biomeric machine price, Biometric device price, Biometric face attendance machine, Biometric attedance system & machine, Fingerprint attedance system, Nialabs biometric machine, Nialabs biometric, Nialabs biometric attendance machine"/>
+		<meta name="referrer" content="origin"/>
+		<meta name="creator" content="Nialabs"/>
+		<meta name="publisher" content="Nialabs India"/>
+		<meta name="robots" content="index, follow"/>
+		<meta name="category" content="Biometric Sdk and Devices"/>
+		<link rel="canonical" href={canonical}/>
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:site_name" content="Nialabs"/>
+		<meta property="og:type" content="website"/>
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		
+		<!-- Additional SEO Tags -->
+		<link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png"/>
+		<meta name="next-size-adjust"/>
+		<meta name="google-site-verification" content="WwVVt5zzMsgKZvSk0hryEX_54kF3RizhS3HN2DzSSwg"/>
+
+		<!-- Preconnect to Google Fonts for performance -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-slate-50 font-sans text-slate-900 antialiased min-h-screen flex flex-col">
+		<div class="flex-grow flex flex-col">
+			<slot />
+		</div>
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	/* Global Utility Resets or Customs */
+	html {
+		font-family: 'Inter', system-ui, sans-serif;
+	}
+	/* Ensure body takes full height for sticky footer if needed */
+	body {
+		margin: 0;
+	}
+</style>

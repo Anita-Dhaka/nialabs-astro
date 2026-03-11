@@ -1,0 +1,68 @@
+---
+---
+
+<section id="story" class="py-24 bg-slate-50 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      <!-- Video/Image Column -->
+      <div class="relative order-2 lg:order-1">
+        <div class="absolute -inset-4 bg-blue-500/5 rounded-3xl blur-2xl"></div>
+        <div class="relative rounded-[32px] overflow-hidden shadow-2xl border border-slate-200 bg-white aspect-video flex items-center justify-center">
+          <video 
+            class="w-full h-full object-cover"
+            autoplay 
+            loop 
+            muted 
+            playsinline
+          >
+            <source src="/mainImages/Nialabs-biometric.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          
+          <!-- Decorative overlay -->
+          <div class="absolute inset-0 ring-1 ring-inset ring-black/5 pointer-events-none rounded-[32px]"></div>
+          
+          <!-- Play hint or badge -->
+          <div class="absolute bottom-6 left-6 px-4 py-2 bg-white/90 backdrop-blur-md rounded-xl shadow-lg border border-white/20">
+             <div class="flex items-center gap-2">
+               <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
+               <span class="text-xs font-bold text-slate-800 uppercase tracking-wider">Product Showcase</span>
+             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div class="space-y-8 order-1 lg:order-2">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+            Our <span class="text-blue-600">Story</span>
+          </h2>
+          <div class="w-16 h-1.5 bg-blue-600 rounded-full mb-8"></div>
+          
+          <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+            <p>
+              Nialabs was founded with a vision to make biometric attendance systems simpler, smarter, and more secure. We noticed that many schools and businesses were struggling with outdated, error-prone fingerprint machines and manual attendance processes.
+            </p>
+            <p>
+              Our team of engineers set out to create face recognition devices and fingerprint attendance machines that integrate with the cloud, offering real-time accuracy, reliability, and effortless management.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6 pt-4">
+          <div class="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm">
+            <p class="text-3xl font-extrabold text-blue-600 mb-1">2021</p>
+            <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Founded In</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm">
+            <p class="text-3xl font-extrabold text-blue-600 mb-1">5500+</p>
+            <p class="text-sm font-medium text-slate-500 uppercase tracking-wider">Installations</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

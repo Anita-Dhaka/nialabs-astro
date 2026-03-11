@@ -1,17 +1,27 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Faq from '../components/Faq.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Recognition from '../components/Recognition.astro';
+import WhyNialabs from '../components/WhyNialabs.astro';
+import Products from '../components/Products.astro';
+import Industries from '../components/Industries.astro';
+import Comparison from '../components/Comparison.astro';
+import AboutSection from '../components/AboutSection.astro';
+import Hero from '../components/Hero.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<Navbar />
+	<Hero />
+
+	<AboutSection />
+	<Comparison />
+	<Industries />
+	<Products />
+	<WhyNialabs />
+	<Recognition />
+	<Testimonial />
+	<Faq />
+</Layout>

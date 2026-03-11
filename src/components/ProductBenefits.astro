@@ -1,0 +1,40 @@
+---
+interface Props {
+  title: string;
+  benefits: string[];
+}
+
+const { title, benefits } = Astro.props;
+---
+
+<section class="py-16 bg-[#f8fafc] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="bg-white rounded-[48px] p-8 md:p-12 lg:p-16 border border-slate-100 shadow-2xl shadow-slate-200/50">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          {title}
+        </h2>
+        <div class="mt-4 flex justify-center">
+          <div class="w-16 h-1.5 bg-blue-600 rounded-full"></div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-12 md:gap-y-6">
+        {benefits.map((benefit) => (
+          <div class="flex items-start gap-4 p-4 rounded-3xl hover:bg-slate-50 transition-colors duration-300 group">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p class="text-base md:text-lg font-bold text-slate-800 leading-tight pt-1.5">
+              {benefit}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  
+  <!-- Decorative background blobs -->
+  <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
+  <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2"></div>
+</section>

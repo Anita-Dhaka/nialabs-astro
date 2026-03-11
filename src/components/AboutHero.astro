@@ -1,0 +1,108 @@
+---
+---
+
+<section class="relative pt-10 pb-16 lg:pt-20 lg:pb-16 overflow-hidden bg-slate-900">
+  <!-- Background Decorations -->
+  <div class="absolute inset-0 z-0">
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4"></div>
+    <div class="absolute inset-0 bg-[url('/mainImages/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      <!-- Content -->
+      <div class="max-w-2xl">
+        <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold mb-6 animate-fade-in">
+          <span class="relative flex h-2 w-2 mr-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+          </span>
+          Excellence in Biometric Technology
+        </div>
+        
+        <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1] mb-6 animate-slide-up">
+          Innovating <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Biometric Solutions</span> for a Smarter Tomorrow
+        </h1>
+        
+        <p class="text-base md:text-lg text-slate-400 leading-relaxed mb-8 animate-slide-up animation-delay-200">
+          At Nialabs, we combine biometric innovation with cloud-based technology to deliver secure, seamless, and future-ready attendance and access control systems. From schools to enterprises, we help organizations streamline attendance, payroll, and security with AI-powered biometric devices and cloud-connected APIs.
+        </p>
+        
+        <div class="flex flex-wrap gap-4 animate-slide-up animation-delay-400">
+          <a href="#story" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-[1.02] shadow-xl shadow-blue-500/25">
+            Our Story
+          </a>
+          <a href="/contactUs" class="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-2xl border border-white/10 transition-all duration-300 backdrop-blur-sm">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Image Area -->
+      <div class="relative animate-fade-in animation-delay-500 max-w-lg lg:ml-auto">
+        <div class="absolute -inset-4 bg-blue-500/10 rounded-[40px] blur-3xl"></div>
+        <div class="relative p-1.5 bg-gradient-to-tr from-slate-800 to-slate-700 rounded-[32px] shadow-2xl border border-white/5">
+          <img 
+            src="/headerImages/generated-image.png" 
+            alt="Nialabs Biometric Solutions" 
+            class="w-full h-auto rounded-[24px] object-cover"
+          />
+          
+          <!-- Floating UI Elements -->
+          <div class="absolute -top-4 -right-4 p-3 bg-white rounded-xl shadow-xl animate-float">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+              </div>
+              <div>
+                <p class="text-[8px] text-slate-500 uppercase font-bold tracking-wider">Security</p>
+                <p class="text-[10px] font-extrabold text-slate-900">100% Secure</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="absolute -bottom-4 -left-4 p-3 bg-white rounded-xl shadow-xl animate-float-delayed">
+            <div class="flex items-center gap-2">
+              <div class="w-8 h-8 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+              </div>
+              <div>
+                <p class="text-[8px] text-slate-500 uppercase font-bold tracking-wider">Cloud Connected</p>
+                <p class="text-[10px] font-extrabold text-slate-900">Real-time Data</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes float-delayed {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+  }
+  .animate-fade-in { animation: fade-in 1s ease-out forwards; }
+  .animate-slide-up { opacity: 0; animation: slide-up 0.8s ease-out forwards; }
+  .animate-float { animation: float 4s ease-in-out infinite; }
+  .animate-float-delayed { animation: float-delayed 4.5s ease-in-out infinite; }
+  .animation-delay-200 { animation-delay: 0.2s; }
+  .animation-delay-400 { animation-delay: 0.4s; }
+  .animation-delay-500 { animation-delay: 0.5s; }
+</style>
