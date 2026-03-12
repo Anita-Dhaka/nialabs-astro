@@ -1,0 +1,314 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ProductHero from '../components/ProductHero.astro';
+import ProductFeatures from '../components/ProductFeatures.astro';
+import Footer from '../components/Footer.astro';
+import Faq from '../components/Faq.astro';
+
+const headerData = {
+    title: "Smart Bus Attendance System",
+    desc: "Real-Time Student Tracking with AI Face Recognition & GPS",
+    image: "/headerImages/products/headerImage.webp",
+};
+
+const whatData = {
+    title: "What is a Smart Bus Attendance System?",
+    desc: "A Smart Bus Attendance System is a technology-enabled solution that automatically records the attendance of students or passengers when they board and exit a bus. Instead of manual registers or calling out names, the system uses biometric devices, RFID cards, GPS tracking, or mobile apps to identify each student in real time.",
+};
+
+const howItWorks = [
+    "Student boards the bus and is identified via face recognition or RFID",
+    "Attendance is recorded instantly and uploaded to the cloud",
+    "Parents receive an instant push notification with time & bus location",
+    "School admin views real-time reports on the dashboard",
+    "GPS tracks the live bus route, speed, and deviation alerts",
+    "'No Child Left Behind' alert triggered before bus is locked"
+];
+
+const keyFeatures = {
+    title: "Smart Bus Attendance System with AI Face Recognition & GPS",
+    points: [
+        { text: "AI Face Recognition: Contactless, hygienic, and 100% safe identification for students with no manual intervention.", icon: "ai" },
+        { text: "Real-Time GPS Tracking: Live location, route history, speed monitoring, and deviation alerts for every bus.", icon: "gps" },
+        { text: "Instant Parent Notifications: Parents get alerts the moment their child boards or exits the bus with exact time and location.", icon: "cloud" },
+        { text: "Offline Mode Support: Device stores attendance locally and syncs automatically when internet is restored.", icon: "analytics" },
+        { text: "No Child Left Behind Alert: System triggers a safety alert to ensure every child has exited before the bus is locked.", icon: "spoofing" },
+        { text: "ERP & School System Integration: Attendance data syncs seamlessly with school ERPs via REST APIs, eliminating manual entries.", icon: "integration" },
+    ]
+};
+
+const benefitsData = [
+    {
+        group: "For Schools",
+        icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
+        points: [
+            "Eliminates manual attendance errors",
+            "Enhances student safety",
+            "Improves transport efficiency",
+            "Clear compliance with safety guidelines",
+            "Reduces admin workload"
+        ]
+    },
+    {
+        group: "For Parents",
+        icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+        points: [
+            "Peace of mind with real-time tracking",
+            "No uncertainty at pickup/drop points",
+            "Instant alerts & transparency"
+        ]
+    },
+    {
+        group: "For Transport Managers",
+        icon: "M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0zM13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10",
+        points: [
+            "Complete fleet overview",
+            "Better route planning",
+            "Monitor driver behavior",
+            "Timely reporting & performance insights"
+        ]
+    }
+];
+
+const FaqsData = [
+  {
+    question: "What is a Smart Bus Attendance System?",
+    solution:
+      "A Smart Bus Attendance System automatically records student attendance using biometric or RFID technology when they board or exit the school bus. Schools and parents receive real-time updates through a connected dashboard or mobile app.",
+  },
+  {
+    question: "How does the Nialabs Smart Bus Attendance System work?",
+    solution:
+      "Nialabs devices use AI face recognition or RFID cards to identify each student. Attendance is instantly uploaded to the cloud, and parents receive immediate notifications of boarding and drop-off events.",
+  },
+  {
+    question: "Is biometric attendance safe for children?",
+    solution:
+      "Yes. Nialabs uses advanced non-intrusive AI face recognition, which does not harm a child's eyes or skin. No physical contact is required, making it hygienic and 100% safe.",
+  },
+  {
+    question: " Can the system work without the internet?",
+    solution:
+      "Yes. The device stores attendance offline and syncs automatically when the internet connection is reestablished, ensuring uninterrupted attendance logging",
+  },
+  {
+    question: "Do parents receive real-time notifications?",
+    solution:
+      "Absolutely. Parents get instant alerts when their child boards or exits the bus, along with the exact time and bus location.",
+  },
+  {
+    question: "Does this include GPS tracking of the bus?",
+    solution:
+      "Yes. The Nialabs system includes live GPS tracking, route history, speed monitoring, and route deviation alerts for improved safety.",
+  },
+  {
+    question: "How long does installation take?",
+    solution:
+      "Installation is quick and simple — typically 1–2 hours per bus, depending on the wiring and connectivity setup.",
+  },
+  {
+    question: "Can this system be integrated with school ERP software?",
+    solution:
+      "Yes. Nialabs offers API integration that allows attendance data to sync with most school ERP systems, eliminating manual entries.",
+  },
+  {
+    question: "What happens if a student forgets their RFID card?",
+    solution:
+      "No issues. The system still works using face recognition, allowing seamless attendance without dependency on the card.",
+  },
+  {
+    question: "How does Nialabs ensure that no child is left behind in the bus?",
+    solution:
+      "The system triggers a 'No Child Left Behind' alert, helping drivers and attendants ensure every child exits safely before the bus is locked.",
+  },
+];
+
+const title = "Smart Bus Attendance System | Real-Time Student Tracking | Nialabs";
+const description = "Nialabs Smart Bus Attendance System provides real-time student attendance tracking, GPS location tracking, and instant parent alerts. Ensure safer school transport with AI-powered automation.";
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-white">
+        <ProductHero 
+            title={headerData.title}
+            desc={headerData.desc}
+            image={headerData.image}
+            badge="AI-Powered School Transport"
+        />
+
+        <!-- What is Section -->
+        <section class="py-16 bg-[#f8fafc] relative overflow-hidden" id="explore">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
+            <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    <div class="lg:col-span-7 bg-white/60 backdrop-blur-xl rounded-[48px] p-8 md:p-12 lg:p-16 border border-white shadow-2xl shadow-slate-200/50">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-1 bg-[#2067e2] rounded-full"></div>
+                            <p class="text-sm font-black text-blue-600 uppercase tracking-widest">About the System</p>
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-8">
+                            {whatData.title}
+                        </h2>
+                        <p class="text-lg text-slate-600 leading-relaxed font-medium">{whatData.desc}</p>
+                        <div class="mt-12 pt-8 border-t border-slate-200/60">
+                            <p class="text-sm font-bold text-slate-500">
+                                Trusted by <span class="text-slate-900">500+ Schools</span> across India.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative group mt-8 lg:mt-0">
+                        <div class="relative w-full rounded-[48px] overflow-hidden shadow-2xl border border-white transform transition-all duration-700 group-hover:scale-[1.02] bg-white">
+                            <img 
+                                src="/headerImages/products/features.webp" 
+                                alt={whatData.title} 
+                                class="w-full h-auto object-contain transform transition-transform duration-1000 group-hover:scale-105"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-gray-900 mb-6">How It Works</h2>
+                        <ul class="space-y-6">
+                            {howItWorks.map((step, index) => (
+                                <li class="flex items-start">
+                                    <div class="flex-none bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                                        {index + 1}
+                                    </div>
+                                    <p class="text-gray-600 text-lg">{step}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-3xl shadow-lg border border-gray-100">
+                        <img src="/headerImages/products/dashboard.webp" alt="Bus Attendance Dashboard" class="rounded-2xl w-full h-auto" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <ProductFeatures 
+            title={keyFeatures.title}
+            features={keyFeatures.points}
+        />
+
+        <!-- N-AI10 Spotlight -->
+        <section class="py-20 bg-slate-900 text-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-1 bg-blue-400 rounded-full"></div>
+                            <p class="text-sm font-black text-blue-400 uppercase tracking-widest">Nialabs Device</p>
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">
+                            N-AI10 — Smart Bus <br/><span class="text-blue-400">Attendance Terminal</span>
+                        </h2>
+                        <p class="text-blue-100/70 text-lg leading-relaxed mb-8">
+                            The N-AI10 by Nialabs is a powerful AI-based biometric terminal designed specifically for bus attendance, student safety tracking, and employee transport management. With 4G SIM support, GPS live location tracking, and real-time cloud syncing, it enables automatic attendance inside school buses or corporate shuttles without manual intervention.
+                        </p>
+                        <a href="/contactUs" class="inline-block px-8 py-4 bg-blue-500 text-white font-extrabold rounded-2xl hover:bg-blue-400 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl">
+                            Book a Demo
+                        </a>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-blue-600/20 rounded-[48px] blur-3xl group-hover:opacity-40 transition-opacity"></div>
+                        <div class="relative rounded-[48px] overflow-hidden border border-white/10 bg-slate-800">
+                            <img 
+                                src="/headerImages/products/Mobile App.webp" 
+                                alt="N-AI10 Bus Attendance Terminal" 
+                                class="w-full h-auto object-contain transform transition-transform duration-1000 group-hover:scale-105"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits at a Glance -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Nialabs Benefits at a Glance</h2>
+                    <p class="text-lg text-gray-600">Designed for every stakeholder in the school transport ecosystem.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {benefitsData.map((benefit) => (
+                        <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:scale-[1.02] transition-transform">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d={benefit.icon}/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">{benefit.group}</h3>
+                            <ul class="space-y-3">
+                                {benefit.points.map((point) => (
+                                    <li class="flex items-start gap-3">
+                                        <div class="mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></div>
+                                        <p class="text-gray-600">{point}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-[40px] bg-blue-600 p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-500/20">
+                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                                Ready to Make Your School <br/> Transport Smarter?
+                            </h2>
+                            <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+                                Choose Nialabs Smart Bus Attendance System — trusted, reliable, and built for modern schools.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="/contactUs" class="px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl">
+                                    Book a Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+                            <ul class="space-y-6">
+                                {[
+                                    "AI face recognition — no cards needed",
+                                    "Live GPS bus tracking",
+                                    "Instant parent notifications"
+                                ].map((point) => (
+                                    <li class="flex items-center text-white text-xl font-semibold">
+                                        <div class="w-10 h-10 rounded-xl bg-green-400/20 flex items-center justify-center mr-4 text-green-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        {point}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Faq 
+            faqs={FaqsData}
+            title="Frequently Asked Questions"
+        />
+    </main>
+    <Footer />
+</Layout>
