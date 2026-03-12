@@ -1,0 +1,297 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ProductHero from '../components/ProductHero.astro';
+import ProductExplainer from '../components/ProductExplainer.astro';
+import ProductFeatures from '../components/ProductFeatures.astro';
+import ProductIndustries from '../components/ProductIndustries.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+import WhyChooseNialabs from '../components/WhyChooseNialabs.astro';
+
+const headerData = {
+    title: "UHF RFID Card by Nialabs",
+    desc: "Smart Long-Range RFID Cards for Access Control, Parking & Asset Tracking",
+    image: "/headerImages/cards/UHF-Header.png",
+};
+
+const whatData = {
+    title: "What is a UHF RFID Card?",
+    desc: [
+        "A UHF (Ultra High Frequency) RFID card operates in the 860–960 MHz frequency range, enabling long-range identification without manual scanning. Unlike HF or LF RFID cards, UHF cards can be read from 3 to 10 meters or more, making them ideal for automated systems.",
+        "These cards contain a passive UHF RFID chip and antenna, allowing seamless communication with UHF RFID readers."
+    ],
+};
+
+const keyFeatures = {
+    title: "Key Features of UHF RFID Cards",
+    points: [
+        { text: "Long-Range Reading Capability: Enables identification from several meters, reducing congestion and delays.", icon: "gps" },
+        { text: "Fast & Contactless Operation: Supports high-speed authentication even for moving vehicles or people.", icon: "ai" },
+        { text: "Durable PVC Construction: Built with industrial-grade material for long-term outdoor and indoor use.", icon: "analytics" },
+        { text: "Unique & Secure Identification: Each card carries a globally unique ID for reliable authentication.", icon: "cloud" },
+        { text: "Anti-Collision Technology: Allows multiple cards to be read simultaneously without interference.", icon: "spoofing" },
+        { text: "Custom Printing Support: Supports logo printing, numbering, QR codes, and branding.", icon: "integration" },
+    ]
+};
+
+const applications = {
+    title: "Applications of UHF RFID Cards",
+    items: [
+        {
+            title: "Vehicle Access & Parking Systems",
+            text: "Automated boom barriers and gate control without stopping vehicles.",
+            image: "/headerImages/industries/parking.webp"
+        },
+        {
+            title: "Access Control for Campuses",
+            text: "Ideal for IT parks, factories, universities, and corporate campuses.",
+            image: "/headerImages/industries/enterprise.webp"
+        },
+        {
+            title: "Asset Tracking & Logistics",
+            text: "Track goods, pallets, and equipment in warehouses and supply chains.",
+            image: "/headerImages/industries/warehouse.webp"
+        },
+        {
+            title: "Toll & Fast-Entry Systems",
+            text: "Used where high-speed, long-range identification is required.",
+            image: "/headerImages/industries/gate.webp"
+        }
+    ]
+};
+
+const whyChooseData = {
+    title: "Why Choose Nialabs UHF RFID Cards?",
+    desc: [
+        "Enterprise-Grade Quality: Designed for commercial and industrial deployments.",
+        "Proven Field Performance: Tested in Indian environmental conditions.",
+        "End-to-End Compatibility: Fully compatible with Nialabs RFID readers and controllers.",
+        "Customization & Bulk Supply: Supports custom printing, encoding, and bulk orders."
+    ]
+};
+
+const productFaqs = [
+    {
+        question: "What is a UHF RFID Card?",
+        solution:
+            "A UHF RFID Card is a long-range RFID card operating in the 860–960 MHz frequency range, used for fast and contactless identification.",
+    },
+    {
+        question: "What is the read range of a UHF RFID card?",
+        solution:
+            "The typical read range is 3 to 10 meters, depending on the reader, antenna, and environment.",
+    },
+    {
+        question: "Where are UHF RFID cards commonly used?",
+        solution:
+            "They are widely used in vehicle access control, parking systems, asset tracking, logistics, and campus entry management.",
+    },
+    {
+        question: "Do UHF RFID cards require a battery?",
+        solution:
+            "No, UHF RFID cards are passive cards and do not require any internal battery.",
+    },
+    {
+        question: "Can UHF RFID cards be used for parking systems?",
+        solution:
+            "Yes, they are ideal for parking and vehicle identification, allowing fast entry without stopping the vehicle.",
+    },
+    {
+        question: "Are UHF RFID cards secure?",
+        solution:
+            "Yes, each card has a unique identification number and supports secure authentication when used with authorized readers.",
+    },
+    {
+        question: "Can UHF RFID cards work with access control software?",
+        solution:
+            "Yes, they integrate easily with access control, parking management, and ERP systems via compatible readers.",
+    },
+    {
+        question: "What is the difference between UHF RFID and HF RFID cards?",
+        solution:
+            "UHF RFID cards offer long-range reading, while HF RFID cards are designed for short-range, close-proximity access.",
+    },
+];
+
+const title = "UHF Card for Parking & Vehicle Access Control | Nialabs";
+const description = "Enable seamless vehicle entry with UHF RFID cards offering long-range detection. Perfect for parking systems, toll access, and gated facilities.";
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-white">
+        <ProductHero 
+            title={headerData.title}
+            desc={headerData.desc}
+            image={headerData.image}
+            badge="Long-Range RFID"
+        />
+
+        <ProductExplainer 
+            title={whatData.title}
+            desc={whatData.desc}
+            image="/headerImages/cards/Uhfcard.webp"
+        />
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-gray-900 mb-6">How UHF RFID Cards Work</h2>
+                        <ul class="space-y-6">
+                            {[
+                                "The UHF reader emits radio waves",
+                                "The card’s antenna captures the signal",
+                                "The chip transmits its unique ID",
+                                "The system validates the data",
+                                "Access or action is granted instantly"
+                            ].map((step, index) => (
+                                <li class="flex items-start">
+                                    <div class="flex-none bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                                        {index + 1}
+                                    </div>
+                                    <p class="text-gray-600 text-lg">{step}</p>
+                                </li>
+                            ))}
+                        </ul>
+                        <p class="mt-8 text-gray-500 italic">This process happens without physical contact or line-of-sight.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+                        <img src="/headerImages/cards/UHF-Working.webp" alt="UHF Working Diagram" class="rounded-2xl w-full" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <ProductFeatures 
+            title={keyFeatures.title}
+            features={keyFeatures.points}
+        />
+
+        <ProductIndustries 
+            title={applications.title}
+            items={applications.items}
+        />
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">UHF RFID Card vs HF RFID Card</h2>
+                    <p class="text-lg text-gray-600">Understand the key differences between frequency ranges for the right application.</p>
+                </div>
+                <div class="overflow-hidden rounded-3xl border border-gray-200 shadow-xl bg-white">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-900 text-white">
+                                <th class="px-6 py-5 font-bold text-lg">Feature</th>
+                                <th class="px-6 py-5 font-bold text-lg text-blue-400">UHF RFID Card</th>
+                                <th class="px-6 py-5 font-bold text-lg text-gray-400">HF RFID Card</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            {[
+                                { f: "Frequency", t: "860–960 MHz", m: "13.56 MHz" },
+                                { f: "Read Range", t: "Long (3–10 m)", m: "Short (2–10 cm)" },
+                                { f: "Line of Sight", t: "Not Required", m: "Close Proximity" },
+                                { f: "Best Use", t: "Parking, Vehicles", m: "Attendance, Access" },
+                                { f: "Speed", t: "Very High", m: "Moderate" }
+                            ].map((row) => (
+                                <tr class="hover:bg-blue-50/30 transition-colors">
+                                    <td class="px-6 py-5 font-bold text-gray-700">{row.f}</td>
+                                    <td class="px-6 py-5 font-semibold text-blue-600">{row.t}</td>
+                                    <td class="px-6 py-5 text-gray-500">{row.m}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">Technical Specifications</h2>
+                        <div class="space-y-4">
+                            {[
+                                { label: "Frequency", value: "UHF 860–960 MHz" },
+                                { label: "Standard", value: "EPC Gen2 / ISO 18000-6C" },
+                                { label: "Material", value: "PVC / PET" },
+                                { label: "Memory", value: "EPC + User Memory" },
+                                { label: "Read Range", value: "Up to 10 meters" },
+                                { label: "Operating Mode", value: "Passive RFID" }
+                            ].map((spec) => (
+                                <div class="flex border-b border-gray-100 py-4 last:border-0 hover:bg-slate-50 transition-colors px-2 rounded-lg">
+                                    <span class="w-1/2 font-bold text-gray-600">{spec.label}</span>
+                                    <span class="w-1/2 text-gray-900 font-semibold">{spec.value}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-[2rem] opacity-10 blur-2xl group-hover:opacity-20 transition-opacity"></div>
+                        <img 
+                            src="/headerImages/cards/Uhfcard.webp" 
+                            alt="UHF Specifications" 
+                            class="relative rounded-3xl shadow-2xl w-full object-cover transform transition-all duration-500 group-hover:scale-[1.02]"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <WhyChooseNialabs 
+            title={whyChooseData.title}
+            points={whyChooseData.desc}
+            image="/headerImages/cards/UHF-RFID.webp"
+        />
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-[40px] bg-blue-600 p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-500/20">
+                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
+                    
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                                Looking for Reliable <br/> UHF RFID Cards?
+                            </h2>
+                            <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+                                Get high-quality UHF cards & tags for parking, campuses, and secure entry.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="/contactUs" class="px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl">
+                                    Book a Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+                            <ul class="space-y-6">
+                                {[
+                                    "Long-range detection",
+                                    "Bulk supply",
+                                    "Custom printing"
+                                ].map((point) => (
+                                    <li class="flex items-center text-white text-xl font-semibold">
+                                        <div class="w-10 h-10 rounded-xl bg-green-400/20 flex items-center justify-center mr-4 text-green-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        {point}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Faq 
+            faqs={productFaqs}
+            title="Frequently Asked Questions"
+        />
+    </main>
+    <Footer />
+</Layout>

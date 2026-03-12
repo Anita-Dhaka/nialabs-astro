@@ -1,0 +1,295 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ProductHero from '../components/ProductHero.astro';
+import ProductExplainer from '../components/ProductExplainer.astro';
+import ProductFeatures from '../components/ProductFeatures.astro';
+import ProductBenefits from '../components/ProductBenefits.astro';
+import ProductIndustries from '../components/ProductIndustries.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+import WhyChooseNialabs from '../components/WhyChooseNialabs.astro';
+
+const headerData = {
+    title: "Near Field Communication (NFC) Cards by Nialabs",
+    desc: "Tap-and-go technology for schools, offices, hospitals, events, and secure entry systems.",
+    image: "/headerImages/cards/nfcHeader.webp",
+};
+
+const whatData = {
+    title: "What is an NFC card?",
+    desc: [
+        "NFC (Near Field Communication) is a wireless short-range technology that allows data transfer by simply tapping a card or tag near an NFC reader. NFC is widely used in access control, attendance marking, visitor tracking, and automation systems.",
+        "With Nialabs NFC solutions, you get high-quality NFC cards and NFC tags designed for fast scanning, long life, and reliable performance in schools, offices, hospitals, events, factories, and commercial entry systems across India.",
+    ],
+};
+
+const problemSolution = {
+    problem: {
+        title: "The Problem",
+        subtitle: "Traditional ID verification and manual entry systems are:",
+        points: [
+            "Slow and time-consuming",
+            "Easy to misuse or fake",
+            "Not contactless",
+            "Hard to track & manage centrally"
+        ]
+    },
+    solution: {
+        title: "Why NFC?",
+        subtitle: "NFC enables:",
+        points: [
+            "Instant tap-based authentication",
+            "Secure identification for users",
+            "Quick access control & attendance marking",
+            "Better tracking, reporting & automation"
+        ]
+    }
+};
+
+const keyFeatures = {
+    title: "Key Features",
+    points: [
+        { text: "Fast Tap Response: Instant data reading in less than a second.", icon: "ai" },
+        { text: "Secure & Reliable: Unique ID data helps prevent unauthorized access.", icon: "spoofing" },
+        { text: "Contactless & Hygienic: Perfect for schools, hospitals and high-traffic places.", icon: "cloud" },
+        { text: "Works with NFC Readers & Smartphones: Compatible with most NFC-enabled devices.", icon: "gps" },
+        { text: "Durable Long-Life Cards: Strong build quality for daily use.", icon: "analytics" },
+        { text: "Multiple Printing Options: Personalized branding, photo, name, QR, barcode, etc.", icon: "integration" },
+    ]
+};
+
+const quickHighlights = {
+    title: "Quick Highlights",
+    points: [
+        "Fast Tap Response (<1 sec)",
+        "Secure UID-based Authentication",
+        "Contactless & Hygienic Entry",
+        "Works with NFC Readers + Smartphones",
+        "Custom Printing Available (Photo/QR/Barcode)",
+        "Pan-India B2B Supply + Support"
+    ]
+};
+
+const applications = {
+    title: "Applications / Use Cases",
+    items: [
+        {
+            title: "School Attendance Systems",
+            text: "Automate student check-ins with a simple tap.",
+            image: "/headerImages/industries/school.webp"
+        },
+        {
+            title: "Office Employee Attendance",
+            text: "Streamline staff logging and access management.",
+            image: "/headerImages/industries/enterprise.webp"
+        },
+        {
+            title: "Access Control Doors / Turnstiles",
+            text: "Secure entry points with encrypted NFC authentication.",
+            image: "/headerImages/industries/complex.webp"
+        },
+        {
+            title: "Visitor Entry Management",
+            text: "Fast and easy visitor check-in/out process.",
+            image: "/headerImages/industries/event.webp"
+        },
+        {
+            title: "Hostel & Library Entry",
+            text: "Manage access to specific zones and resources.",
+            image: "/headerImages/industries/lib.webp"
+        },
+        {
+            title: "Cashless Canteen / Payments",
+            text: "Implement closed-loop payment systems for institutions.",
+            image: "/headerImages/industries/canteen.webp"
+        },
+        {
+            title: "Event Entry & Pass Verification",
+            text: "Quickly verify attendees at conferences and events.",
+            image: "/headerImages/industries/gate.webp"
+        },
+        {
+            title: "Parking Access & Authentication",
+            text: "Automate gate entry for vehicles with NFC tags.",
+            image: "/headerImages/industries/parking.webp"
+        }
+    ]
+};
+
+const whyChooseData = {
+    title: "Why Choose Nialabs for NFC Solutions?",
+    desc: [
+        "B2B Supply Across India: We deliver NFC cards & tags to schools, offices, hospitals, factories, and system integrators nationwide.",
+        "Custom Branding & Bulk Printing: Professional print quality with ID personalisation options.",
+        "Reliable Scanning Performance: Built for daily tapping, high traffic and real-world usage.",
+        "Consultation & Support: We help you match the correct NFC card/tag with your reader/device setup."
+    ]
+};
+
+const productFaqs = [
+    {
+        question: "What is the use of an NFC card?",
+        solution: "An NFC card is used for tap-based identification in systems like attendance, access control, visitor entry, event passes, and smart verification."
+    },
+    {
+        question: "Do NFC cards work without the internet?",
+        solution: "Yes. NFC tap works offline between the card and the reader. The Internet is only needed if your software uploads data to cloud servers."
+    },
+    {
+        question: "What is the difference between NFC and RFID?",
+        solution: "Both are contactless technologies. NFC works at short range (tap) and is often supported by smartphones, while RFID can work from longer distances depending on the type (like UHF)."
+    },
+    {
+        question: "Can NFC cards be printed with a photo and a logo?",
+        solution: "Yes. Nialabs provides custom NFC card printing with photo, name, logo, barcode, QR code, and unique ID numbers."
+    },
+    {
+        question: "Are NFC cards secure for access control?",
+        solution: "Yes. NFC cards use unique ID-based identification, and when paired with the right system, they help prevent unauthorized entry."
+    },
+    {
+        question: "Can NFC cards be used for school attendance?",
+        solution: "Absolutely. NFC is widely used for student and staff attendance with fast tap entry and accurate reports."
+    },
+    {
+        question: "Will NFC cards work with mobile phones?",
+        solution: "Yes, NFC cards can be scanned by NFC-enabled smartphones, depending on your setup and app usage."
+    },
+    {
+        question: "What is the lifespan of NFC cards?",
+        solution: "NFC cards are designed for long-term daily use, especially when made with good-quality PVC and proper printing."
+    },
+    {
+        question: "Do you provide NFC tags and key fobs, too?",
+        solution: "Yes. Nialabs supplies NFC PVC cards, tags/stickers, and key fobs depending on your requirement."
+    },
+    {
+        question: "Do you deliver NFC cards across India?",
+        solution: "Yes, we provide pan-India delivery for bulk NFC card orders"
+    }
+];
+
+const title = "NFC Cards & Tags in India | Access Control & Attendance – Nialabs";
+const description = "Buy high-quality NFC cards & tags for attendance, access control, events & hospitals. Fast tap response, secure UID, pan-India delivery. Get a quote.";
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-white">
+        <ProductHero 
+            title={headerData.title}
+            desc={headerData.desc}
+            image={headerData.image}
+            badge="Tap-and-Go"
+        />
+
+        <ProductExplainer 
+            title={whatData.title}
+            desc={whatData.desc}
+            image="/headerImages/cards/NFC.webp"
+        />
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">{problemSolution.problem.title}</h2>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">{problemSolution.problem.subtitle}</h3>
+                        <ul class="space-y-4">
+                            {problemSolution.problem.points.map((point) => (
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-red-500 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                    <span class="text-gray-600 text-lg">{point}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl shadow-sm border border-green-100">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">{problemSolution.solution.title}</h2>
+                        <h3 class="text-xl font-semibold text-gray-700 mb-4">{problemSolution.solution.subtitle}</h3>
+                        <ul class="space-y-4">
+                            {problemSolution.solution.points.map((point) => (
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-green-500 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    <span class="text-gray-600 text-lg">{point}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <ProductFeatures 
+            title={keyFeatures.title}
+            features={keyFeatures.points}
+        />
+
+        <ProductBenefits 
+            title={quickHighlights.title}
+            benefits={quickHighlights.points}
+        />
+
+        <ProductIndustries 
+            title={applications.title}
+            items={applications.items}
+        />
+
+        <WhyChooseNialabs 
+            title={whyChooseData.title}
+            points={whyChooseData.desc}
+            image="/headerImages/why-choose-nialabs.png"
+        />
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-[40px] bg-blue-600 p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-500/20">
+                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
+                    
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                                Ready to upgrade to <br/> Tap-and-Go NFC?
+                            </h2>
+                            <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+                                Get high-quality NFC cards & tags for attendance, access control, events, and secure entry.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="/contactUs" class="px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl">
+                                    Book a Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+                            <ul class="space-y-6">
+                                {[
+                                    "Bulk pricing",
+                                    "Custom printing",
+                                    "Pan-India delivery"
+                                ].map((point) => (
+                                    <li class="flex items-center text-white text-xl font-semibold">
+                                        <div class="w-10 h-10 rounded-xl bg-green-400/20 flex items-center justify-center mr-4 text-green-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        {point}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Faq 
+            faqs={productFaqs}
+            title="Frequently Asked Questions"
+        />
+    </main>
+    <Footer />
+</Layout>

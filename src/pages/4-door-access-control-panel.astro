@@ -1,0 +1,313 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ProductHero from '../components/ProductHero.astro';
+import ProductExplainer from '../components/ProductExplainer.astro';
+import ProductFeatures from '../components/ProductFeatures.astro';
+import ProductIndustries from '../components/ProductIndustries.astro';
+import Footer from '../components/Footer.astro';
+import Faq from '../components/Faq.astro';
+import WhyChooseNialabs from '../components/WhyChooseNialabs.astro';
+
+const headerData = {
+    title: "4-Port Access Controller by Nialabs",
+    desc: "Control up to 4 doors with a single intelligent controller, ideal for offices, schools, factories, hospitals, and commercial buildings.",
+    image: "/headerImages/cards/access-controller.webp",
+};
+
+const whatData = {
+    title: "What is a 4-Port Access Controller?",
+    desc: [
+        "A 4 Port Access Controller is a centralized hardware device that manages access to four separate doors or entry points. It works with RFID cards, biometric devices, keypads, or mobile applications to ensure that only authorised users can enter restricted areas.",
+        "Nialabs’ 4-port access controller offers high security, real-time monitoring, and seamless integration with attendance and ERP systems."
+    ],
+};
+
+const keyFeatures = {
+    title: "Key Features of Nialabs 4 Port Access Controller",
+    points: [
+        { text: "Multi-Door Access Management: Control and monitor up to four doors simultaneously from a single centralized controller.", icon: "integration" },
+        { text: "Attendance System Integration: Integrates smoothly with attendance, HRMS, and ERP systems for automation.", icon: "ai" },
+        { text: "Secure Door Lock Control: Works seamlessly with EM locks, drop bolts, and electric strikes for safety.", icon: "cloud" },
+        { text: "Offline Data Storage: Stores access logs locally during network failure and syncs automatically.", icon: "analytics" },
+        { text: "User & Credential Management: Add, edit, or revoke users and access rights with ease.", icon: "spoofing" },
+        { text: "Time-Based Access Control: Allows access based on time schedules, shifts, or predefined rules.", icon: "gps" },
+    ]
+};
+
+const applications = {
+    title: "Where Can You Use It?",
+    items: [
+        {
+            title: "Corporate Offices",
+            text: "Efficiently manage multiple entry points and restricted zones within office buildings.",
+            image: "/headerImages/industries/enterprise.webp"
+        },
+        {
+            title: "Schools & Colleges",
+            text: "Secure main gates, administration halls, and library entrances with centralized control.",
+            image: "/headerImages/industries/school.webp"
+        },
+        {
+            title: "Hospitals & Clinics",
+            text: "Restrict access to OT, medicine storage, and sensitive wards to authorized personnel only.",
+            image: "/headerImages/industries/Healthcare.webp"
+        },
+        {
+            title: "Factories & Warehouses",
+            text: "Monitor staff movement and secure inventory areas with high-performance tracking.",
+            image: "/headerImages/industries/warehouse.webp"
+        },
+        {
+            title: "IT Parks & Co-working Spaces",
+            text: "Flexible access management for multi-tenant environments and shared workspaces.",
+            image: "/headerImages/industries/cowork.webp"
+        },
+        {
+            title: "Residential Complexes",
+            text: "Secure entry for residents, guests, and staff across multiple clubhouses or building blocks.",
+            image: "/headerImages/industries/complex.webp"
+        }
+    ]
+};
+
+const technicalSpecs = [
+    { label: "Control Doors", value: "4 Doors" },
+    { label: "Reader Support", value: "4 Wiegand / RS485" },
+    { label: "User Capacity", value: "30,000 Users" },
+    { label: "Event Buffer", value: "60,000 Transactions" },
+    { label: "Communication", value: "TCP/IP" },
+    { label: "Operating Voltage", value: "12V DC" },
+    { label: "Input / Output", value: "8 Inputs / 4 Form C Relays" }
+];
+
+const whyChooseData = {
+    title: "Why Choose Nialabs 4 Port Access Controller",
+    desc: [
+        "Advanced Security: Ensures authorized access with real-time validation and alerts.",
+        "Multi-Authentication: Supports RFID, biometric, PIN, and mobile credentials.",
+        "Centralized Control: Monitor doors, users, and access logs from one dashboard.",
+        "Easy Integration: Works seamlessly with attendance, HRMS, and ERP systems.",
+        "Robust Hardware: Industrial-grade design for reliable long-term operation.",
+        "Scalable Design: Easily expandable for future doors and locations."
+    ]
+};
+
+const faqData = [
+  {
+    question: "What is a 4 Port Access Controller?",
+    solution:
+      "A 4 Port Access Controller is a device that manages and controls access for up to four doors from a single system.",
+  },
+  {
+    question: "Which authentication methods are supported?",
+    solution:
+      "It supports RFID cards, biometric devices, PIN keypads, and mobile-based access methods.",
+  },
+  {
+    question: "Can it be integrated with attendance systems?",
+    solution:
+      "Yes, it can be seamlessly integrated with attendance, HRMS, payroll, and ERP systems.",
+  },
+  {
+    question: "Does the controller work during network failure?",
+    solution:
+      "Yes, it stores data offline locally and automatically syncs once the network is restored.",
+  },
+  {
+    question: "What types of door locks are compatible?",
+    solution:
+      "The controller works with EM locks, electric strikes, and drop bolt locks.",
+  },
+  {
+    question: "Is remote monitoring and control possible?",
+    solution:
+      "Yes, administrators can monitor doors, users, and access logs remotely via the dashboard.",
+  },
+  {
+    question: "Is the system suitable for schools and offices?",
+    solution:
+      "Yes, it is widely used in schools, colleges, offices, hospitals, and factories.",
+  },
+  {
+    question: "Does it support time-based access rules?",
+    solution:
+      "Yes, access can be configured based on time schedules, shifts, or user roles.",
+  },
+  {
+    question: "Can the system be expanded in the future?",
+    solution:
+      "Yes, the solution is scalable and supports expansion with additional devices and controllers.",
+  },
+];
+
+const title = "Advanced 4 Door Access Controller with Centralized Monitoring | Nialabs";
+const description = "High-performance 4 door access controller with centralized access management, user permissions, and real-time tracking for enhanced security systems.";
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-white">
+        <ProductHero 
+            title={headerData.title}
+            desc={headerData.desc}
+            image={headerData.image}
+            badge="Centralized Security"
+        />
+
+        <section class="py-16 bg-[#f8fafc] relative overflow-hidden" id="explore">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
+            <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                    <div class="lg:col-span-7 bg-white/60 backdrop-blur-xl rounded-[48px] p-8 md:p-12 lg:p-16 border border-white shadow-2xl shadow-slate-200/50">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-1 bg-[#2067e2] rounded-full"></div>
+                            <p class="text-sm font-black text-blue-600 uppercase tracking-widest">About the system</p>
+                        </div>
+                        <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-8">
+                            {whatData.title}
+                        </h2>
+                        <div class="space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
+                            {whatData.desc.map((paragraph) => (
+                                <p>{paragraph}</p>
+                            ))}
+                        </div>
+                        <div class="mt-12 pt-8 border-t border-slate-200/60">
+                            <p class="text-sm font-bold text-slate-500">
+                                Trusted by <span class="text-slate-900">1000+ Organizations</span> across India.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative group mt-8 lg:mt-0">
+                        <div class="relative w-full rounded-[48px] overflow-hidden shadow-2xl border border-white transform transition-all duration-700 group-hover:scale-[1.02] bg-white">
+                            <img 
+                                src="/headerImages/cards/access-control-Many-Doors.webp" 
+                                alt={whatData.title} 
+                                class="w-full h-auto object-contain transform transition-transform duration-1000 group-hover:scale-105"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-extrabold text-gray-900 mb-6">How it Works</h2>
+                        <ul class="space-y-6">
+                            {[
+                                "User presents RFID card/fingerprint/face / PIN",
+                                "Controller verifies credentials",
+                                "The door lock opens if authorized",
+                                "Entry data is logged in the system",
+                                "Admin can monitor everything from the dashboard"
+                            ].map((step, index) => (
+                                <li class="flex items-start">
+                                    <div class="flex-none bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                                        {index + 1}
+                                    </div>
+                                    <p class="text-gray-600 text-lg">{step}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">
+                        <img src="/headerImages/cards/port1.webp" alt="4 Door Access Controller Working" class="rounded-2xl w-full" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <ProductFeatures 
+            title={keyFeatures.title}
+            features={keyFeatures.points}
+        />
+
+        <ProductIndustries 
+            title={applications.title}
+            items={applications.items}
+        />
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">Technical Specifications</h2>
+                        <div class="space-y-4">
+                            {technicalSpecs.map((spec) => (
+                                <div class="flex border-b border-gray-100 py-2 last:border-0 hover:bg-slate-50 transition-colors px-2 rounded-lg">
+                                    <span class="w-1/2 font-bold text-gray-600">{spec.label}</span>
+                                    <span class="w-1/2 text-gray-900 font-semibold">{spec.value}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-[2rem] opacity-10 blur-2xl group-hover:opacity-20 transition-opacity"></div>
+                        <img 
+                            src="/headerImages/cards/access-controller.webp" 
+                            alt="4 Door Access Controller Specifications" 
+                            class="relative rounded-3xl shadow-2xl w-full object-cover transform transition-all duration-500 group-hover:scale-[1.02]"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <WhyChooseNialabs 
+            title={whyChooseData.title}
+            points={whyChooseData.desc}
+            image="/headerImages/cards/access-controller.webp"
+        />
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-[40px] bg-blue-600 p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-500/20">
+                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
+                    
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                                Looking for a Reliable <br/> 4 Door Access Control System?
+                            </h2>
+                            <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+                                Talk to our experts and get a customized access control solution for your organization.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="/contactUs" class="px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl">
+                                    Book a Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+                            <ul class="space-y-6">
+                                {[
+                                    "Centralized multi-door management",
+                                    "Biometric & RFID support",
+                                    "Real-time event logging"
+                                ].map((point) => (
+                                    <li class="flex items-center text-white text-xl font-semibold">
+                                        <div class="w-10 h-10 rounded-xl bg-green-400/20 flex items-center justify-center mr-4 text-green-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        {point}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Faq 
+            faqs={faqData}
+            title="Frequently Asked Questions"
+        />
+    </main>
+    <Footer />
+</Layout>

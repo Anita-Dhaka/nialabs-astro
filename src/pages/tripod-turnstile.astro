@@ -1,0 +1,283 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ProductHero from '../components/ProductHero.astro';
+import ProductExplainer from '../components/ProductExplainer.astro';
+import ProcessSteps from '../components/ProcessSteps.astro';
+import ProductFeatures from '../components/ProductFeatures.astro';
+import ProductIndustries from '../components/ProductIndustries.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+import WhyChooseNialabs from '../components/WhyChooseNialabs.astro';
+
+const headerData = {
+    title: "Tripod Turnstile Access Control System in India",
+    desc: "Smart, Secure & Controlled Entry Solutions for Schools, Offices & Industries",
+    image: "/headerImages/cards/tt1.webp",
+};
+
+const whatData = {
+    title: "What is a Tripod Turnstile?",
+    desc: [
+        "A tripod turnstile is a mechanical gate with three rotating arms that allows controlled single-person entry or exit. It prevents tailgating and unauthorized access, making it ideal for schools, offices, factories, hospitals, and parking areas.",
+        "Nialabs tripod turnstiles combine robust stainless-steel construction with smart electronic control for seamless integration with access systems."
+    ],
+};
+
+const howItWorks = {
+    title: "How Tripod Turnstiles Work",
+    steps: [
+        {
+            title: "Authentication",
+            icon: "enrollment",
+            details: ["User presents RFID card, biometric, or QR code to the reader."]
+        },
+        {
+            title: "Validation",
+            icon: "matching",
+            details: ["The access controller validates the user credentials in real-time."]
+        },
+        {
+            title: "Unlocked Entry",
+            icon: "capture",
+            details: ["After validation, the turnstile arm unlocks and allows one person to pass."]
+        },
+        {
+            title: "Logging",
+            icon: "analytics",
+            details: ["Entry data is logged in the system for attendance and reporting."]
+        }
+    ]
+};
+
+const keyFeatures = {
+    title: "Key Features",
+    points: [
+        { text: "One-Person-One-Entry: Prevents tailgating and ensures disciplined movement.", icon: "ai" },
+        { text: "Multi-Authentication: Works with RFID, Biometric, QR, and Access Controllers.", icon: "integration" },
+        { text: "Durable Body: Built with SS 304 / SS 316 for long-term Indian conditions.", icon: "analytics" },
+        { text: "Smooth Operation: Low-noise rotation for comfort in professional environments.", icon: "spoofing" },
+        { text: "Power-Failure Mode: Automatically unlocks or locks during power failure.", icon: "cloud" },
+        { text: "Bidirectional Access: Supports entry and exit with clear direction indicators.", icon: "gps" },
+    ]
+};
+
+const applications = {
+    title: "Applications of Tripod Turnstile Systems",
+    items: [
+        {
+            title: "Schools & Educational Institutions",
+            text: "Controls student and staff entry while integrating with attendance systems.",
+            image: "/headerImages/industries/school.webp"
+        },
+        {
+            title: "Corporate Offices & IT Parks",
+            text: "Ensures secure and professional access management for employees and visitors.",
+            image: "/headerImages/industries/enterprise.webp"
+        },
+        {
+            title: "Factories & Industrial Units",
+            text: "Prevents unauthorized entry into production and restricted zones.",
+            image: "/headerImages/industries/complex.webp"
+        },
+        {
+            title: "Parking & Public Entry Areas",
+            text: "Ideal for paid entry zones, staff parking, and gated access points.",
+            image: "/headerImages/industries/parking.webp"
+        }
+    ]
+};
+
+const whyChooseData = {
+    title: "Why Choose Nialabs Tripod Turnstile?",
+    desc: [
+        "Enterprise-Grade Build Quality: Designed for continuous operation in high-footfall areas.",
+        "Seamless System Integration: Works smoothly with Nialabs access control and attendance solutions.",
+        "Made for Indian Infrastructure: Optimized for Indian power conditions and usage patterns.",
+        "Custom Deployment Support: Layout planning, device integration, and on-site assistance available."
+    ]
+};
+
+const productFaqs = [
+    {
+        question: "What is a tripod turnstile used for?",
+        solution: "A tripod turnstile is used to control single-person entry in secure areas like schools, offices, factories, and hospitals."
+    },
+    {
+        question: "Can tripod turnstiles integrate with RFID systems?",
+        solution: "Yes, tripod turnstiles integrate seamlessly with RFID card readers and access controllers."
+    },
+    {
+        question: "Are biometric devices supported?",
+        solution: "Yes, fingerprint and face recognition devices can be easily connected to the turnstile system."
+    },
+    {
+        question: "Is the tripod turnstile suitable for high-traffic areas?",
+        solution: "Yes, it is designed for continuous operation in high-footfall environments."
+    },
+    {
+        question: "What happens during a power failure?",
+        solution: "The system supports fail-safe or fail-secure modes, depending on configuration."
+    },
+    {
+        question: "Can entry data be logged and reported?",
+        solution: "Yes, all entry and exit events are logged and available for reports through the software."
+    }
+];
+
+const title = "Tripod Turnstile Access Control System in India | Nialabs";
+const description = "Secure pedestrian entry with Nialabs Tripod Turnstile. Ideal for schools, offices, factories, hospitals & parking. RFID and biometric support.";
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-white">
+        <ProductHero 
+            title={headerData.title}
+            desc={headerData.desc}
+            image={headerData.image}
+            badge="Secure Entry"
+        />
+
+        <ProductExplainer 
+            title={whatData.title}
+            desc={whatData.desc}
+            image="/headerImages/cards/TT2.webp"
+        />
+
+        <ProcessSteps 
+            title={howItWorks.title}
+            steps={howItWorks.steps}
+        />
+
+        <ProductFeatures 
+            title={keyFeatures.title}
+            features={keyFeatures.points}
+        />
+
+        <ProductIndustries 
+            title={applications.title}
+            items={applications.items}
+        />
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Tripod Turnstile vs Traditional Gate</h2>
+                    <p class="text-lg text-gray-600">See why automated turnstiles are the superior choice for modern facilities.</p>
+                </div>
+                <div class="overflow-hidden rounded-3xl border border-gray-200 shadow-xl bg-white">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-900 text-white">
+                                <th class="px-6 py-5 font-bold text-lg">Feature</th>
+                                <th class="px-6 py-5 font-bold text-lg text-blue-400">Tripod Turnstile</th>
+                                <th class="px-6 py-5 font-bold text-lg text-gray-400">Manual Gate</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            {[
+                                { f: "Access Control", t: "Automated", m: "Manual" },
+                                { f: "Tailgating Prevention", t: "Yes", m: "No" },
+                                { f: "Integration", t: "RFID / Biometric", m: "Not Possible" },
+                                { f: "Logging & Reports", t: "Yes", m: "No" },
+                                { f: "Security Level", t: "High", m: "Low" }
+                            ].map((row) => (
+                                <tr class="hover:bg-blue-50/30 transition-colors">
+                                    <td class="px-6 py-5 font-bold text-gray-700">{row.f}</td>
+                                    <td class="px-6 py-5 font-semibold text-blue-600">{row.t}</td>
+                                    <td class="px-6 py-5 text-gray-500">{row.m}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">Technical Specifications</h2>
+                        <div class="space-y-4">
+                            {[
+                                { label: "Material", value: "Stainless Steel (SS 304 / SS 316)" },
+                                { label: "Arm Type", value: "Tripod (3-arm)" },
+                                { label: "Direction", value: "Bi-directional" },
+                                { label: "Passage Width", value: "500–600 mm" },
+                                { label: "Operating Voltage", value: "AC 220V / DC 24V" },
+                                { label: "Operating Temperature", value: "-10°C to 60°C" }
+                            ].map((spec) => (
+                                <div class="flex border-b border-gray-100 py-4 last:border-0 hover:bg-slate-50 transition-colors px-2 rounded-lg">
+                                    <span class="w-1/2 font-bold text-gray-600">{spec.label}</span>
+                                    <span class="w-1/2 text-gray-900 font-semibold">{spec.value}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-[2rem] opacity-10 blur-2xl group-hover:opacity-20 transition-opacity"></div>
+                        <img 
+                            src="/headerImages/cards/TT4.webp" 
+                            alt="Turnstile Specifications" 
+                            class="relative rounded-3xl shadow-2xl w-full object-cover transform transition-all duration-500 group-hover:scale-[1.02]"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <WhyChooseNialabs 
+            title={whyChooseData.title}
+            points={whyChooseData.desc}
+            image="/headerImages/cards/TT3.webp"
+        />
+
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-[40px] bg-blue-600 p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-500/20">
+                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
+                    
+                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                                Need a Reliable Tripod Turnstile System?
+                            </h2>
+                            <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+                                Secure your facility with Nialabs high-performance turnstile solutions.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="/contactUs" class="px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl">
+                                    Book a Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
+                            <ul class="space-y-6">
+                                {[
+                                    "Durable build",
+                                    "Seamless integration",
+                                    "Expert support"
+                                ].map((point) => (
+                                    <li class="flex items-center text-white text-xl font-semibold">
+                                        <div class="w-10 h-10 rounded-xl bg-green-400/20 flex items-center justify-center mr-4 text-green-400">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        {point}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Faq 
+            faqs={productFaqs}
+            title="Frequently Asked Questions"
+        />
+    </main>
+    <Footer />
+</Layout>
