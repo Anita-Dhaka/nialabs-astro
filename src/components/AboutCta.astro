@@ -1,4 +1,13 @@
 ---
+interface Props {
+  title?: string;
+  desc?: string;
+}
+
+const {
+  title = "Smarter Attendance <br class=\"hidden md:block\"/> Starts Here",
+  desc = "From classrooms to boardrooms, Nialabs makes attendance and access control simple, reliable, and future-ready. Take the first step toward efficiency today."
+} = Astro.props;
 ---
 
 <section class="py-10 bg-white">
@@ -9,12 +18,10 @@
       <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
       
       <div class="relative z-10 max-w-3xl">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-          Smarter Attendance <br class="hidden md:block"/> Starts Here
-        </h2>
-        <p class="text-lg md:text-xl text-blue-100 mb-10 leading-relaxed">
-          From classrooms to boardrooms, Nialabs makes attendance and access control simple, reliable, and future-ready. Take the first step toward efficiency today.
-        </p>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight" set:html={title}></h2>
+        {desc && (
+          <p class="text-lg md:text-xl text-blue-100 mb-10 leading-relaxed" set:html={desc}></p>
+        )}
         
         <div class="flex flex-wrap gap-4">
           <a 

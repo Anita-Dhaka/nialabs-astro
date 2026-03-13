@@ -1,0 +1,184 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ProductHero from '../components/ProductHero.astro';
+import ProductExplainer from '../components/ProductExplainer.astro';
+import ProductFeatures from '../components/ProductFeatures.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+import AboutCta from '../components/AboutCta.astro';
+import SecurityPrivacy from '../components/SecurityPrivacy.astro';
+
+const headerData = {
+    title: "AI Biometric vs Traditional Attendance Systems",
+    desc: [
+        "Which system provides more accuracy, security, and efficiency?",
+        "Explore the straightforward comparison and discover why forward-thinking organisations are choosing AI-powered biometrics."
+    ],
+    image: "/headerImages/ai2.webp",
+};
+
+const whatIsTraditional = {
+    title: "What's Traditional Attendance & Why It's Inefficient",
+    desc: [
+        "Explore the outdated attendance methods still in use and the inherent Challenges they present to modern organizations."
+    ],
+    list: [
+        "Manual sign-in sheets & registers leading to lost records",
+        "Punch cards & mechanical time clocks causing bottlenecks",
+        "ID cards & RFID swipe cards prone to loss",
+        "PIN or code-based logins facing security risks",
+        "Buddy punching and proxy attendance issues",
+        "Manual errors, incorrect entries, and oversight"
+    ]
+};
+
+const whatIsAi = {
+    title: "What is AI Biometric Attendance?",
+    desc: [
+        "AI Biometric Attendance uses biometric identifiers (fingerprints, face, iris, etc.) enhanced with Artificial Intelligence/ Machine Learning to verify identity accurately and in near real-time."
+    ],
+    list: [
+        "Face recognition using AI algorithms",
+        "Anti-spoofing & liveness detection (detects fake photos or masks)",
+        "Cloud API integration and real-time sync with HR",
+        "Multimodal biometrics (face, fingerprint, hybrid)",
+        "Secure cryptographic storage and encryption"
+    ]
+};
+
+const howItStandsOut = {
+    title: "How Nialabs' AI Biometric Attendance Solution Stands Out",
+    points: [
+        {
+            text: "Cloud API & real-time integration with HR/ERP",
+        },
+        {
+            text: "Modular & scalable across branches and locations",
+        },
+        {
+            text: "Liveness/spoof detection that distinguishes real faces",
+        },
+        {
+            text: "Multi-modal options (Face, fingerprint, hybrid)",
+        },
+        {
+            text: "Backward compatibility that supports existing hardware",
+        },
+        {
+            text: "Rich actionable analytics & cloud dashboards",
+        },
+    ]
+};
+
+const comparisonData = [
+  { feature: "Identity verification", traditional: "Weak (cards, PINs)", ai: "Strong (unique biometrics)" },
+  { feature: "Proxy/fraud risk", traditional: "High", ai: "Low/minimal (anti-spoofing)" },
+  { feature: "Speed & throughput", traditional: "Moderate/slow during peak", ai: "Fast/real-time" },
+  { feature: "Data integration", traditional: "Manual / batch uploads", ai: "API / cloud synchronisation" },
+  { feature: "Maintenance cost", traditional: "Cards, punch machine upkeep, paper", ai: "Device firmware updates, cloud infrastructure" },
+  { feature: "Hygiene/contact", traditional: "Physical touches (cards, punch)", ai: "Mostly contactless" },
+  { feature: "Accuracy & error rate", traditional: "Higher error due to human / misuse", ai: "Lower, with AI refinement" },
+  { feature: "Reporting & analytics", traditional: "Basic/manual", ai: "Advanced dashboards, insights" },
+];
+
+const faqs = [
+  {
+    question: "What is the difference between AI Biometric and Traditional Attendance Systems?",
+    solution: "Traditional systems use cards or manual logs, while AI biometric systems use face or fingerprint recognition for faster, more secure attendance.",
+  },
+  {
+    question: "How does an AI Biometric Attendance System work?",
+    solution: "It captures a user’s biometric data and verifies identity instantly using AI, syncing records to the cloud in real time.",
+  },
+  {
+    question: "Is AI Biometric Attendance safe and privacy-compliant?",
+    solution: "Yes, it uses encrypted data storage and liveness detection, ensuring complete user privacy and security.",
+  },
+  {
+    question: "Can AI Biometric systems replace traditional attendance completely?",
+    solution: "Yes, AI systems are faster, contactless, and more reliable, making them a complete replacement for traditional methods.",
+  },
+  {
+    question: "Where can AI Biometric Attendance be used?",
+    solution: "They’re ideal for schools, offices, factories, and institutions needing accurate and automated attendance tracking.",
+  },
+];
+
+const title = "AI Biometric vs Traditional Attendance Systems | Nialabs";
+const description = "Explore the straightforward comparison between traditional attendance and AI biometrics, and discover why organizations are upgrading.";
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-white">
+        <ProductHero 
+            title={headerData.title}
+            desc={headerData.desc}
+            image={headerData.image}
+            badge="Comparative Guide"
+            primaryButtonText="Book a Demo"
+            primaryButtonLink="#explore"
+            secondaryButtonText="Talk to us"
+            secondaryButtonLink="/contactUs"
+        />
+
+        <ProductExplainer 
+            title={whatIsTraditional.title}
+            desc={whatIsTraditional.desc}
+            list={whatIsTraditional.list}
+            image="/headerImages/traditional_attendance.png"
+            reverse={false}
+        />
+        
+        <ProductExplainer 
+            title={whatIsAi.title}
+            desc={whatIsAi.desc}
+            list={whatIsAi.list}
+            image="/product/ai06/229.png"
+            reverse={true}
+        />
+
+        <section class="py-16 bg-slate-50 relative overflow-hidden xl:px-0">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+              <h2 class="text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Direct Comparison: AI vs Traditional</h2>
+              <div class="w-16 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                  <thead>
+                    <tr class="bg-slate-900 text-white">
+                      <th class="py-4 px-6 font-semibold text-lg border-b border-slate-700">Feature</th>
+                      <th class="py-4 px-6 font-semibold text-lg border-b border-slate-700 text-slate-300">Traditional System</th>
+                      <th class="py-4 px-6 font-semibold text-lg border-b border-slate-700 text-blue-400 bg-slate-800">AI Biometric System</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-100 text-slate-700">
+                    {comparisonData.map((row, index) => (
+                      <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="py-4 px-6 font-medium text-slate-900">{row.feature}</td>
+                        <td class="py-4 px-6 text-slate-600">{row.traditional}</td>
+                        <td class="py-4 px-6 font-semibold text-blue-700 bg-blue-50/30">{row.ai}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <ProductFeatures 
+            title={howItStandsOut.title}
+            features={howItStandsOut.points}
+        />
+
+        <Faq faqs={faqs} title="Frequently Asked Questions" />
+        
+        <AboutCta title="Step Into the Future of Attendance with Nialabs AI Solutions" desc="" />
+    </main>
+    <Footer />
+</Layout>

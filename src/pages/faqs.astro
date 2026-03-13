@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ProductHero from '../components/ProductHero.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
+import AboutCta from '../components/AboutCta.astro';
+import { headerData, faqsData } from '../data/faqs';
+
+const title = "Frequently Asked Questions | Nialabs";
+const description = "Find answers to common questions about Nialabs biometric attendance, access control systems, partner support, installation, pricing & features.";
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-[#f8fafc]">
+        <ProductHero 
+            title="We've Got Answers!"
+            desc="Find answers to common questions about Nialabs biometric attendance, access control systems, partner support, installation, pricing & features."
+            image="/headerImages/AI_Biometrics.webp"
+            badge="Knowledge Base"
+            primaryButtonText="Contact Support"
+            primaryButtonLink="/contactUs"
+        />
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+                
+                <!-- Sticky Sidebar Navigation -->
+                <aside class="w-full lg:w-1/3 xl:w-1/4">
+                    <div class="sticky top-32 bg-white rounded-3xl p-6 shadow-xl shadow-slate-200/50 border border-slate-100 hidden lg:block">
+                        <h3 class="font-extrabold text-slate-900 text-xl mb-6 flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+                            </span>
+                            Categories
+                        </h3>
+                        <nav class="space-y-2">
+                            {headerData.map((category) => (
+                                <a 
+                                    href={category.path} 
+                                    class="block px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 hover:text-blue-600 font-semibold transition-colors duration-200"
+                                >
+                                    {category.headerName}
+                                </a>
+                            ))}
+                        </nav>
+                    </div>
+
+                    <!-- Mobile/Tablet Category Dropdown -->
+                    <div class="lg:hidden mb-8">
+                        <select 
+                            onchange="window.location.hash = this.value"
+                            class="w-full bg-white border border-slate-200 text-slate-700 font-semibold rounded-2xl px-4 py-4 shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                        >
+                            <option value="">Jump to Category...</option>
+                            {headerData.map((category) => (
+                                <option value={category.path}>{category.headerName}</option>
+                            ))}
+                        </select>
+                    </div>
+                </aside>
+
+                <!-- FAQ Content Area -->
+                <div class="w-full lg:w-2/3 xl:w-3/4 space-y-20">
+                    {headerData.map((category) => {
+                        const dictKey = category.path.replace('#', '') as keyof typeof faqsData;
+                        const questions = faqsData[dictKey];
+                        
+                        if(!questions || questions.length === 0) return null;
+
+                        return (
+                            <div id={dictKey} class="scroll-mt-32">
+                                <div class="bg-white rounded-[40px] shadow-xl shadow-slate-200/40 border border-slate-100 overflow-hidden">
+                                    <div class="bg-gradient-to-r from-slate-900 to-slate-800 px-8 py-6">
+                                        <h2 class="text-2xl font-extrabold text-white">{category.headerName}</h2>
+                                    </div>
+                                    <div class="p-4 md:p-8">
+                                        <!-- Reusing the existing Faq logic inside the category container -->
+                                        <div class="space-y-4">
+                                            {questions.map((faq, index) => (
+                                                <details class="group bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                                                    <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 text-slate-800 hover:text-blue-600 transition-colors">
+                                                        <span class="pr-6 text-[17px]">{faq.question}</span>
+                                                        <span class="transition group-open:rotate-180 bg-white shadow-sm p-1.5 rounded-full text-slate-400 group-hover:text-blue-500 group-open:bg-blue-600 group-open:text-white shrink-0">
+                                                            <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" width="20"><path d="M6 9l6 6 6-6"></path></svg>
+                                                        </span>
+                                                    </summary>
+                                                    <div class="text-slate-600 px-5 pb-5 leading-relaxed font-medium">
+                                                        <p>{faq.solution}</p>
+                                                    </div>
+                                                </details>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    <Footer />
+</Layout>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

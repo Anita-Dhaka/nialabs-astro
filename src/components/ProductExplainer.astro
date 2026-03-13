@@ -1,7 +1,8 @@
 ---
 interface Props {
   title: string;
-  desc: string[];
+  desc?: string[];
+  list?: string[];
   image?: string;
   imageFirst?: boolean;
 }
@@ -9,6 +10,7 @@ interface Props {
 const { 
   title, 
   desc, 
+  list,
   image = "/headerImages/generated-image.png", 
   imageFirst = false 
 } = Astro.props;
@@ -33,11 +35,21 @@ const {
           {title}
         </h2>
         
-        <div class="space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
-          {desc.map((paragraph) => (
-            <p>{paragraph}</p>
-          ))}
-        </div>
+        {desc && (
+          <div class="space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
+            {desc.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+        )}
+        
+        {list && (
+          <ul class="space-y-4 text-lg text-slate-600 font-medium list-disc pl-6 marker:text-blue-500">
+            {list.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        )}
 
         <div class="mt-12 pt-8 border-t border-slate-200/60">
           <p class="text-sm font-bold text-slate-500">

@@ -1,0 +1,52 @@
+
+> nialabs-astro@0.0.1 build
+> astro build
+
+[2m15:31:45[22m [34m[types][39m Generated [2m74ms[22m
+[2m15:31:45[22m [34m[build][39m output: [34m"static"[39m
+[2m15:31:45[22m [34m[build][39m mode: [34m"static"[39m
+[2m15:31:45[22m [34m[build][39m directory: [34mC:\Users\anita\OneDrive\Documents\Desktop\nialabs-astro\dist\[39m
+[2m15:31:45[22m [34m[build][39m Collecting build info...
+[2m15:31:45[22m [34m[build][39m [32m✓ Completed in 121ms.[39m
+[2m15:31:45[22m [34m[build][39m Building static entrypoints...
+[33m[1m15:31:47[22m [WARN] [vite][39m 
+/mainImages/grid.svg referenced in /mainImages/grid.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+[33m[1m15:31:47[22m [WARN] [vite][39m [33m"matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/index.js".[39m
+[2m15:31:47[22m [34m[vite][39m [32m✓ built in 2.36s[39m
+[2m15:31:48[22m [34m[vite][39m [32m✓ built in 373ms[39m
+[2m15:31:48[22m [34m[build][39m Rearranging server assets...
+
+[42m[30m generating static routes [39m[49m
+[2m15:31:48[22m   [34m├─[39m [2m/4-door-access-control-panel/index.html[22m [2m(+23ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/aboutUs/index.html[22m [2m(+17ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/bus-attendance-system/index.html[22m [2m(+17ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/contactUs/index.html[22m [2m(+22ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/face-recognition-attendance-system/index.html[22m [2m(+23ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/nfc-card/index.html[22m [2m(+25ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/privacy-policy/index.html[22m [2m(+12ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/return-policy/index.html[22m [2m(+15ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/rfid-cards/index.html[22m [2m(+23ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/sitemap/index.html[22m [2m(+18ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/terms-and-conditions/index.html[22m [2m(+12ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/tripod-turnstile/index.html[22m [2m(+22ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/uhf-card/index.html[22m [2m(+20ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/uhf-rfid-reader/index.html[22m [2m(+14ms)[22m 
+[2m15:31:48[22m   [34m├─[39m [2m/biometric-attendance-system-in-bangalore/index.html[22m[31m[1m15:31:48[22m [ERROR][39m TypeError: Cannot read properties of undefined (reading 'map')
+    at file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/WhyChooseNialabs_GRiKmqwT.mjs:38:2093
+    at AstroComponentInstance.WhyChooseNialabs [as factory] (file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/Navbar_DT-99jYE.mjs:19:12)
+    at AstroComponentInstance.init (file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:3893:29)
+    at AstroComponentInstance.render (file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:3903:30)
+    at Object.render (file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:4543:23)
+    at renderChild (file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:3793:18)
+    at file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:3356:22
+    at new BufferedRenderer (file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:3120:26)
+    at createBufferedRenderer (file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:3144:10)
+    at RenderTemplateResult.render (file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:3354:25)
+[31m[1m15:31:48[22m [ERROR] [build][39m Caught error rendering /biometric-attendance-system-in-bangalore: TypeError: Cannot read properties of undefined (reading 'map')
+Cannot read properties of undefined (reading 'map')
+  [1mStack trace:[22m
+[2m    at file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/WhyChooseNialabs_GRiKmqwT.mjs:38:2093
+    at AstroComponentInstance.init (file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:3893:29)
+    at Object.render (file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:4543:23)
+    at file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:3356:22
+    at createBufferedRenderer (file:///C:/Users/anita/OneDrive/Documents/Desktop/nialabs-astro/dist/.prerender/chunks/prerender_BE9mhJuM.mjs:3144:10)[22m

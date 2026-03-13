@@ -1,0 +1,207 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ProductHero from '../components/ProductHero.astro';
+import CityFeatures from '../components/CityFeatures.astro';
+import ProductIndustries from '../components/ProductIndustries.astro';
+import Faq from '../components/Faq.astro';
+
+import { cityData } from '../data/cityData';
+import type { CityData } from '../data/cityData';
+
+export function getStaticPaths() {
+  return cityData.map((data) => ({
+    params: { city: data.route },
+    props: { data },
+  }));
+}
+
+interface Props {
+  data: CityData;
+}
+
+const { data } = Astro.props;
+---
+
+<Layout title={data.metaTitle} description={data.metaDesc}>
+  <Navbar />
+  
+  <ProductHero title={`Biometric Attendance System in ${data.heading}`} desc={data.subHeading} image={data.image} badge="City Spotlight" />
+
+  <section class="py-16 bg-white xl:px-0">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-8">
+      {data.desc && data.desc.map(paragraph => (
+        <p class="text-lg text-slate-600 leading-relaxed mb-6 last:mb-0">{paragraph}</p>
+      ))}
+    </div>
+  </section>
+
+  {/* Why NiaLabs in this City */}
+  {data.whyNia && (
+    <CityFeatures 
+      title={data.whyNia.title} 
+      features={data.whyNia.points.map((p, i) => ({ text: p.text, icon: p.icon || 'ai' }))} 
+    />
+  )}
+
+  {/* Features */}
+  {data.features && (
+    <div class="bg-slate-50">
+        <CityFeatures 
+        title={data.features.title} 
+        subtitle={data.features.desc}
+        features={data.features.points.map((p, i) => ({ text: p.text, icon: p.icon || 'ai' }))} 
+        theme="light"
+        />
+    </div>
+  )}
+
+  {/* Industries */}
+  {data.industries && (
+    <ProductIndustries 
+      title={data.industries.title} 
+      items={data.industries.points.map((p, i) => ({ title: p.title, text: p.desc, image: p.icon || '/uhfReader/enterprise.webp' }))} 
+    />
+  )}
+
+  {/* Devices Offered */}
+  {data.deviceOffer && (
+    <section class="py-20 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">{data.deviceOffer.title}</h2>
+                <div class="w-16 h-1.5 bg-blue-600 rounded-full mx-auto mb-8"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {data.deviceOffer.points.map(device => (
+                    <div class="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                        <div class="h-80 mb-4 bg-slate-50/50 rounded-2xl p-2 flex items-center justify-center shrink-0">
+                            <img src={device.icon} alt={device.title} class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" />
+                        </div>
+                        <div class="flex-grow flex flex-col items-center text-center">
+                            {device.machine && (
+                                <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 font-bold text-sm rounded-full mb-4">{device.machine}</span>
+                            )}
+                            <h3 class="text-xl font-bold text-slate-900 mb-4">{device.title}</h3>
+                            <p class="text-slate-600 leading-relaxed text-sm">{device.desc}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="/products" class="inline-flex items-center gap-2 text-blue-600 font-bold hover:text-blue-700 transition-colors group">
+                    Explore all our devices
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+  )}
+
+  {/* Why Better */}
+  {data.whyBetter && (
+    <CityFeatures 
+      title={data.whyBetter.title} 
+      subtitle={data.whyBetter.desc}
+      features={data.whyBetter.points.map((p, i) => ({ text: p.text, icon: p.icon || 'ai' }))} 
+    />
+  )}
+
+  {/* Testimonials */}
+  {data.testimonials && (
+    <section class="py-24 bg-slate-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">{data.testimonials.title}</h2>
+                <div class="w-16 h-1.5 bg-blue-500 rounded-full mx-auto mb-8"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {data.testimonials.points.map(t => (
+                    <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 flex flex-col justify-between hover:bg-white/10 transition-colors duration-300">
+                        <div class="mb-8 relative">
+                           <svg class="w-8 h-8 text-blue-500/30 absolute -top-4 -left-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
+                           <p class="text-slate-300 leading-relaxed relative z-10 text-sm italic">{t.desc.replace(/^“|”$/g, '')}</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg shrink-0">
+                                {t.position.charAt(0)}
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">{t.position}</h4>
+                                <p class="text-slate-400 text-xs">{t.place} {t.district && `${t.district}`}</p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+  )}
+
+  {/* FAQs */}
+  {data.faqs && (
+    <div class="bg-white">
+        <Faq faqs={data.faqs} />
+    </div>
+  )}
+
+  {/* CTA */}
+  {data.cta && (
+    <section class="py-16 md:py-24 bg-white border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative rounded-[40px] bg-[#2A6DE4] p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-500/20 text-center md:text-left h-full">
+          <!-- Decorative background elements -->
+          <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
+          <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
+          
+          <div class="relative z-10 w-full flex flex-col md:flex-row items-center gap-10 justify-between">
+            <div class="w-full">
+               <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight max-w-2xl">
+                 {data.cta.title}
+               </h2>
+               <div class="space-y-4">
+                 {data.cta.desc.map(p => (
+                    <p class="text-lg md:text-xl text-blue-100 leading-relaxed font-medium max-w-3xl">
+                      {p}
+                    </p>
+                 ))}
+               </div>
+            </div>
+            <div class="shrink-0 flex flex-col gap-4 w-full md:w-auto">
+               <a 
+                 href="/contactUs" 
+                 class="px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl text-center w-full min-w-[200px]"
+               >
+                 Book Free Demo
+               </a>
+               <a 
+                 href="tel:+918069409217" 
+                 class="px-8 py-4 bg-blue-700/50 text-white border border-blue-400/30 font-extrabold rounded-2xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-md flex items-center justify-center gap-2 w-full min-w-[200px]"
+               >
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                 Call Now
+               </a>
+            </div>
+          </div>
+    
+          <!-- Floating visual elements -->
+          <div class="absolute right-0 bottom-0 hidden xl:block opacity-20 pointer-events-none -mr-20 -mb-20">
+            <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="200" cy="200" r="150" stroke="white" stroke-width="2" stroke-dasharray="10 10"/>
+              <circle cx="200" cy="200" r="100" stroke="white" stroke-width="4"/>
+              <path d="M200 100V300M100 200H300" stroke="white" stroke-width="2"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+
+  <Footer />
+</Layout>
