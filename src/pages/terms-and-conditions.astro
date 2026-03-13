@@ -1,0 +1,282 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Terms & Conditions | Nialabs";
+const description = "Read Nialabs Terms and Conditions governing your access to and use of our website, products and services including biometric attendance devices, installation, warranty, and dispute resolution.";
+
+const sections = [
+    {
+        number: "1",
+        title: "Introduction",
+        type: "para",
+        content: "These Terms & Conditions (\"Terms\") govern your access to and use of the website and services provided by Nialabs (hereafter \"we\", \"us\", \"our\"). By accessing or using our website or placing any order for products or services, you agree to be bound by these Terms. If you do not agree to all of these Terms, you must not use our website or services.",
+    },
+    {
+        number: "2",
+        title: "Definitions",
+        type: "definitions",
+        items: [
+            { label: '"Website"', text: "means our site available at www.nialabs.in" },
+            { label: '"Products"', text: "means the biometric attendance devices, modules, accessories, software and related services offered by us." },
+            { label: '"Services"', text: "means installation, commissioning, maintenance, support, consulting related to Products." },
+            { label: '"Customer", "you", "your"', text: "means the person or legal entity ordering or using our Products/Services." },
+            { label: '"Content"', text: "means text, images, data, software, code, and documentation on our Website." },
+        ],
+    },
+    {
+        number: "3",
+        title: "Intellectual Property Rights",
+        type: "para",
+        content: "All Content, including but not limited to text, graphics, logos, device images, and software, is owned by us or our licensors, and is protected by intellectual property laws. You are granted a limited licence to access and use the Website for viewing information about our Products/Services, but you shall not reproduce, distribute, publish, commercialise, modify, or publicly display the Content without our prior written consent.",
+    },
+    {
+        number: "4",
+        title: "Use of the Website",
+        type: "list",
+        intro: "You agree that you will:",
+        items: [
+            "Use the Website only for lawful purposes and in accordance with these Terms.",
+            "Not use the Website in any way that causes, or may cause, damage to the Website or impairment of the availability or accessibility of the Website.",
+            "Not use any data-mining, robots, scraping or other automated means to access or obtain materials from the Website.",
+            "Not use the Website to transmit any unsolicited advertising, chain letters, spam, or other bulk messaging.",
+        ],
+    },
+    {
+        number: "5",
+        title: "Products & Services: Order, Delivery & Installation",
+        type: "paras",
+        items: [
+            "Orders placed for our Products and Services are subject to our acceptance. We may refuse or cancel an order for any reason (including insufficient stock, inability to deliver, or pricing errors).",
+            "Delivery times are estimates only; delays shall not be grounds for cancellation unless explicitly agreed in writing.",
+            "Installation and commissioning (if applicable) shall take place at the location specified by the Customer and according to the schedule agreed. The Customer is responsible for providing access, power, data connectivity and other site requirements.",
+            "The Customer shall allow our authorised personnel safe access to the site for installation, maintenance or support.",
+        ],
+    },
+    {
+        number: "6",
+        title: "Prices, Payment & Taxes",
+        type: "list",
+        items: [
+            "Prices quoted do not include applicable taxes, duties, shipping, or export-import costs unless explicitly stated.",
+            "Payment terms will be as set out in our invoice/quotation. Late payments may incur interest or charges as per applicable law.",
+            "The Customer is responsible for any taxes, duties or other governmental charges in their jurisdiction.",
+        ],
+    },
+    {
+        number: "7",
+        title: "Warranty, Support & Maintenance",
+        type: "list",
+        items: [
+            "We provide a warranty for our Products/Services as set out in our warranty documentation (“Warranty Policy”).",
+            "The warranty excludes defects or damage caused by misuse, neglect, modification, unauthorised repair, external factors (power surge, fire, water damage), or use outside specified conditions.",
+            "Support and maintenance services may be provided under separate maintenance-contract terms or as part of the Product purchase.",
+            "Those separate terms will govern any upgrades, patches, or replacements.",
+        ],
+    },
+    {
+        number: "8",
+        title: "Limitation of Liability",
+        type: "list",
+        items: [
+            "To the fullest extent permitted by law, we exclude any liability for indirect, incidental, special, consequential or punitive damages, including loss of profits, loss of data, or business interruption, arising out of or related to your use of our Products/Services/Website.",
+            "Our total aggregate liability under or in connection with these Terms shall not exceed the amount paid by you for the Product or Service giving rise to liability.",
+            "Nothing in these Terms shall exclude liability for death or personal injury caused by our negligence, or other liabilities that cannot legally be excluded.",
+        ],
+    },
+    {
+        number: "9",
+        title: "Customer Obligations & Data Use",
+        type: "list",
+        items: [
+            "You warrant that you have the legal capacity to enter into these Terms and that any information provided is accurate and up-to-date.",
+            "You shall comply with all applicable laws and regulations, including data privacy laws, when using biometric devices, handling biometric data of individuals, obtaining necessary consents, and securing such data. (For example, biometric identifiers like fingerprints, face geometry, and iris scans may be subject to tighter regulation).",
+            "You consent to use the Products/Services as intended, and you shall not use them for any unlawful purpose or in a way that violates third-party rights.",
+        ],
+    },
+    {
+        number: "10",
+        title: "Changes to Terms & Variation",
+        type: "para",
+        content: "We reserve the right to revise and update these Terms at any time by publishing the updated Terms on the Website. Your continued use of the Website after any change constitutes your acceptance of the updated Terms. We may also assign, transfer, or subcontract our rights or obligations under these Terms without notice to you.",
+    },
+    {
+        number: "11",
+        title: "Severability",
+        type: "para",
+        content: "Suppose any provision of these Terms is held to be invalid, illegal or unenforceable under applicable law. In that case, such provision shall be struck out and the remaining provisions shall remain in full force and effect.",
+    },
+    {
+        number: "12",
+        title: "Governing Law & Jurisdiction",
+        type: "para",
+        content: "These Terms shall be governed by and construed in accordance with the laws of India. Any dispute arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts in Jaipur, Rajasthan.",
+    },
+    {
+        number: "13",
+        title: "Entire Agreement",
+        type: "para",
+        content: "These Terms, together with any documents or policies referred to herein (e.g., our Warranty Policy, Privacy Policy), constitute the entire agreement between you and us concerning your use of the Website and the purchase of our Products/Services and supersede all prior agreements or understandings.",
+    },
+];
+
+const arbitrationClauses = [
+    {
+        subtitle: "Governing Law",
+        text: "This Agreement and all matters arising out of or relating to this Agreement shall be governed by, and construed in accordance with, the laws of the Republic of India, without regard to its conflict of law principles.",
+    },
+    {
+        subtitle: "Arbitration",
+        text: "Any dispute, difference, controversy or claim arising out of or in connection with this Agreement, including any question regarding its existence, validity or termination, shall be referred to and finally resolved by binding arbitration in accordance with the provisions of the Arbitration and Conciliation Act, 1996 (as amended).",
+        bullets: [
+            "The seat and venue of the arbitration shall be Jaipur, Rajasthan, India.",
+            "The tribunal shall consist of a sole arbitrator, mutually appointed by the Parties. If the Parties cannot agree on a sole arbitrator, the appointment shall be made in accordance with the Arbitration Rules.",
+            "The language of the arbitration shall be English. The award of the arbitrator shall be final and binding on the Parties.",
+        ],
+    },
+    {
+        subtitle: "Exclusive Jurisdiction",
+        text: "Subject to the Arbitration clause, the Parties agree that the courts in Jaipur, Rajasthan, India shall have exclusive jurisdiction to entertain any suit or proceeding arising out of or in relation to this Agreement, including proceedings for interim relief and any proceedings to challenge or enforce an arbitral award.",
+    },
+];
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-white">
+
+        <!-- Hero -->
+        <section class="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 overflow-hidden py-10 lg:py-28">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-1 bg-blue-400 rounded-full"></div>
+                            <p class="text-sm font-black text-blue-400 uppercase tracking-widest">Legal Policy</p>
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
+                            Terms &amp;<br/>
+                            <span class="text-blue-400">Conditions</span>
+                        </h1>
+                        <p class="text-lg text-blue-100/70 leading-relaxed max-w-xl">
+                            These Terms & Conditions govern your access to and use of the website and services provided by Nialabs. By accessing our website or placing any order, you agree to be bound by these Terms.
+                        </p>
+                    </div>
+                    <div class="relative group hidden lg:block">
+                        <div class="absolute -inset-4 bg-blue-600/10 rounded-[48px] blur-3xl"></div>
+                        <div class="relative rounded-[32px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm p-4 max-h-[400px]">
+                            <img
+                                src="/legalPages/terms-and-conditions.png"
+                                alt="Terms and Conditions"
+                                class="w-full h-full object-contain rounded-2xl max-h-[400px]"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Sections -->
+        <section class="py-20 bg-[#f8fafc]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="space-y-8">
+                    {sections.map((section) => (
+                        <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <!-- Header -->
+                            <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-sm">
+                                    {section.number}
+                                </div>
+                                <h2 class="text-xl font-black text-slate-900">{section.title}</h2>
+                            </div>
+
+                            <!-- Body -->
+                            <div class="px-8 py-7">
+                                {section.type === "para" && (
+                                    <p class="text-slate-600 leading-relaxed">{section.content}</p>
+                                )}
+
+                                {section.type === "definitions" && (
+                                    <ul class="space-y-4">
+                                        {(section.items as any[]).map((item) => (
+                                            <li class="flex gap-4">
+                                                <div class="mt-1 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></div>
+                                                <p class="text-slate-600 leading-relaxed">
+                                                    <span class="font-bold text-slate-800">{item.label}</span> {item.text}
+                                                </p>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+
+                                {section.type === "list" && (
+                                    <div>
+                                        {section.intro && (
+                                            <p class="text-slate-600 mb-4">{section.intro}</p>
+                                        )}
+                                        <ul class="space-y-3">
+                                            {(section.items as string[]).map((item) => (
+                                                <li class="flex gap-4">
+                                                    <div class="mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></div>
+                                                    <p class="text-slate-600 leading-relaxed">{item}</p>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+
+                                {section.type === "paras" && (
+                                    <div class="space-y-4">
+                                        {(section.items as string[]).map((item) => (
+                                            <p class="text-slate-600 leading-relaxed">{item}</p>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Governing Law & Dispute Resolution -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-[40px] overflow-hidden shadow-2xl shadow-blue-500/10"
+                     style="background: radial-gradient(circle, #0c3d8afb 0%, #0c3d8afb 40%, #041735 100%);">
+                    <div class="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/4"></div>
+                    <div class="relative z-10 p-10 md:p-14">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-1 bg-blue-400 rounded-full"></div>
+                            <p class="text-sm font-black text-blue-400 uppercase tracking-widest">Jaipur Jurisdiction</p>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-black text-white mb-8">Governing Law and Dispute Resolution</h2>
+                        <div class="space-y-8">
+                            {arbitrationClauses.map((clause) => (
+                                <div>
+                                    <h3 class="text-blue-300 font-extrabold text-lg mb-3">{clause.subtitle}</h3>
+                                    <p class="text-blue-100/80 leading-relaxed mb-3">{clause.text}</p>
+                                    {clause.bullets && (
+                                        <ul class="space-y-2 ml-2">
+                                            {clause.bullets.map((b) => (
+                                                <li class="flex gap-3">
+                                                    <div class="mt-2 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0"></div>
+                                                    <p class="text-blue-100/70 text-sm leading-relaxed">{b}</p>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <Footer />
+</Layout>

@@ -218,9 +218,8 @@ const currentYear = new Date().getFullYear();
                 <li>
                   <a 
                     href={item.link} 
-                    target={item.isExternal || item.link.startsWith('http') ? '_blank' : '_self'}
-                    rel={item.isExternal || item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    download={item.download ? "" : undefined}
+                    target={item.isExternal || item.download || item.link.startsWith('http') ? '_blank' : '_self'}
+                    rel={item.isExternal || item.download || item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                     class="text-sm text-slate-300 hover:text-blue-400 hover:translate-x-1 inline-block transition-all duration-200"
                   >
                     {item.title}

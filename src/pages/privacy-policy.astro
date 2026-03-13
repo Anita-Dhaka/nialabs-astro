@@ -1,0 +1,359 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Privacy Policy | Nialabs";
+const description = "Nialabs Privacy Policy — learn how we collect, use, store and protect your personal data when you use our website and biometric attendance services.";
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-white">
+
+        <!-- Hero -->
+        <section class="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 overflow-hidden py-10 lg:py-28">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-1 bg-blue-400 rounded-full"></div>
+                            <p class="text-sm font-black text-blue-400 uppercase tracking-widest">Legal Policy</p>
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
+                            Privacy<br/>
+                            <span class="text-blue-400">Policy</span>
+                        </h1>
+                        <p class="text-lg text-blue-100/70 leading-relaxed max-w-xl">
+                            Nialabs ("us", "we", or "our") operates the https://nialabs.in/ website (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
+                        </p>
+                    </div>
+                    <div class="relative group hidden lg:block">
+                        <div class="absolute -inset-4 bg-blue-600/10 rounded-[48px] blur-3xl"></div>
+                        <div class="relative rounded-[32px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm p-4 max-h-[400px]">
+                            <img
+                                src="/legalPages/privacy-policy.png"
+                                alt="Privacy Policy"
+                                class="w-full h-full object-contain rounded-2xl max-h-[400px]"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Content -->
+        <section class="py-20 bg-[#f8fafc]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="space-y-8">
+
+                    <!-- Section 01: Information Collection And Use -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">01</div>
+                            <h2 class="text-xl font-black text-slate-900">Information Collection And Use</h2>
+                        </div>
+                        <div class="px-8 py-7 space-y-6">
+                            <p class="text-slate-600 leading-relaxed">We collect several different types of information for various purposes to provide and improve our Service to you.</p>
+
+                            <!-- Types of Data -->
+                            <div>
+                                <h3 class="text-lg font-extrabold text-slate-800 mb-4">Types of Data Collected</h3>
+
+                                <!-- Personal Data -->
+                                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100 mb-4">
+                                    <p class="font-extrabold text-slate-800 mb-2">Personal Data</p>
+                                    <p class="text-slate-600 leading-relaxed text-sm mb-3">While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:</p>
+                                    <ul class="space-y-1.5">
+                                        {["Email address", "First name and last name", "Phone number", "Address, State, Province, ZIP/Postal code, City", "Cookies and Usage Data"].map((item) => (
+                                            <li class="flex gap-3">
+                                                <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></div>
+                                                <p class="text-slate-600 text-sm">{item}</p>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <!-- Usage Data -->
+                                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100 mb-4">
+                                    <p class="font-extrabold text-slate-800 mb-2">Usage Data</p>
+                                    <p class="text-slate-600 leading-relaxed text-sm">We may also collect information on how the Service is accessed and used ("Usage Data"). This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+                                </div>
+
+                                <!-- Tracking & Cookies -->
+                                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                                    <p class="font-extrabold text-slate-800 mb-2">Tracking & Cookies Data</p>
+                                    <p class="text-slate-600 leading-relaxed text-sm mb-3">We use cookies and similar tracking technologies to track the activity on our Service and hold certain information. Cookies are files with a small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service.</p>
+                                    <p class="text-slate-600 text-sm mb-3">You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</p>
+                                    <p class="font-semibold text-slate-700 text-sm mb-2">Examples of Cookies we use:</p>
+                                    <ul class="space-y-1.5">
+                                        {[
+                                            { label: "Session Cookies:", text: "We use Session Cookies to operate our Service." },
+                                            { label: "Preference Cookies:", text: "We use Preference Cookies to remember your preferences and various settings." },
+                                            { label: "Security Cookies:", text: "We use Security Cookies for security purposes." },
+                                        ].map((item) => (
+                                            <li class="flex gap-3">
+                                                <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 flex-shrink-0"></div>
+                                                <p class="text-slate-600 text-sm"><span class="font-bold">{item.label}</span> {item.text}</p>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 02: Use of Data -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">02</div>
+                            <h2 class="text-xl font-black text-slate-900">Use of Data</h2>
+                        </div>
+                        <div class="px-8 py-7">
+                            <p class="text-slate-600 mb-4">Techtalisman Eng. Pvt. Ltd. uses the collected data for various purposes:</p>
+                            <ul class="space-y-3">
+                                {[
+                                    "To provide and maintain the Service",
+                                    "To notify you about changes to our Service",
+                                    "To allow you to participate in interactive features of our Service when you choose to do so",
+                                    "To provide customer care and support",
+                                    "To provide analysis or valuable information so that we can improve the Service",
+                                    "To monitor the usage of the Service",
+                                    "To detect, prevent and address technical issues",
+                                ].map((item) => (
+                                    <li class="flex gap-4">
+                                        <div class="mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></div>
+                                        <p class="text-slate-600 leading-relaxed">{item}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Section 03: Data Storage, Processing & Transfer -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">03</div>
+                            <h2 class="text-xl font-black text-slate-900">Data Storage, Processing & Transfer</h2>
+                        </div>
+                        <div class="px-8 py-7 space-y-4">
+                            <p class="text-slate-600 leading-relaxed">At Nialabs, we value the privacy and security of every customer — whether in India or abroad. Your information, including Personal Data, may be stored, processed, and maintained on secure servers located within India or in other countries where Nialabs or its trusted service providers operate.</p>
+                            <p class="text-slate-600 leading-relaxed">While our primary data operations are based in India, certain technical or support processes may involve the transfer of information to servers or partners in other regions. Data protection laws in those jurisdictions may differ from those in your location.</p>
+                            <p class="text-slate-600 leading-relaxed">By submitting your information and using our services, you consent to the collection, transfer, and processing of your data in accordance with this Privacy Policy.</p>
+                            <p class="text-slate-600 leading-relaxed">Nialabs ensures that all transfers, whether domestic or international, are carried out with the highest level of data protection. We take all reasonable and necessary steps to ensure your Personal Data is handled securely and in compliance with applicable data protection laws. We do not transfer your information to any third party or country unless there are adequate controls and safeguards in place to protect your data and privacy.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 04: Data Security -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">04</div>
+                            <h2 class="text-xl font-black text-slate-900">Data Security</h2>
+                        </div>
+                        <div class="px-8 py-7">
+                            <p class="text-slate-600 leading-relaxed mb-4">Nialabs implements robust technical and organizational measures to safeguard your data against unauthorized access, alteration, disclosure, or destruction. These include:</p>
+                            <ul class="space-y-3 mb-5">
+                                {[
+                                    "Secure and encrypted data storage and transmission protocols.",
+                                    "Limited access to personal information, restricted to authorized personnel only.",
+                                    "Regular monitoring and audits to ensure compliance with data protection standards.",
+                                    "Secure integration with third-party services that meet industry-standard security requirements.",
+                                ].map((item) => (
+                                    <li class="flex gap-4">
+                                        <div class="mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></div>
+                                        <p class="text-slate-600 leading-relaxed">{item}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                            <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                                <p class="text-blue-800 text-sm leading-relaxed">Despite our best efforts, no method of data transmission or storage is 100% secure. However, Nialabs is committed to continuously improving its security infrastructure to protect your personal information.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 05: Your Data Rights -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">05</div>
+                            <h2 class="text-xl font-black text-slate-900">Your Data Rights</h2>
+                        </div>
+                        <div class="px-8 py-7">
+                            <p class="text-slate-600 leading-relaxed mb-5">At Nialabs, we respect your right to privacy and transparency regarding how your personal information is collected and used. Whether you are based in India or overseas, you have certain rights related to your data under applicable data protection laws.</p>
+                            <p class="text-slate-600 mb-5">Depending on your location, these rights may include:</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                                {[
+                                    { label: "Right to Access", text: "You can request details of the personal information we hold about you." },
+                                    { label: "Right to Correction", text: "You may ask us to correct or update inaccurate or incomplete information." },
+                                    { label: "Right to Deletion", text: "You can request the deletion of your personal data, subject to legal and contractual obligations." },
+                                    { label: "Right to Restrict or Object to Processing", text: "You may restrict or object to certain types of data processing, such as marketing communications." },
+                                    { label: "Right to Data Portability", text: "You can request a copy of your personal data in a commonly used format for transfer to another service provider." },
+                                    { label: "Right to Withdraw Consent", text: "If you have given consent for specific data processing activities, you can withdraw that consent at any time." },
+                                ].map((item) => (
+                                    <div class="flex gap-4 bg-blue-50/60 rounded-2xl p-4 border border-blue-100">
+                                        <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </div>
+                                        <div>
+                                            <p class="font-bold text-slate-800 text-sm">{item.label}</p>
+                                            <p class="text-slate-600 text-sm leading-relaxed mt-0.5">{item.text}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <p class="text-slate-500 text-sm italic border-l-2 border-blue-200 pl-3">To exercise any of these rights, please contact us at <span class="font-bold not-italic text-slate-700">privacy@nialabs.in</span> with the subject line "Data Rights Request." We may verify your identity before processing your request to ensure your information is protected.</p>
+                            <p class="text-slate-600 leading-relaxed mt-4">Nialabs will respond to all valid requests within a reasonable timeframe and in accordance with applicable laws and regulations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 06: Retention of Personal Data -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">06</div>
+                            <h2 class="text-xl font-black text-slate-900">Retention of Personal Data</h2>
+                        </div>
+                        <div class="px-8 py-7">
+                            <p class="text-slate-600 leading-relaxed mb-5">Nialabs retains your personal information only for as long as it is necessary to fulfil the purposes outlined in this Privacy Policy — such as providing services, complying with legal obligations, resolving disputes, and enforcing our agreements.</p>
+                            <p class="text-slate-600 mb-5">The retention period may vary depending on the type of data collected and its intended use:</p>
+                            <ul class="space-y-3 mb-5">
+                                {[
+                                    { label: "Account and Service Data:", text: "Retained for as long as your account remains active or as required to provide ongoing support." },
+                                    { label: "Transactional and Billing Data:", text: "Retained for the duration required by applicable accounting, tax, or legal regulations." },
+                                    { label: "Marketing and Communication Data:", text: "Retained until you unsubscribe or request deletion." },
+                                    { label: "Operational Logs and Technical Data:", text: "Maintained for a limited time to ensure system integrity, security, and performance monitoring." },
+                                ].map((item) => (
+                                    <li class="flex gap-4">
+                                        <div class="mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></div>
+                                        <p class="text-slate-600 leading-relaxed"><span class="font-bold text-slate-800">{item.label}</span> {item.text}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                            <p class="text-slate-600 leading-relaxed mb-2">Once the retention period expires or the data is no longer required, Nialabs will securely delete, anonymize, or archive it in accordance with best industry practices and applicable data protection laws.</p>
+                            <p class="text-slate-600 leading-relaxed">We regularly review our data storage and retention policies to ensure that personal information is not kept longer than necessary.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 07: Disclosure Of Data -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">07</div>
+                            <h2 class="text-xl font-black text-slate-900">Disclosure Of Data</h2>
+                        </div>
+                        <div class="px-8 py-7">
+                            <h3 class="font-extrabold text-slate-800 mb-3">Legal Requirements</h3>
+                            <p class="text-slate-600 mb-4">Techtalisman Eng. Pvt. Ltd. may disclose your Personal Data in good faith belief that such action is necessary to:</p>
+                            <ul class="space-y-3">
+                                {[
+                                    "To comply with a legal obligation",
+                                    "To protect and defend the rights or property of Techtalisman Eng. Pvt. Ltd.",
+                                    "To prevent or investigate possible wrongdoing in connection with the Service",
+                                    "To protect the personal safety of users of the Service or the public",
+                                    "To protect against legal liability",
+                                ].map((item) => (
+                                    <li class="flex gap-4">
+                                        <div class="mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></div>
+                                        <p class="text-slate-600 leading-relaxed">{item}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Section 08: Security Of Data -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">08</div>
+                            <h2 class="text-xl font-black text-slate-900">Security Of Data</h2>
+                        </div>
+                        <div class="px-8 py-7">
+                            <p class="text-slate-600 leading-relaxed">The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 09: Service Providers -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">09</div>
+                            <h2 class="text-xl font-black text-slate-900">Service Providers</h2>
+                        </div>
+                        <div class="px-8 py-7 space-y-4">
+                            <p class="text-slate-600 leading-relaxed">We may employ third-party companies and individuals to facilitate our Service ("Service Providers"), to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used.</p>
+                            <p class="text-slate-600 leading-relaxed">These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
+                            <div>
+                                <h3 class="font-extrabold text-slate-800 mb-3">Analytics</h3>
+                                <p class="text-slate-600 mb-3">We may use third-party Service Providers to monitor and analyze the use of our Service.</p>
+                                <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                                    <p class="font-extrabold text-slate-800 mb-2">Google Analytics</p>
+                                    <p class="text-slate-600 text-sm leading-relaxed mb-2">Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.</p>
+                                    <p class="text-slate-600 text-sm leading-relaxed mb-2">You can opt-out of having made your activity on the Service available to Google Analytics by installing the Google Analytics opt-out browser add-on. The add-on prevents the Google Analytics JavaScript (ga.js, analytics.js, and dc.js) from sharing information with Google Analytics about visits activity.</p>
+                                    <p class="text-slate-500 text-sm">For more information on the privacy practices of Google, please visit the <a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-800">Google Privacy & Terms web page</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 10: Links To Other Sites -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">10</div>
+                            <h2 class="text-xl font-black text-slate-900">Links To Other Sites</h2>
+                        </div>
+                        <div class="px-8 py-7">
+                            <p class="text-slate-600 leading-relaxed mb-3">Our Service may contain links to other sites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.</p>
+                            <p class="text-slate-600 leading-relaxed">We have no control over and assume no responsibility for the content, privacy policies or practices of any third-party sites or services.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 11: Children's Privacy -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">11</div>
+                            <h2 class="text-xl font-black text-slate-900">Children's Privacy</h2>
+                        </div>
+                        <div class="px-8 py-7">
+                            <p class="text-slate-600 leading-relaxed mb-3">Our Service does not address anyone under the age of 18 ("Children").</p>
+                            <p class="text-slate-600 leading-relaxed">We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your child has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 12: Changes To This Privacy Policy -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">12</div>
+                            <h2 class="text-xl font-black text-slate-900">Changes To This Privacy Policy</h2>
+                        </div>
+                        <div class="px-8 py-7">
+                            <p class="text-slate-600 leading-relaxed mb-3">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+                            <p class="text-slate-600 leading-relaxed mb-3">We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.</p>
+                            <p class="text-slate-600 leading-relaxed">You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 13: Contact Us -->
+                    <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                            <div class="flex-shrink-0 w-12 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-xs">13</div>
+                            <h2 class="text-xl font-black text-slate-900">Contact Us</h2>
+                        </div>
+                        <div class="px-8 py-7">
+                            <p class="text-slate-600 leading-relaxed">
+                                If you have any questions about this Privacy Policy, please{" "}
+                                <a
+                                    href="/contactUs"
+                                    class="inline-flex items-center gap-1.5 text-blue-600 font-extrabold underline underline-offset-4 decoration-blue-300 hover:text-blue-800 transition-colors duration-200"
+                                >
+                                    contact us
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <Footer />
+</Layout>

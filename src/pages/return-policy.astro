@@ -1,0 +1,262 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Return, Refund & Cancellation Policy | Nialabs";
+const description = "Nialabs Return, Refund and Cancellation Policy. Learn how to initiate a return, claim warranty, and understand our refund process for domestic and international orders.";
+
+const sections = [
+    {
+        number: "1",
+        title: "Damaged or Non-Functional Products",
+        content: "If you receive a product that is damaged, defective, or non-functional, you can raise a return request within 7 days of delivery through our Customer Service or RMA (Return Merchandise Authorization) portal. Our support team will review your request and provide a suitable resolution, such as replacement, repair, or component exchange.",
+        type: "para",
+    },
+    {
+        number: "2",
+        title: "Return Shipping",
+        type: "bullets",
+        items: [
+            { label: "Domestic Customers (India)", text: "Customers are required to send the product back to our Nialabs warehouse in India at their own cost. In some cases, we may arrange pickup from your location if feasible through our logistics partner." },
+            { label: "International Customers", text: "All international customers must ship the product to our India warehouse at their own expense. Pickup services may be arranged only in rare, feasible cases, depending on location and logistics availability." },
+        ],
+    },
+    {
+        number: "3",
+        title: "Change of Mind",
+        content: "We do not accept returns for products that are in good condition and working properly if the customer simply changes their mind after purchase.",
+        type: "para",
+    },
+    {
+        number: "4",
+        title: "Products with Quality or Warranty Issues",
+        type: "mixed",
+        content: "All Nialabs products are covered under warranty against manufacturing or material defects. If a valid claim is raised within the warranty period, we will offer one of the following solutions:",
+        items: ["Product Exchange", "Repair Service", "Replacement Components"],
+        footnote: "Shipping costs for warranty claims will be covered by Nialabs only if the customer has opted for an extended on-site warranty.",
+    },
+    {
+        number: "5",
+        title: "Cancellation Policy",
+        type: "list",
+        items: [
+            "Orders can be cancelled for a full refund at any time before shipping.",
+            "Orders cancelled within 12 hours of payment confirmation are eligible for a 100% refund.",
+            "Orders cancelled after production begins but before shipping will incur a 50% deduction from the product price.",
+            "Orders that have already been shipped cannot be cancelled.",
+        ],
+    },
+    {
+        number: "6",
+        title: "Refund Policy",
+        type: "list",
+        items: [
+            "Refunds are issued for approximately 95% of the product price if the returned product is received in its original condition, with original packaging and invoice.",
+            "Shipping charges are non-refundable.",
+            "The 5% deduction covers payment gateway fees and double logistics charges in case of non-acceptance or return.",
+            "Refunds are processed using the same payment method used at the time of purchase.",
+            "Once approved, the refund will reflect within 7 business days.",
+        ],
+        note: "Our refund structure is designed to maintain transparent pricing while ensuring minimal profit margins. We focus on providing the best prices to customers, and deductions during refunds help us offset operational and logistics costs fairly.",
+    },
+    {
+        number: "7",
+        title: "How to Initiate a Return or Refund",
+        type: "steps",
+        items: [
+            "Contact our Customer Support at support@nialabs.in with your Order ID and Issue Description.",
+            "Our team will verify the claim and provide an RMA number or further instructions.",
+            "Ship the item to the address provided by our support team.",
+            "Once received and inspected, we will notify you regarding the status of your refund or replacement.",
+        ],
+    },
+    {
+        number: "8",
+        title: "Important Notes",
+        type: "list",
+        items: [
+            "Returns will not be accepted without prior approval or an RMA number.",
+            "Products returned without original packaging or invoice may be rejected.",
+            "Refunds or replacements may be delayed if returned products are found to be tampered with or physically damaged.",
+            "Nialabs reserves the right to amend this policy from time to time without prior notice.",
+        ],
+    },
+];
+
+const whyNialabs = [
+    "Transparent return and refund process",
+    "Genuine warranty and quality assurance",
+    "Dedicated customer support",
+    "Competitive pricing with minimal margins",
+];
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-white">
+
+        <!-- Hero -->
+        <section class="relative bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 overflow-hidden py-10 lg:py-28">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-1 bg-blue-400 rounded-full"></div>
+                            <p class="text-sm font-black text-blue-400 uppercase tracking-widest">Legal Policy</p>
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
+                            Return, Refund &<br/>
+                            <span class="text-blue-400">Cancellation Policy</span>
+                        </h1>
+                        <p class="text-lg text-blue-100/70 leading-relaxed max-w-xl">
+                            At Nialabs, we're committed to providing you with a seamless and reliable shopping experience. While we ensure all products go through strict quality checks before dispatch, we also understand that issues can occasionally occur. This policy explains our process for returns, cancellations, and refunds for both domestic (India) and international customers.
+                        </p>
+                    </div>
+                    <div class="relative group hidden lg:block">
+                        <div class="absolute -inset-4 bg-blue-600/10 rounded-[48px] blur-3xl"></div>
+                        <div class="relative rounded-[32px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm p-4 max-h-[400px]">
+                            <img
+                                src="/legalPages/return-policy.png"
+                                alt="Return and Refund Policy"
+                                class="w-full h-full object-contain rounded-2xl max-h-[400px]"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Policy Sections -->
+        <section class="py-20 bg-[#f8fafc]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="space-y-8">
+                    {sections.map((section) => (
+                        <div class="bg-white rounded-[28px] shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <!-- Section Header -->
+                            <div class="flex items-center gap-5 px-8 py-6 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-white">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-sm">
+                                    {section.number}
+                                </div>
+                                <h2 class="text-xl font-black text-slate-900">{section.title}</h2>
+                            </div>
+
+                            <!-- Section Body -->
+                            <div class="px-8 py-7">
+                                {section.type === "para" && (
+                                    <p class="text-slate-600 leading-relaxed">{section.content}</p>
+                                )}
+
+                                {section.type === "bullets" && (
+                                    <ul class="space-y-4">
+                                        {section.items!.map((item: any) => (
+                                            <li class="flex gap-4">
+                                                <div class="mt-1 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></div>
+                                                <p class="text-slate-600 leading-relaxed">
+                                                    <span class="font-bold text-slate-800">{item.label}:</span> {item.text}
+                                                </p>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+
+                                {section.type === "mixed" && (
+                                    <div>
+                                        <p class="text-slate-600 leading-relaxed mb-4">{section.content}</p>
+                                        <ul class="space-y-2 mb-4 ml-2">
+                                            {section.items!.map((item: any) => (
+                                                <li class="flex items-center gap-3">
+                                                    <div class="w-7 h-7 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                                    </div>
+                                                    <span class="text-slate-700 font-semibold">{item}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        {section.footnote && (
+                                            <p class="text-slate-500 text-sm italic border-l-2 border-blue-200 pl-3">{section.footnote}</p>
+                                        )}
+                                    </div>
+                                )}
+
+                                {section.type === "list" && (
+                                    <div>
+                                        <ul class="space-y-3">
+                                            {section.items!.map((item: any) => (
+                                                <li class="flex gap-4">
+                                                    <div class="mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></div>
+                                                    <p class="text-slate-600 leading-relaxed">{item}</p>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                        {section.note && (
+                                            <div class="mt-5 p-4 bg-blue-50 rounded-xl border border-blue-100">
+                                                <p class="text-blue-800 text-sm leading-relaxed">
+                                                    <span class="font-bold">Note:</span> {section.note}
+                                                </p>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+
+                                {section.type === "steps" && (
+                                    <ol class="space-y-4">
+                                        {section.items!.map((item: any, i: number) => (
+                                            <li class="flex gap-5">
+                                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">
+                                                    {i + 1}
+                                                </div>
+                                                <p class="text-slate-600 leading-relaxed pt-1">{item}</p>
+                                            </li>
+                                        ))}
+                                    </ol>
+                                )}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Nialabs -->
+        <section class="py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-[40px] overflow-hidden shadow-2xl shadow-blue-500/10"
+                     style="background: radial-gradient(circle, #0c3d8afb 0%, #0c3d8afb 40%, #041735 100%);">
+                    <div class="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/4"></div>
+                    <div class="relative z-10 p-10 md:p-14">
+                        <h2 class="text-2xl md:text-3xl font-black text-white mb-8">Why Choose Nialabs?</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                            {whyNialabs.map((point) => (
+                                <div class="flex items-center gap-4">
+                                    <div class="w-9 h-9 rounded-xl bg-green-400/20 flex items-center justify-center flex-shrink-0 text-green-400">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    </div>
+                                    <p class="text-white font-semibold">{point}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <!-- Conclusion / For Assistance -->
+                        <div class="pt-8 border-t border-white/10">
+                            <p class="text-blue-100 text-lg leading-relaxed">
+                                For any return, cancellation, or refund queries, please{" "}
+                                <a
+                                    href="/contactUs"
+                                    class="inline-flex items-center gap-1.5 text-white font-extrabold underline underline-offset-4 decoration-blue-400 hover:text-blue-300 transition-colors duration-200"
+                                >
+                                    contact us
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <Footer />
+</Layout>

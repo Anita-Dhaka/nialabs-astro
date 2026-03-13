@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import ProductHero from '../components/ProductHero.astro';
-import ProductFeatures from '../components/ProductFeatures.astro';
 import Footer from '../components/Footer.astro';
 import Faq from '../components/Faq.astro';
 
@@ -17,26 +16,15 @@ const whatData = {
     desc: "A Smart Bus Attendance System is a technology-enabled solution that automatically records the attendance of students or passengers when they board and exit a bus. Instead of manual registers or calling out names, the system uses biometric devices, RFID cards, GPS tracking, or mobile apps to identify each student in real time.",
 };
 
-const howItWorks = [
-    "Student boards the bus and is identified via face recognition or RFID",
-    "Attendance is recorded instantly and uploaded to the cloud",
-    "Parents receive an instant push notification with time & bus location",
-    "School admin views real-time reports on the dashboard",
-    "GPS tracks the live bus route, speed, and deviation alerts",
-    "'No Child Left Behind' alert triggered before bus is locked"
+const nai10Specs = [
+    { label: '4.3" Interactive Display' },
+    { label: "Dual Camera Accuracy" },
+    { label: "1.2 GHz Dual-Core CPU" },
+    { label: "0.5–2.5m Recognition Range" },
+    { label: "LAN / Wi-Fi / Cloud Ready" },
+    { label: "4G SIM Support" },
+    { label: "Pre-Installed GPS" },
 ];
-
-const keyFeatures = {
-    title: "Smart Bus Attendance System with AI Face Recognition & GPS",
-    points: [
-        { text: "AI Face Recognition: Contactless, hygienic, and 100% safe identification for students with no manual intervention.", icon: "ai" },
-        { text: "Real-Time GPS Tracking: Live location, route history, speed monitoring, and deviation alerts for every bus.", icon: "gps" },
-        { text: "Instant Parent Notifications: Parents get alerts the moment their child boards or exits the bus with exact time and location.", icon: "cloud" },
-        { text: "Offline Mode Support: Device stores attendance locally and syncs automatically when internet is restored.", icon: "analytics" },
-        { text: "No Child Left Behind Alert: System triggers a safety alert to ensure every child has exited before the bus is locked.", icon: "spoofing" },
-        { text: "ERP & School System Integration: Attendance data syncs seamlessly with school ERPs via REST APIs, eliminating manual entries.", icon: "integration" },
-    ]
-};
 
 const benefitsData = [
     {
@@ -47,8 +35,8 @@ const benefitsData = [
             "Enhances student safety",
             "Improves transport efficiency",
             "Clear compliance with safety guidelines",
-            "Reduces admin workload"
-        ]
+            "Reduces admin workload",
+        ],
     },
     {
         group: "For Parents",
@@ -56,8 +44,8 @@ const benefitsData = [
         points: [
             "Peace of mind with real-time tracking",
             "No uncertainty at pickup/drop points",
-            "Instant alerts & transparency"
-        ]
+            "Instant alerts & transparency",
+        ],
     },
     {
         group: "For Transport Managers",
@@ -66,62 +54,79 @@ const benefitsData = [
             "Complete fleet overview",
             "Better route planning",
             "Monitor driver behavior",
-            "Timely reporting & performance insights"
-        ]
-    }
+            "Timely reporting & performance insights",
+        ],
+    },
+];
+
+const dashboardImages = [
+    { src: "/headerImages/products/dashboard-1.webp", alt: "Dashboard Overview" },
+    { src: "/headerImages/products/dashboard-2.webp", alt: "Trip Details" },
+    { src: "/headerImages/products/dashboard-5.webp", alt: "Live Operation" },
+    { src: "/headerImages/products/dashboard-6.webp", alt: "Route & Reports" },
+];
+
+const tableData = [
+    { feature: "Technology", present: "2G", smart: "4G" },
+    { feature: "Network technology speed", present: "50KBPS", smart: "UP to 1 GBPS" },
+    { feature: "Minimum tracking interval", present: "30 SECONDS", smart: "5 SECONDS" },
+    { feature: "Specially designed parent app", present: "NO", smart: "YES" },
+    { feature: "Single parent multiple child tracking in same app", present: "NO", smart: "YES" },
+    { feature: "Bus departure alert", present: "NO", smart: "YES" },
+    { feature: "Bus arriving alert", present: "NO", smart: "YES" },
+    { feature: "Bus reached school alert", present: "NO", smart: "YES" },
+    { feature: "Estimated time of arrival notifications", present: "NO", smart: "YES" },
+    { feature: "Call driver from mobile app", present: "NO", smart: "YES" },
+    { feature: "Setup alerts", present: "NO", smart: "YES" },
+    { feature: "Check bus number and trip details", present: "NO", smart: "YES" },
+    { feature: "Instant alert from school in case of any changes", present: "NO", smart: "YES" },
+    { feature: "Apply leaves from app", present: "NO", smart: "YES" },
+    { feature: "School holidays update on app", present: "NO", smart: "YES" },
+    { feature: "Separate account for each parent", present: "NO", smart: "YES" },
+    { feature: "Password change option", present: "NO", smart: "YES" },
 ];
 
 const FaqsData = [
-  {
-    question: "What is a Smart Bus Attendance System?",
-    solution:
-      "A Smart Bus Attendance System automatically records student attendance using biometric or RFID technology when they board or exit the school bus. Schools and parents receive real-time updates through a connected dashboard or mobile app.",
-  },
-  {
-    question: "How does the Nialabs Smart Bus Attendance System work?",
-    solution:
-      "Nialabs devices use AI face recognition or RFID cards to identify each student. Attendance is instantly uploaded to the cloud, and parents receive immediate notifications of boarding and drop-off events.",
-  },
-  {
-    question: "Is biometric attendance safe for children?",
-    solution:
-      "Yes. Nialabs uses advanced non-intrusive AI face recognition, which does not harm a child's eyes or skin. No physical contact is required, making it hygienic and 100% safe.",
-  },
-  {
-    question: " Can the system work without the internet?",
-    solution:
-      "Yes. The device stores attendance offline and syncs automatically when the internet connection is reestablished, ensuring uninterrupted attendance logging",
-  },
-  {
-    question: "Do parents receive real-time notifications?",
-    solution:
-      "Absolutely. Parents get instant alerts when their child boards or exits the bus, along with the exact time and bus location.",
-  },
-  {
-    question: "Does this include GPS tracking of the bus?",
-    solution:
-      "Yes. The Nialabs system includes live GPS tracking, route history, speed monitoring, and route deviation alerts for improved safety.",
-  },
-  {
-    question: "How long does installation take?",
-    solution:
-      "Installation is quick and simple — typically 1–2 hours per bus, depending on the wiring and connectivity setup.",
-  },
-  {
-    question: "Can this system be integrated with school ERP software?",
-    solution:
-      "Yes. Nialabs offers API integration that allows attendance data to sync with most school ERP systems, eliminating manual entries.",
-  },
-  {
-    question: "What happens if a student forgets their RFID card?",
-    solution:
-      "No issues. The system still works using face recognition, allowing seamless attendance without dependency on the card.",
-  },
-  {
-    question: "How does Nialabs ensure that no child is left behind in the bus?",
-    solution:
-      "The system triggers a 'No Child Left Behind' alert, helping drivers and attendants ensure every child exits safely before the bus is locked.",
-  },
+    {
+        question: "What is a Smart Bus Attendance System?",
+        solution: "A Smart Bus Attendance System automatically records student attendance using biometric or RFID technology when they board or exit the school bus. Schools and parents receive real-time updates through a connected dashboard or mobile app.",
+    },
+    {
+        question: "How does the Nialabs Smart Bus Attendance System work?",
+        solution: "Nialabs devices use AI face recognition or RFID cards to identify each student. Attendance is instantly uploaded to the cloud, and parents receive immediate notifications of boarding and drop-off events.",
+    },
+    {
+        question: "Is biometric attendance safe for children?",
+        solution: "Yes. Nialabs uses advanced non-intrusive AI face recognition, which does not harm a child's eyes or skin. No physical contact is required, making it hygienic and 100% safe.",
+    },
+    {
+        question: "Can the system work without the internet?",
+        solution: "Yes. The device stores attendance offline and syncs automatically when the internet connection is reestablished, ensuring uninterrupted attendance logging.",
+    },
+    {
+        question: "Do parents receive real-time notifications?",
+        solution: "Absolutely. Parents get instant alerts when their child boards or exits the bus, along with the exact time and bus location.",
+    },
+    {
+        question: "Does this include GPS tracking of the bus?",
+        solution: "Yes. The Nialabs system includes live GPS tracking, route history, speed monitoring, and route deviation alerts for improved safety.",
+    },
+    {
+        question: "How long does installation take?",
+        solution: "Installation is quick and simple — typically 1–2 hours per bus, depending on the wiring and connectivity setup.",
+    },
+    {
+        question: "Can this system be integrated with school ERP software?",
+        solution: "Yes. Nialabs offers API integration that allows attendance data to sync with most school ERP systems, eliminating manual entries.",
+    },
+    {
+        question: "What happens if a student forgets their RFID card?",
+        solution: "No issues. The system still works using face recognition, allowing seamless attendance without dependency on the card.",
+    },
+    {
+        question: "How does Nialabs ensure that no child is left behind in the bus?",
+        solution: "The system triggers a 'No Child Left Behind' alert, helping drivers and attendants ensure every child exits safely before the bus is locked.",
+    },
 ];
 
 const title = "Smart Bus Attendance System | Real-Time Student Tracking | Nialabs";
@@ -131,7 +136,9 @@ const description = "Nialabs Smart Bus Attendance System provides real-time stud
 <Layout title={title} description={description}>
     <Navbar />
     <main class="bg-white">
-        <ProductHero 
+
+        <!-- Hero -->
+        <ProductHero
             title={headerData.title}
             desc={headerData.desc}
             image={headerData.image}
@@ -160,10 +167,10 @@ const description = "Nialabs Smart Bus Attendance System provides real-time stud
                         </div>
                     </div>
                     <div class="lg:col-span-5 relative group mt-8 lg:mt-0">
-                        <div class="relative w-full rounded-[48px] overflow-hidden shadow-2xl border border-white transform transition-all duration-700 group-hover:scale-[1.02] bg-white">
-                            <img 
-                                src="/headerImages/products/features.webp" 
-                                alt={whatData.title} 
+                        <div class="relative w-full rounded-[48px] overflow-hidden shadow-2xl border border-white transform transition-all duration-700 group-hover:scale-[1.02] bg-white p-6">
+                            <img
+                                src="/headerImages/products/what-is-bus-attendance.png"
+                                alt={whatData.title}
                                 class="w-full h-auto object-contain transform transition-transform duration-1000 group-hover:scale-105"
                             />
                         </div>
@@ -172,34 +179,29 @@ const description = "Nialabs Smart Bus Attendance System provides real-time stud
             </div>
         </section>
 
-        <!-- How It Works -->
+        <!-- Key Features — Image Only -->
         <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-3xl font-extrabold text-gray-900 mb-6">How It Works</h2>
-                        <ul class="space-y-6">
-                            {howItWorks.map((step, index) => (
-                                <li class="flex items-start">
-                                    <div class="flex-none bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 mt-1">
-                                        {index + 1}
-                                    </div>
-                                    <p class="text-gray-600 text-lg">{step}</p>
-                                </li>
-                            ))}
-                        </ul>
+                <div class="text-center mb-12">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-10 h-1 bg-[#2067e2] rounded-full"></div>
+                        <p class="text-sm font-black text-blue-600 uppercase tracking-widest">What We Offer</p>
+                        <div class="w-10 h-1 bg-[#2067e2] rounded-full"></div>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-3xl shadow-lg border border-gray-100">
-                        <img src="/headerImages/products/dashboard.webp" alt="Bus Attendance Dashboard" class="rounded-2xl w-full h-auto" />
-                    </div>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+                        Key Features of Nialabs<br/>
+                        <span class="text-blue-600">Smart Bus Attendance System</span>
+                    </h2>
+                </div>
+                <div class="rounded-[32px] overflow-hidden shadow-2xl border border-slate-100">
+                    <img
+                        src="/headerImages/products/features.webp"
+                        alt="Key Features of Nialabs Smart Bus Attendance System"
+                        class="w-full h-auto object-contain"
+                    />
                 </div>
             </div>
         </section>
-
-        <ProductFeatures 
-            title={keyFeatures.title}
-            features={keyFeatures.points}
-        />
 
         <!-- N-AI10 Spotlight -->
         <section class="py-20 bg-slate-900 text-white overflow-hidden">
@@ -212,24 +214,44 @@ const description = "Nialabs Smart Bus Attendance System provides real-time stud
                             <p class="text-sm font-black text-blue-400 uppercase tracking-widest">Nialabs Device</p>
                         </div>
                         <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">
-                            N-AI10 — Smart Bus <br/><span class="text-blue-400">Attendance Terminal</span>
+                            N-AI10 — Smart Bus Attendance System with <br/><span class="text-blue-400">AI Face Recognition & GPS</span>
                         </h2>
                         <p class="text-blue-100/70 text-lg leading-relaxed mb-8">
                             The N-AI10 by Nialabs is a powerful AI-based biometric terminal designed specifically for bus attendance, student safety tracking, and employee transport management. With 4G SIM support, GPS live location tracking, and real-time cloud syncing, it enables automatic attendance inside school buses or corporate shuttles without manual intervention.
                         </p>
-                        <a href="/contactUs" class="inline-block px-8 py-4 bg-blue-500 text-white font-extrabold rounded-2xl hover:bg-blue-400 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl">
-                            Book a Demo
+
+                        <!-- Spec Badges -->
+                        <div class="flex flex-wrap gap-3 mb-10">
+                            {nai10Specs.map((spec) => (
+                                <span class="px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-xl text-blue-200 text-sm font-semibold backdrop-blur-sm">
+                                    {spec.label}
+                                </span>
+                            ))}
+                        </div>
+
+                        <a
+                            href="/products/biometric-attendance-machine/N-AI10-bus-attendence"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-block px-8 py-4 bg-blue-500 text-white font-extrabold rounded-2xl hover:bg-blue-400 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl"
+                        >
+                            View Product Details
                         </a>
                     </div>
                     <div class="relative group">
                         <div class="absolute -inset-4 bg-blue-600/20 rounded-[48px] blur-3xl group-hover:opacity-40 transition-opacity"></div>
-                        <div class="relative rounded-[48px] overflow-hidden border border-white/10 bg-slate-800">
-                            <img 
-                                src="/headerImages/products/Mobile App.webp" 
-                                alt="N-AI10 Bus Attendance Terminal" 
+                        <a
+                            href="/products/biometric-attendance-machine/N-AI10-bus-attendence"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="block relative rounded-[48px] overflow-hidden border border-white/10 bg-slate-800"
+                        >
+                            <img
+                                src="/product/ai10/237.webp"
+                                alt="N-AI10 Bus Attendance Terminal"
                                 class="w-full h-auto object-contain transform transition-transform duration-1000 group-hover:scale-105"
                             />
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -240,7 +262,6 @@ const description = "Nialabs Smart Bus Attendance System provides real-time stud
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Nialabs Benefits at a Glance</h2>
-                    <p class="text-lg text-gray-600">Designed for every stakeholder in the school transport ecosystem.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {benefitsData.map((benefit) => (
@@ -265,50 +286,328 @@ const description = "Nialabs Smart Bus Attendance System provides real-time stud
             </div>
         </section>
 
-        <!-- CTA Section -->
+        <!-- Explore the Dashboard -->
         <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="relative rounded-[40px] bg-blue-600 p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-500/20">
-                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
-                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-                                Ready to Make Your School <br/> Transport Smarter?
-                            </h2>
-                            <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
-                                Choose Nialabs Smart Bus Attendance System — trusted, reliable, and built for modern schools.
-                            </p>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="/contactUs" class="px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl">
-                                    Book a Demo
-                                </a>
+                <div class="text-center mb-12">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-10 h-1 bg-[#2067e2] rounded-full"></div>
+                        <p class="text-sm font-black text-blue-600 uppercase tracking-widest">Platform Preview</p>
+                        <div class="w-10 h-1 bg-[#2067e2] rounded-full"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+                        Explore the Dashboard
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {dashboardImages.map((img) => (
+                        <div class="group relative rounded-[24px] overflow-hidden shadow-lg border border-slate-100 bg-slate-50 hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={img.src}
+                                alt={img.alt}
+                                class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-[1.03]"
+                            />
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <p class="text-white font-semibold text-sm p-5">{img.alt}</p>
                             </div>
                         </div>
-                        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
-                            <ul class="space-y-6">
-                                {[
-                                    "AI face recognition — no cards needed",
-                                    "Live GPS bus tracking",
-                                    "Instant parent notifications"
-                                ].map((point) => (
-                                    <li class="flex items-center text-white text-xl font-semibold">
-                                        <div class="w-10 h-10 rounded-xl bg-green-400/20 flex items-center justify-center mr-4 text-green-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                                        </div>
-                                        {point}
-                                    </li>
-                                ))}
-                            </ul>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="py-20 bg-[#f8fafc]">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <div class="flex items-center justify-center gap-3 mb-4">
+                        <div class="w-10 h-1 bg-[#2067e2] rounded-full"></div>
+                        <p class="text-sm font-black text-blue-600 uppercase tracking-widest">Why Nialabs</p>
+                        <div class="w-10 h-1 bg-[#2067e2] rounded-full"></div>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+                        See the Difference
+                    </h2>
+                    <p class="text-lg text-slate-500">How Nialabs outperforms present-day systems.</p>
+                </div>
+
+                <div class="rounded-[32px] overflow-hidden shadow-2xl border border-slate-200">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="bg-slate-900 text-white">
+                                <th class="py-5 px-6 text-left font-bold text-base w-1/2">Feature</th>
+                                <th class="py-5 px-6 text-center font-bold text-base w-1/4">
+                                    <span class="text-slate-400">Present GPS System</span>
+                                </th>
+                                <th class="py-5 px-6 text-center font-bold text-base w-1/4">
+                                    <span class="text-blue-400">Smart Bus GPS</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {tableData.map((row, i) => (
+                                <tr class={`border-b border-slate-100 ${i % 2 === 0 ? 'bg-white' : 'bg-slate-50'} hover:bg-blue-50/40 transition-colors`}>
+                                    <td class="py-4 px-6 font-medium text-slate-700">{row.feature}</td>
+                                    <td class="py-4 px-6 text-center">
+                                        {row.present === "NO" ? (
+                                            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-100 text-red-500">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                            </span>
+                                        ) : (
+                                            <span class="font-semibold text-slate-600">{row.present}</span>
+                                        )}
+                                    </td>
+                                    <td class="py-4 px-6 text-center">
+                                        {row.smart === "YES" ? (
+                                            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100 text-green-600">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                            </span>
+                                        ) : (
+                                            <span class="font-bold text-blue-600">{row.smart}</span>
+                                        )}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ready to Make Your School Transport Smarter? + Contact Form -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative rounded-[40px] overflow-hidden shadow-2xl shadow-blue-500/20"
+                     style="background: radial-gradient(circle, #0c3d8afb 0%, #0c3d8afb 40%, #041735 100%);">
+                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
+                    <div class="relative z-10 p-8 md:p-12 lg:p-16">
+                        <div class="text-center mb-10">
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight">
+                                Ready to Make Your School Transport Smarter?
+                            </h2>
+                            <p class="text-lg md:text-xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+                                Choose Nialabs Smart Bus Attendance System — trusted, reliable, and built for modern schools.
+                            </p>
+                        </div>
+
+                        <!-- Contact Form -->
+                        <div class="w-full max-w-3xl mx-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-[24px] p-6 md:p-10">
+
+                            <!-- Success State -->
+                            <div id="form-success" class="hidden text-center py-8">
+                                <div class="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </div>
+                                <p class="text-white text-xl font-bold mb-2">Enquiry Submitted!</p>
+                                <p class="text-blue-200 mb-6">We'll get back to you shortly.</p>
+                                <button id="reset-btn" class="px-6 py-2 bg-white/20 hover:bg-white/30 text-white font-semibold rounded-xl transition-colors">
+                                    Submit Another
+                                </button>
+                            </div>
+
+                            <form id="contact-form" novalidate>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                                    <!-- Name -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="name" class="text-white text-sm font-semibold">Name <span class="text-red-400">*</span></label>
+                                        <input
+                                            id="name"
+                                            name="name"
+                                            type="text"
+                                            placeholder="Enter Your Name"
+                                            required
+                                            class="w-full px-4 py-3 rounded-xl bg-white text-slate-800 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                                        />
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="email" class="text-white text-sm font-semibold">Email <span class="text-red-400">*</span></label>
+                                        <input
+                                            id="email"
+                                            name="email"
+                                            type="email"
+                                            placeholder="Enter Your Email"
+                                            required
+                                            maxlength="50"
+                                            class="w-full px-4 py-3 rounded-xl bg-white text-slate-800 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                                        />
+                                        <span id="email-error" class="text-red-400 text-xs hidden">Please enter a valid email address.</span>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                                    <!-- Contact -->
+                                    <div class="flex flex-col gap-1.5">
+                                        <label for="contact" class="text-white text-sm font-semibold">Contact <span class="text-red-400">*</span></label>
+                                        <input
+                                            id="contact"
+                                            name="contact"
+                                            type="tel"
+                                            placeholder="Enter Contact Number"
+                                            required
+                                            maxlength="10"
+                                            pattern="[6-9]{1}[0-9]{9}"
+                                            class="w-full px-4 py-3 rounded-xl bg-white text-slate-800 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                                        />
+                                        <span id="contact-error" class="text-red-400 text-xs hidden">Enter a valid 10-digit Indian mobile number.</span>
+                                    </div>
+                                </div>
+
+                                <!-- Message -->
+                                <div class="flex flex-col gap-1.5 mb-7">
+                                    <label for="message" class="text-white text-sm font-semibold">Message <span class="text-red-400">*</span></label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        placeholder="Enter Your Message"
+                                        required
+                                        rows="4"
+                                        class="w-full px-4 py-3 rounded-xl bg-white text-slate-800 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-400 transition resize-none"
+                                    ></textarea>
+                                </div>
+
+                                <button
+                                    id="submit-btn"
+                                    type="submit"
+                                    class="px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl flex items-center gap-3"
+                                >
+                                    <span id="btn-text">Send Enquiry</span>
+                                    <svg id="btn-spinner" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="hidden animate-spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                                </button>
+                            </form>
+
+                            <!-- Toast Notification -->
+                            <div id="toast" class="fixed top-6 right-6 z-50 hidden">
+                                <div class="flex items-center gap-3 px-5 py-4 rounded-2xl shadow-2xl text-white text-sm font-semibold min-w-[260px]" id="toast-inner">
+                                    <svg id="toast-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></svg>
+                                    <span id="toast-msg"></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <Faq 
+        <Faq
             faqs={FaqsData}
             title="Frequently Asked Questions"
         />
     </main>
     <Footer />
 </Layout>
+
+<script>
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const successDiv = document.getElementById('form-success') as HTMLElement;
+    const resetBtn = document.getElementById('reset-btn') as HTMLButtonElement;
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const btnText = document.getElementById('btn-text') as HTMLElement;
+    const btnSpinner = document.getElementById('btn-spinner') as HTMLElement;
+    const toast = document.getElementById('toast') as HTMLElement;
+    const toastInner = document.getElementById('toast-inner') as HTMLElement;
+    const toastMsg = document.getElementById('toast-msg') as HTMLElement;
+    const toastIcon = document.getElementById('toast-icon') as HTMLElement;
+    const emailError = document.getElementById('email-error') as HTMLElement;
+    const contactError = document.getElementById('contact-error') as HTMLElement;
+
+    function showToast(type: 'success' | 'error', message: string) {
+        toastInner.className = `flex items-center gap-3 px-5 py-4 rounded-2xl shadow-2xl text-white text-sm font-semibold min-w-[260px] ${type === 'success' ? 'bg-green-600' : 'bg-red-600'}`;
+        toastIcon.innerHTML = type === 'success'
+            ? '<polyline points="20 6 9 17 4 12"/>'
+            : '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>';
+        toastMsg.textContent = message;
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 3000);
+    }
+
+    function setLoading(loading: boolean) {
+        submitBtn.disabled = loading;
+        btnText.textContent = loading ? 'Sending...' : 'Send';
+        btnSpinner.classList.toggle('hidden', !loading);
+    }
+
+    function validateEmail(email: string): boolean {
+        return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email) && email.length <= 50;
+    }
+
+    function validateContact(contact: string): boolean {
+        return /^[6-9][0-9]{9}$/.test(contact);
+    }
+
+    form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const name = (document.getElementById('name') as HTMLInputElement).value.trim();
+        const email = (document.getElementById('email') as HTMLInputElement).value.trim();
+        const contact = (document.getElementById('contact') as HTMLInputElement).value.trim();
+        const message = (document.getElementById('message') as HTMLTextAreaElement).value.trim();
+
+        // Validate
+        let valid = true;
+        if (!validateEmail(email)) {
+            emailError.classList.remove('hidden');
+            valid = false;
+        } else {
+            emailError.classList.add('hidden');
+        }
+        if (!validateContact(contact)) {
+            contactError.classList.remove('hidden');
+            valid = false;
+        } else {
+            contactError.classList.add('hidden');
+        }
+        if (!name || !message) {
+            valid = false;
+        }
+        if (!valid) return;
+
+        setLoading(true);
+
+        const payload = {
+            leadListId: "68b53c175188bd06232e87ea",
+            name,
+            email,
+            contact1: contact,
+            customFields: [
+                {
+                    customFieldId: "68b53c9b5188bd06232e96a9",
+                    key: "nialabs_message",
+                    value: message,
+                },
+            ],
+        };
+
+        try {
+            const response = await fetch(
+                "https://api.next.coachinglog.in/api/v1/lead/website",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        iid: "6502a77c6d074427b15f5230",
+                    },
+                    body: JSON.stringify(payload),
+                }
+            );
+
+            if (response.ok) {
+                showToast('success', 'Enquiry submitted successfully');
+                form.classList.add('hidden');
+                successDiv.classList.remove('hidden');
+            } else {
+                throw new Error('API request failed');
+            }
+        } catch {
+            showToast('error', 'Could not submit enquiry. Please try again.');
+        } finally {
+            setLoading(false);
+        }
+    });
+
+    resetBtn?.addEventListener('click', () => {
+        form.reset();
+        form.classList.remove('hidden');
+        successDiv.classList.add('hidden');
+    });
+</script>
