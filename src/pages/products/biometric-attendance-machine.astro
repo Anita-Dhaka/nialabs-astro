@@ -1,0 +1,147 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import ProductHero from '../../components/ProductHero.astro';
+
+const headerData = {
+    title: "AI-Powered Biometric Attendance Machines for Offices & Schools",
+    desc: "Nialabs offers advanced biometric attendance systems to simplify school and staff management and boost security for modern businesses.",
+    image: "/headerImages/biometric-attendance-system.jpg", 
+};
+
+const products = [
+    {
+        id: "N-AI10-bus-attendence",
+        title: "Smart Bus Attendance System with AI Face Recognition & GPS - AI10",
+        desc: "The N-AI10 redefines smart access control with real face recognition that delivers fast and accurate identification within 0.5–2.5 meters. Supporting up to 5 users simultaneously, it ensures smooth multi-person detection and enhanced security with mask detection and dual cameras for precise verification. Built for 24/7 performance, the N-AI10 features a night-vision functional camera, durable construction, and a 4.3-inch display powered by a 1.2GHz dual-core ARM CPU. With multiple authentication modes—including face recognition, QR code, and RFID card—it provides flexible, reliable, and real-time monitoring for both access control and attendance management.",
+        image: "/product/ai10/235.webp",
+        badge: "Bus Attendance"
+    },
+    {
+        id: "N-AI09-face-attendence",
+        title: "Dynamic Face Recognition Terminal by Nialabs: The Next Generation of Secure Access - N-AI09",
+        desc: "The N-AI09 Dynamic Face Recognition Terminal from Nialabs is a powerful, AI-driven device designed to set a new standard for efficient access control and automated time attendance. Leveraging cutting-edge AI Visible Light technology combined with WDR (Wide Dynamic Range) optics, the N-AI09 guarantees ultra-fast, touchless identification with exceptional precision, ensuring a high-security environment and a friction-free experience for every user. It is the intelligent solution for modern organizations seeking to enhance security, compliance, and operational efficiency.",
+        image: "/product/ai09/239.webp",
+        badge: "Dynamic Face Reco"
+    },
+    {
+        id: "N-AI08-face-recognition",
+        title: "Dynamic Face Recognition Terminal with 4G Sim - AI08",
+        desc: "Experience next-level security with the N-AI08, an advanced access control and attendance device offering real face recognition within 0.5–2.5 meters. Designed for speed and accuracy, it supports multi-person detection (up to 5 users) and ensures safety with mask detection and dual cameras for anti-spoof verification. Equipped with a night-vision camera, 4.3-inch display, and 1.2GHz dual-core ARM CPU, the N-AI08 delivers smooth and reliable performance day and night. With multiple authentication modes—face, QR code, and RFID card—it combines flexibility, durability, and real-time monitoring for smart and secure access management.",
+        image: "/product/ai08/229.webp",
+        badge: "4G SIM Supported"
+    },
+    {
+        id: "N-AI07-face-fingerprint",
+        title: "Face, Fingerprint Time Attendance and Access Control System - N-AI07",
+        desc: "The N-AI07F Dynamic Face & Fingerprint Recognition Terminal is an advanced dual identification access control and attendance management system. This device combines high-precision fingerprint authentication with AI-powered face recognition to ensure accurate and reliable identification. With mask detection, anti-spoofing, and multiple authentication modes, including face, fingerprint, QR code, and RFID card, the N-AI07F offers top-notch security and flexibility. This convenience is further enhanced with the user-friendly interface and support for a biometric API. The N-AI07F promises real-time monitoring, remote access control, and cloud connectivity for effortless integration and management. With dual identification, smart features, and an option to expand user capacity, the N-AI07F is an ideal choice for businesses of all sizes.",
+        image: "/product/ai07/218.webp",
+        badge: "Face + Fingerprint"
+    },
+    {
+        id: "N-AI06-face-recognition",
+        title: "Face Time Attendance & Access Control Reader - N-AI06",
+        desc: "The N-AI06 is an advanced access control and attendance face recognition terminal powered by AI-based face recognition technology. It features a high-resolution display and an easy-to-navigate interface and ensures fast and accurate identification with mask detection and anti-spoofing protection. Equipped with a biometric API, the N-AI06 facilitates remote access control, real-time monitoring, and cloud connectivity. With multiple authentication modes such as face recognition, QR code, and RFID card, it adapts to various security needs. Furthermore, the strong build and large user capacity make N-AI06 a smart and dependable face recognition device.",
+        image: "/product/ai06/223.webp",
+        badge: "Face + Access Control"
+    },
+    {
+        id: "AI05-face-recognition",
+        title: "Face Recognition Time Attendance & Access Control System - AI05",
+        desc: "The AI05 Biometric Terminal is a smart and adaptable solution for access management and employee attendance tracking. Equipped with AI-powered technology and cloud-based software, it allows real-time monitoring and remote system control with ease. Moreover, with features like infrared live body detection, intuitive interface, and intelligent recognition algorithms, it can adjust to varying lighting and facial changes, ensuring consistent accuracy. Packed with a powerful processor and built-in battery, the smart terminal guarantees fast, uninterrupted operation even during power outages. The strong build, flexible mounting, and multiple connectivity options make it a secure and dependable solution for high-traffic areas.",
+        image: "/product/ai04/242.webp",
+        badge: "Cloud AI Powered"
+    },
+    {
+        id: "AI04-cloud-ai-powered",
+        title: "Face Recognition Biometric Terminal – Cloud & AI-Powered Attendance Solution - AI04",
+        desc: "The AI04 Biometric Terminal is a smart and adaptable solution for access management and employee attendance tracking. Equipped with AI-powered technology and cloud-based software, it allows real-time monitoring and remote system control with ease. Moreover, with features like infrared live body detection, intuitive interface, and intelligent recognition algorithms, it can adjust to varying lighting and facial changes, ensuring consistent accuracy. Packed with a powerful processor and built-in battery, the smart terminal guarantees fast, uninterrupted operation even during power outages. The strong build, flexible mounting, and multiple connectivity options make it a secure and dependable solution for high-traffic areas.",
+        image: "/product/ai04/247.webp",
+        badge: "Cloud AI Powered"
+    }
+];
+
+const title = "Best Biometric Attendance Machine | AI Face & Fingerprint Devices | Nialabs";
+const description = "Nialabs offers the best biometric attendance system in India with fast face recognition, accurate attendance tracking, cloud reports, and seamless integration for all industries.";
+---
+
+<Layout title={title} description={description}>
+    <Navbar />
+    <main class="bg-slate-50 min-h-screen">
+        <!-- Hero Section using ProductHero component -->
+        <ProductHero
+            title={headerData.title}
+            desc={headerData.desc}
+            image={headerData.image}
+            badge="Premium Biometrics"
+        />
+
+        <!-- Products Listing Section -->
+        <section class="py-24 relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-semibold mb-6">
+                        <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                        Our Product Lineup
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-6">Explore Our Range of <span class="text-blue-600">Smart Terminals</span></h2>
+                    <p class="text-lg text-slate-600 font-medium">From schools to smart offices, discover the perfect biometric attendance machine tailored for your specific needs.</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-16 lg:gap-24">
+                    {products.map((product, index) => (
+                        <div class={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20 bg-white rounded-[40px] p-8 md:p-12 lg:p-16 shadow-2xl shadow-slate-200/50 border border-slate-100 hover:border-blue-100 transition-colors duration-500 group`}>
+                            
+                            <!-- Product Image Area -->
+                            <div class="w-full lg:w-5/12 relative">
+                                <div class="absolute inset-0 bg-blue-600/5 rounded-full blur-[60px] transform group-hover:scale-110 transition-transform duration-700"></div>
+                                <div class="relative aspect-square flex items-center justify-center p-8 bg-slate-50 rounded-[32px] border border-slate-100 overflow-hidden transform group-hover:shadow-xl transition-all duration-500">
+                                    <img 
+                                        src={product.image} 
+                                        alt={product.title} 
+                                        class="w-full h-auto max-w-[280px] object-contain drop-shadow-2xl transform transition-transform duration-700 group-hover:scale-105"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- Product Content Area -->
+                            <div class="w-full lg:w-7/12 flex flex-col justify-center">
+                                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider mb-6 w-max">
+                                    {product.badge}
+                                </div>
+                                <h3 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-6">
+                                    {product.title}
+                                </h3>
+                                <p class="text-lg text-slate-600 leading-relaxed font-medium mb-10">
+                                    {product.desc}
+                                </p>
+                                
+                                <div>
+                                    <a 
+                                        href={`/products/biometric-attendance-machine/${product.id}`}
+                                        class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 text-white font-extrabold rounded-2xl hover:bg-blue-500 transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-xl shadow-blue-500/25 group/btn"
+                                    >
+                                        <span>View Details</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transform transition-transform group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    </main>
+    <Footer />
+</Layout>

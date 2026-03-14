@@ -1,0 +1,228 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Navbar from '../../../components/Navbar.astro';
+import Footer from '../../../components/Footer.astro';
+import ProductHero from '../../../components/ProductHero.astro';
+import Faq from '../../../components/Faq.astro';
+import Products from '../../../components/Products.astro';
+import SimpleCta from '../../../components/SimpleCta.astro';
+import { PRODUCTDETAILS } from '../../../data/machine';
+
+export async function getStaticPaths() {
+    return PRODUCTDETAILS.map((product) => ({
+        params: { id: product.routeName },
+        props: { product },
+    }));
+}
+
+const { product } = Astro.props;
+
+// Map FAQ format
+const formattedFaqs = product.faqs ? product.faqs.map(f => ({
+    question: f.question,
+    solution: f.answer
+})) : [];
+---
+
+<Layout title={product.metaTitle || product.title} description={product.metaDesc || product.desc}>
+    <Navbar />
+    <main class="bg-slate-50 min-h-screen">
+        <ProductHero
+            title={product.title}
+            desc={product.desc}
+            image={product.img}
+            badge="Premium Biometrics"
+        />
+
+        <section class="py-20 bg-white border-b border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <!-- Image Gallery -->
+                    <div class="sticky top-24">
+                        <div class="rounded-3xl overflow-hidden bg-white border border-slate-100 p-8 flex items-center justify-center min-h-[400px] shadow-sm transform transition-all hover:shadow-lg">
+                            <img src={product.img} alt={product.title} class="max-w-full max-h-[400px] w-auto h-auto object-contain drop-shadow-2xl" id="main-product-image" />
+                        </div>
+                        {product.images && product.images.length > 0 && (
+                            <div class="flex gap-4 mt-6 overflow-x-auto pb-4 scrollbar-hide">
+                                {product.images.map((img) => (
+                                    <button class="thumbnail-btn w-24 h-24 rounded-2xl border-2 border-transparent hover:border-blue-500 focus:border-blue-600 overflow-hidden bg-white shadow-sm flex-shrink-0 transition-colors">
+                                        <img src={img} alt="Thumbnail" class="w-full h-full object-contain p-2" />
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
+                    <!-- Content -->
+                    <div class="space-y-10">
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 tracking-tight leading-tight">{product.aboutTitle}</h2>
+                            <div class="space-y-5 text-lg text-slate-600 leading-relaxed font-medium">
+                                {product.aboutDesc.map((para) => (
+                                    <p>{para}</p>
+                                ))}
+                            </div>
+                        </div>
+
+                        {product.applications && product.applications.length > 0 && (
+                            <div class="bg-blue-50/60 rounded-3xl p-8 border border-blue-100 shadow-sm">
+                                <h3 class="text-2xl font-bold text-slate-900 mb-6">Key Applications</h3>
+                                <ul class="space-y-4">
+                                    {product.applications.map((app) => (
+                                        <li class="flex items-start gap-4">
+                                            <div class="w-6 h-6 rounded-full bg-blue-600/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                                <svg class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                            <span class="text-slate-700 font-medium">{app}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Points / Features Grid -->
+        {product.points && product.points.length > 0 && (
+            <section class="py-20 bg-slate-50 border-b border-slate-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-16 max-w-3xl mx-auto">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-semibold mb-6">
+                            <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                            Smart Capabilities
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Why Choose This Terminal?</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {product.points.map((pt) => (
+                            <div class="bg-white rounded-[32px] p-8 shadow-sm shadow-slate-200/50 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                                <div class="w-14 h-14 bg-gradient-to-br from-blue-500 flex items-center justify-center to-blue-600 text-white rounded-2xl mb-6 shadow-lg shadow-blue-500/30">
+                                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <h4 class="text-xl font-extrabold text-slate-900 mb-4">{pt.heading}</h4>
+                                <p class="text-slate-600 leading-relaxed font-medium">{pt.point}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        )}
+
+        <!-- Specifications Tab/Grid Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Technical Specifications</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Hardware -->
+                    {product.hardware && product.hardware.length > 0 && (
+                        <div class="bg-slate-50 rounded-[32px] p-8 border border-slate-100 hover:shadow-md transition-shadow">
+                            <h3 class="text-2xl font-extrabold text-slate-900 mb-8 flex items-center gap-3">
+                                <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>
+                                </div>
+                                Hardware
+                            </h3>
+                            <ul class="space-y-4">
+                                {product.hardware.map((hw) => (
+                                    <li class="flex flex-col border-b border-slate-200/60 pb-4 last:border-0">
+                                        <span class="text-[13px] font-black uppercase tracking-wider text-slate-500">{hw.title}</span>
+                                        <span class="text-slate-800 font-semibold mt-1">{hw.desc}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    <!-- Software -->
+                    {product.software && product.software.length > 0 && (
+                        <div class="bg-slate-50 rounded-[32px] p-8 border border-slate-100 hover:shadow-md transition-shadow">
+                            <h3 class="text-2xl font-extrabold text-slate-900 mb-8 flex items-center gap-3">
+                                <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                                </div>
+                                Software
+                            </h3>
+                            <ul class="space-y-4">
+                                {product.software.map((sw) => (
+                                    <li class="flex flex-col border-b border-slate-200/60 pb-4 last:border-0">
+                                        <span class="text-[13px] font-black uppercase tracking-wider text-slate-500">{sw.title}</span>
+                                        <span class="text-slate-800 font-semibold mt-1">{sw.desc}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+
+                    <!-- Features -->
+                    {product.features && product.features.length > 0 && (
+                        <div class="bg-slate-50 rounded-[32px] p-8 border border-slate-100 hover:shadow-md transition-shadow">
+                            <h3 class="text-2xl font-extrabold text-slate-900 mb-8 flex items-center gap-3">
+                                <div class="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-600">
+                                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg>
+                                </div>
+                                Features
+                            </h3>
+                            <ul class="space-y-4">
+                                {product.features.map((ft) => (
+                                    <li class="flex flex-col border-b border-slate-200/60 pb-4 last:border-0">
+                                        <span class="text-[13px] font-black uppercase tracking-wider text-slate-500">{ft.title}</span>
+                                        <span class="text-slate-800 font-semibold mt-1">{ft.desc}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </section>
+
+        {formattedFaqs.length > 0 && (
+            <Faq faqs={formattedFaqs} title="Frequently Asked Questions" />
+        )}
+
+        <Products />
+
+        <SimpleCta />
+
+    </main>
+    <Footer />
+</Layout>
+
+<script>
+    function setupGallery() {
+        const mainImg = document.getElementById('main-product-image') as HTMLImageElement;
+        const thumbnails = document.querySelectorAll('.thumbnail-btn');
+        
+        if (mainImg && thumbnails.length > 0) {
+            thumbnails.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update main image source
+                    const img = btn.querySelector('img');
+                    if (img) {
+                        mainImg.src = img.src;
+                        
+                        // Update active state visualization
+                        thumbnails.forEach(t => t.classList.remove('border-blue-500'));
+                        btn.classList.add('border-blue-500');
+                    }
+                });
+            });
+        }
+    }
+
+    // Run on initial load
+    setupGallery();
+    
+    // Run after Astro view transitions
+    document.addEventListener('astro:after-swap', setupGallery);
+</script>

@@ -73,23 +73,25 @@ const navLinks = [
               </button>
               
               <!-- Desktop Dropdown -->
-              <ul class="absolute -right-4 lg:right-auto lg:left-0 mt-2 hidden w-max min-w-[240px] max-h-[70vh] overflow-y-auto overscroll-contain origin-top bg-white p-2 shadow-xl border border-gray-100 rounded-xl opacity-0 transition-opacity duration-200 group-hover:flex group-hover:opacity-100 flex-col space-y-1">
-                {link.dropdown.map((subLink) => (
-                  <li>
-                    <a 
-                      href={subLink.url} 
-                      target={subLink.download || subLink.url.startsWith('http') ? '_blank' : '_self'}
-                      rel={subLink.download || subLink.url.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      class={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm transition-colors whitespace-nowrap ${subLink.download ? 'text-blue-600 font-semibold hover:bg-blue-50' : 'text-slate-600 hover:bg-blue-50 hover:text-blue-600'}`}
-                    >
-                      {subLink.download && (
-                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                      )}
-                      {subLink.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <div class="absolute -right-4 lg:right-auto lg:left-0 top-full pt-2 hidden group-hover:block z-50">
+                <ul class="w-max min-w-[240px] max-h-[70vh] overflow-y-auto overscroll-contain origin-top bg-white p-2 shadow-xl border border-gray-100 rounded-xl flex flex-col space-y-1">
+                  {link.dropdown.map((subLink) => (
+                    <li>
+                      <a 
+                        href={subLink.url} 
+                        target={subLink.download || subLink.url.startsWith('http') ? '_blank' : '_self'}
+                        rel={subLink.download || subLink.url.startsWith('http') ? 'noopener noreferrer' : undefined}
+                        class={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm transition-colors whitespace-nowrap ${subLink.download ? 'text-blue-600 font-semibold hover:bg-blue-50' : 'text-slate-600 hover:bg-blue-50 hover:text-blue-600'}`}
+                      >
+                        {subLink.download && (
+                          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        )}
+                        {subLink.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ) : (
               <a href={link.url} class="block rounded-md px-3 py-2 text-sm transition-colors hover:bg-slate-50 hover:text-blue-600">
                 {link.name}

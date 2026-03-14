@@ -1,0 +1,50 @@
+---
+export interface Props {
+    title?: string;
+    desc?: string;
+    btnText?: string;
+    btnLink?: string;
+}
+
+const {
+    title = "Have questions? We're here to help!",
+    desc = "Reach out to our experts and discover how Nialabs Biometric Solutions can secure and streamline your organization's attendance and access management today.",
+    btnText = "Get in Touch",
+    btnLink = "/contact"
+} = Astro.props;
+---
+
+<section class="py-10 bg-white" id="simple-cta">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative rounded-[40px] bg-[#2A6DE4] p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-500/20">
+            <!-- Decorative background orbs -->
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
+
+            <div class="relative z-10 max-w-3xl">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                    {title}
+                </h2>
+
+                <div class="flex flex-wrap gap-4">
+                    <a
+                        href={btnLink}
+                        class="inline-flex items-center gap-3 px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl"
+                    >
+                        {btnText}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Decorative SVG graphic (right side, desktop only) -->
+            <div class="absolute right-0 bottom-0 hidden lg:block opacity-20 pointer-events-none">
+                <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="200" cy="200" r="150" stroke="white" stroke-width="2" stroke-dasharray="10 10"/>
+                    <circle cx="200" cy="200" r="100" stroke="white" stroke-width="4"/>
+                    <path d="M200 100V300M100 200H300" stroke="white" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
