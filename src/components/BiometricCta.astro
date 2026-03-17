@@ -1,0 +1,153 @@
+---
+interface Props {
+  title?: string;
+  desc?: string;
+}
+
+const {
+  title = 'Take Attendance Management <br class="hidden md:block"/> to the Next Level',
+  desc = "Join 1000+ businesses/institutes and 250+ fleets already using our biometric solutions.",
+} = Astro.props;
+
+const clientLogos = Array.from(
+  { length: 20 },
+  (_, i) => `/response/clients/client_logo_${i + 1}.jpg`,
+);
+---
+
+<!-- Trusted By Marquee -->
+<div>
+  <section
+    class="py-10 bg-slate-50 border-b border-slate-100 overflow-hidden relative"
+  >
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class={`text-3xl md:text-5xl font-extrabold mb-6 leading-tight`}>
+        Our Esteemed Clients
+      </h2>
+    </div>
+
+    <div class="relative flex overflow-x-hidden group">
+      <div
+        class="animate-marquee whitespace-nowrap flex shrink-0 items-center gap-12 sm:gap-16 px-6"
+      >
+        {
+          clientLogos.map((logo) => (
+            <img
+              src={logo}
+              alt="Client Logo"
+              class="h-12 md:h-16 w-auto max-w-[140px] object-contain hover:scale-105 transition-all duration-300"
+              loading="lazy"
+            />
+          ))
+        }
+      </div>
+      <!-- Duplicate for seamless loop -->
+      <div
+        class="animate-marquee whitespace-nowrap flex shrink-0 items-center gap-12 sm:gap-16 px-6"
+        aria-hidden="true"
+      >
+        {
+          clientLogos.map((logo) => (
+            <img
+              src={logo}
+              alt="Client Logo"
+              class="h-12 md:h-16 w-auto max-w-[140px] object-contain hover:scale-105 transition-all duration-300"
+              loading="lazy"
+            />
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Gradient fades for marquee edges -->
+    <div
+      class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-slate-50 to-transparent pointer-events-none"
+    >
+    </div>
+    <div
+      class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-50 to-transparent pointer-events-none"
+    >
+    </div>
+  </section>
+  <section class="py-10 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="relative rounded-[40px] bg-[#2A6DE4] p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-500/20"
+      >
+        <!-- Decorative background elements -->
+        <div
+          class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"
+        >
+        </div>
+        <div
+          class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"
+        >
+        </div>
+
+        <div class="relative z-10 max-w-3xl">
+          <h2
+            class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight"
+            set:html={title}
+          />
+          {
+            desc && (
+              <p
+                class="text-lg md:text-xl text-blue-100 mb-10 leading-relaxed"
+                set:html={desc}
+              />
+            )
+          }
+
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="/contactUs"
+              class="px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl"
+            >
+              Request a Free Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Optional: Floating visual elements -->
+        <div
+          class="absolute right-0 bottom-0 hidden lg:block opacity-20 pointer-events-none"
+        >
+          <svg
+            width="400"
+            height="400"
+            viewBox="0 0 400 400"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="200"
+              cy="200"
+              r="150"
+              stroke="white"
+              stroke-width="2"
+              stroke-dasharray="10 10"></circle>
+            <circle cx="200" cy="200" r="100" stroke="white" stroke-width="4"
+            ></circle>
+            <path d="M200 100V300M100 200H300" stroke="white" stroke-width="2"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  .group:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+</style>

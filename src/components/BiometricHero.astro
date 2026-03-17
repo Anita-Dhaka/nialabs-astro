@@ -1,108 +1,74 @@
----
-export interface Props {
-  title?: string;
-  desc?: string;
-}
-
-const {
-  title = "Upgrade to a smarter biometric attendance solution today.",
-  desc = "Whether you’re managing a school or running a business, Nialabs has the right technology for you.",
-} = Astro.props;
----
-
-<section class="relative bg-[#2A6DE4] overflow-hidden" id="contact">
-  <!-- Decorative background elements -->
-  <div
-    class="absolute top-0 right-0 w-[600px] h-[600px] bg-white/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"
-  >
-  </div>
-  <div
-    class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"
-  >
+<section
+  class="relative pt-10 pb-16 lg:pt-20 lg:pb-16 overflow-hidden bg-slate-900"
+>
+  <!-- Background Decorations -->
+  <div class="absolute inset-0 z-0">
+    <div
+      class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4"
+    >
+    </div>
+    <div
+      class="absolute inset-0 bg-[url('/mainImages/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"
+    >
+    </div>
   </div>
 
-  <div
-    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10"
-  >
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-      <!-- Left: Content -->
-      <div class="max-w-xl">
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Content -->
+      <div class="max-w-2xl">
         <div
-          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold mb-6"
+          class="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold mb-6 animate-fade-in"
         >
-          <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-          Get In Touch
+          <span class="relative flex h-2 w-2 mr-3">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"
+            ></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"
+            ></span>
+          </span>
+          Excellence in Biometric Technology
         </div>
-        <h2
-          class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6"
+
+        <h1
+          class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.1] mb-6 animate-slide-up"
         >
-          {title}
-        </h2>
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400"
+            >India's Trusted</span
+          > Biometric Attendance Partner
+        </h1>
+
         <p
-          class="text-lg md:text-xl text-blue-100 font-medium mb-12 leading-relaxed"
+          class="text-base md:text-lg text-slate-400 leading-relaxed mb-4 animate-slide-up animation-delay-200"
         >
-          {desc}
+          From schools to enterprises, we make attendance management fast,
+          accurate, and secure.
         </p>
 
-        <div class="space-y-6">
-          <div
-            class="flex items-center gap-4 text-white transform transition-transform hover:translate-x-2 duration-300"
+        <p
+          class="text-base md:text-lg text-slate-400 leading-relaxed mb-2 animate-slide-up animation-delay-200"
+        >
+          <span class="font-bold">Over 1000+ biometrics sold:</span> A proven track record of security and efficiency.
+        </p>
+        
+        <span
+          class="text-base md:text-lg text-slate-400 leading-relaxed animate-slide-up animation-delay-200"
+        >
+          <span class="font-bold">Empowering 250+ School Bus Fleets: </span>with advanced safety and attendance tracking.
+        </p>
+
+        <div class="flex mt-8 flex-wrap gap-4 animate-slide-up animation-delay-400">
+          <a
+            href="#story"
+            class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-[1.02] shadow-xl shadow-blue-500/25"
           >
-            <div
-              class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 text-white shadow-xl"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                ><path
-                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                ></path></svg
-              >
-            </div>
-            <div>
-              <p class="text-sm text-blue-100 font-semibold mb-1">
-                Call Us Now
-              </p>
-              <p class="font-bold text-white tracking-wide">+91 80694 09217</p>
-            </div>
-          </div>
-          <div
-            class="flex items-center gap-4 text-white transform transition-transform hover:translate-x-2 duration-300"
-          >
-            <div
-              class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20 text-white shadow-xl"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                ><path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                ></path><polyline points="22,6 12,13 2,6"></polyline></svg
-              >
-            </div>
-            <div>
-              <p class="text-sm text-blue-100 font-semibold mb-1">
-                Email Support
-              </p>
-              <p class="font-bold text-white tracking-wide">
-                support@nialabs.in
-              </p>
-            </div>
-          </div>
+            Get a Custom Quote Today
+          </a> 
         </div>
       </div>
 
@@ -117,7 +83,7 @@ const {
         >
           <!-- Success Message (Hidden Initial) -->
           <div
-            id="home-cta-success"
+            id="landing-success"
             class="hidden h-full flex flex-col items-center justify-center text-center py-12"
           >
             <div
@@ -144,7 +110,7 @@ const {
               shortly.
             </p>
             <button
-              id="home-cta-reset"
+              id="landing-reset"
               class="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-900 font-bold rounded-xl transition-colors"
             >
               Send Another Message
@@ -152,40 +118,40 @@ const {
           </div>
 
           <!-- Form -->
-          <form id="home-cta-form" class="space-y-5">
+          <form id="landing-form" class="space-y-5">
             <div class="flex flex-col gap-1.5 text-left">
               <label
-                for="home-cta-name"
+                for="landing-name"
                 class="text-slate-700 text-sm font-bold uppercase tracking-wider"
                 >Full Name <span class="text-red-500">*</span></label
               >
               <input
                 type="text"
-                id="home-cta-name"
+                id="landing-name"
                 name="name"
                 placeholder="Enter Your Name"
                 required
-                class="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#2A6DE4] transition-all"
+                class="w-full px-5 py-3 rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#2A6DE4] transition-all"
               />
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div class="flex flex-col gap-1.5 text-left">
                 <label
-                  for="home-cta-email"
+                  for="landing-email"
                   class="text-slate-700 text-sm font-bold uppercase tracking-wider"
                   >Email ID <span class="text-red-500">*</span></label
                 >
                 <input
                   type="email"
-                  id="home-cta-email"
+                  id="landing-email"
                   name="email"
                   placeholder="Enter Your Email"
                   required
-                  class="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#2A6DE4] transition-all"
+                  class="w-full px-5 py-3 rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#2A6DE4] transition-all"
                 />
                 <span
-                  id="home-cta-email-error"
+                  id="landing-email-error"
                   class="text-red-500 text-xs hidden mt-1"
                   >Please enter a valid email address.</span
                 >
@@ -193,21 +159,21 @@ const {
 
               <div class="flex flex-col gap-1.5 text-left">
                 <label
-                  for="home-cta-contact"
+                  for="landing-contact"
                   class="text-slate-700 text-sm font-bold uppercase tracking-wider"
                   >Contact No. <span class="text-red-500">*</span></label
                 >
                 <input
                   type="tel"
-                  id="home-cta-contact"
+                  id="landing-contact"
                   name="contact"
                   placeholder="Enter Your Contact No."
                   required
                   pattern="[6-9][0-9]{9}"
-                  class="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#2A6DE4] transition-all"
+                  class="w-full px-5 py-3 rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#2A6DE4] transition-all"
                 />
                 <span
-                  id="home-cta-contact-error"
+                  id="landing-contact-error"
                   class="text-red-500 text-xs hidden mt-1"
                   >Enter a valid 10-digit Indian mobile number.</span
                 >
@@ -216,28 +182,44 @@ const {
 
             <div class="flex flex-col gap-1.5 text-left">
               <label
-                for="home-cta-message"
+                for="landing-business"
+                class="text-slate-700 text-sm font-bold uppercase tracking-wider"
+                >Business/Institute Name <span class="text-red-500">*</span></label
+              >
+              <input
+                type="text"
+                id="landing-business"
+                name="name"
+                placeholder="Enter Business"
+                required
+                class="w-full px-5 py-3 rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#2A6DE4] transition-all"
+              />
+            </div>
+
+            <div class="flex flex-col gap-1.5 text-left">
+              <label
+                for="landing-message"
                 class="text-slate-700 text-sm font-bold uppercase tracking-wider"
                 >Message <span class="text-red-500">*</span></label
               >
               <textarea
-                id="home-cta-message"
+                id="landing-message"
                 name="message"
                 placeholder="Enter Your Message"
                 required
                 rows="3"
-                class="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#2A6DE4] transition-all resize-none"
+                class="w-full px-5 py-3 rounded-2xl bg-slate-50 border border-slate-100 text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#2A6DE4] transition-all resize-none"
               ></textarea>
             </div>
 
             <button
-              id="home-cta-submit"
+              id="landing-submit"
               type="submit"
-              class="w-full px-8 py-4 bg-[#2A6DE4] hover:bg-blue-700 text-white font-extrabold rounded-2xl transition-all duration-300 transform hover:scale-[1.01] shadow-xl shadow-blue-500/25 flex items-center justify-center gap-3 mt-4"
+              class="w-full px-8 py-3 bg-[#2A6DE4] hover:bg-blue-700 text-white font-extrabold rounded-2xl transition-all duration-300 transform hover:scale-[1.01] shadow-xl shadow-blue-500/25 flex items-center justify-center gap-3 mt-4"
             >
-              <span id="home-cta-btn-text">Send Enquiry</span>
+              <span id="landing-btn-text">Send Enquiry</span>
               <svg
-                id="home-cta-spinner"
+                id="landing-spinner"
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
@@ -255,15 +237,15 @@ const {
 
           <!-- Toast Notification -->
           <div
-            id="home-cta-toast"
+            id="landing-toast"
             class="absolute -top-16 left-1/2 min-w-max -translate-x-1/2 z-50 hidden transition-all duration-300"
           >
             <div
               class="flex items-center gap-3 px-5 py-3 rounded-xl shadow-2xl text-white text-sm font-semibold"
-              id="home-cta-toast-inner"
+              id="landing-toast-inner"
             >
               <svg
-                id="home-cta-toast-icon"
+                id="landing-toast-icon"
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
                 height="18"
@@ -273,7 +255,7 @@ const {
                 stroke-width="3"
                 stroke-linecap="round"
                 stroke-linejoin="round"></svg>
-              <span id="home-cta-toast-msg"></span>
+              <span id="landing-toast-msg"></span>
             </div>
           </div>
         </div>
@@ -307,29 +289,29 @@ const {
 </div>
 
 <script>
-  const form = document.getElementById("home-cta-form") as HTMLFormElement;
-  const successDiv = document.getElementById("home-cta-success") as HTMLElement;
+  const form = document.getElementById("landing-form") as HTMLFormElement;
+  const successDiv = document.getElementById("landing-success") as HTMLElement;
   const resetBtn = document.getElementById(
-    "home-cta-reset",
+    "landing-reset",
   ) as HTMLButtonElement;
   const submitBtn = document.getElementById(
-    "home-cta-submit",
+    "landing-submit",
   ) as HTMLButtonElement;
-  const btnText = document.getElementById("home-cta-btn-text") as HTMLElement;
-  const btnSpinner = document.getElementById("home-cta-spinner") as HTMLElement;
-  const toast = document.getElementById("home-cta-toast") as HTMLElement;
+  const btnText = document.getElementById("landing-btn-text") as HTMLElement;
+  const btnSpinner = document.getElementById("landing-spinner") as HTMLElement;
+  const toast = document.getElementById("landing-toast") as HTMLElement;
   const toastInner = document.getElementById(
-    "home-cta-toast-inner",
+    "landing-toast-inner",
   ) as HTMLElement;
-  const toastMsg = document.getElementById("home-cta-toast-msg") as HTMLElement;
+  const toastMsg = document.getElementById("landing-toast-msg") as HTMLElement;
   const toastIcon = document.getElementById(
-    "home-cta-toast-icon",
+    "landing-toast-icon",
   ) as HTMLElement;
   const emailError = document.getElementById(
-    "home-cta-email-error",
+    "landing-email-error",
   ) as HTMLElement;
   const contactError = document.getElementById(
-    "home-cta-contact-error",
+    "landing-contact-error",
   ) as HTMLElement;
 
   function showHomeToast(type: "success" | "error", message: string) {
@@ -371,21 +353,25 @@ const {
     e.preventDefault();
 
     const nameInput = document.getElementById(
-      "home-cta-name",
+      "landing-name",
     ) as HTMLInputElement;
     const emailInput = document.getElementById(
-      "home-cta-email",
+      "landing-email",
     ) as HTMLInputElement;
     const contactInput = document.getElementById(
-      "home-cta-contact",
+      "landing-contact",
+    ) as HTMLInputElement;
+    const businessInput = document.getElementById(
+      "landing-business",
     ) as HTMLInputElement;
     const messageInput = document.getElementById(
-      "home-cta-message",
+      "landing-message",
     ) as HTMLTextAreaElement;
 
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const contact = contactInput.value.trim();
+    const business = businessInput.value.trim();
     const message = messageInput.value.trim();
 
     // Validate
@@ -402,7 +388,7 @@ const {
     } else {
       contactError.classList.add("hidden");
     }
-    if (!name || !message) {
+    if (!name || !message || !business) {
       valid = false;
     }
     if (!valid) return;
@@ -411,9 +397,10 @@ const {
 
     const payload = {
       leadListId: "68b53c175188bd06232e87ea",
-      name,
+      name, 
       email,
       contact1: contact,
+      companyName: business,
       customFields: [
         {
           customFieldId: "68b53c9b5188bd06232e96a9",

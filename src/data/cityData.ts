@@ -219,42 +219,42 @@ export const cityData: CityData[] = [
       title: "Industries We Serve in Maharashtra",
       points: [
         {
-          icon: "/uhfReader/cowork.webp",
+          icon: "/headerImages/industries/cowork.webp",
           title: "IT & Software Companies (Mumbai, Pune, Navi Mumbai)",
           desc: "Unified Attendance, Access Control, and Analytics for big teams",
         },
         {
-          icon: "/uhfReader/school.webp",
+          icon: "/headerImages/industries/school.webp",
           title: "Schools & Colleges ( Mumbai, Pune, Nagpur, Nashik)",
           desc: "Attendance of students & staff in real-time, with an alert to parents",
         },
         {
-          icon: "/uhfReader/Healthcare.webp",
+          icon: "/headerImages/industries/Healthcare.webp",
           title: "Hospitals & Clinics",
           desc: "Accurate monitoring of 24/7 shift attendance",
         },
         {
-          icon: "/uhfReader/enterprise.webp",
+          icon: "/headerImages/industries/enterprise.webp",
           title: "Manufacturing Units (Chakan, Pimpri-Chinchwad, Aurangabad)",
           desc: "Factory-suitable rugged devices",
         },
         {
-          icon: "/uhfReader/parking.webp",
+          icon: "/headerImages/industries/parking.webp",
           title: "Automobile & Engineering",
           desc: "Precise logs for skilled and contract workers",
         },
         {
-          icon: "/uhfReader/retail.webp",
+          icon: "/headerImages/industries/retail.webp",
           title: "Retail & Supermarkets",
           desc: "Branch-level attendance with central monitoring",
         },
         {
-          icon: "/uhfReader/warehouse.webp",
+          icon: "/headerImages/industries/warehouse.webp",
           title: "Logistics & Warehousing",
           desc: "GPS attendance+ shift reporting for large teams",
         },
         {
-          icon: "/uhfReader/event.webp",
+          icon: "/headerImages/industries/event.webp",
           title: "Hotels & Hospitality",
           desc: "Smooth attendance for operations and housekeeping",
         },
@@ -269,19 +269,19 @@ export const cityData: CityData[] = [
       title: "Biometric Devices We Offer",
       points: [
         {
-          icon: "/HeaderImages/ai04/242.webp",
+          icon: "/product/ai04/242.webp",
           title: "Advanced Facial Recognition",
           machine: "N-AI06",
           desc: "High-speed AI hardware with high accuracy to scan large databases, implement Mask detection and anti-proximal, best suited for office, campus, and smart bus systems.",
         },
         {
-          icon: "/HeaderImages/ai10/235.webp",
+          icon: "/product/ai10/235.webp",
           title: "Fingerprint + Two-Factor Security",
           machine: "N-AI07F",
           desc: "Integrates fingerprint and face recognition to ensure security and accuracy, and works well with wet hands, dust, and outdoor lighting conditions.",
         },
         {
-          icon: "/HeaderImages/ai09/239.webp",
+          icon: "/product/ai09/239.webp",
           title: "Multi-Modal Authentication and Access Control",
           desc: "Products such as the N-AI07 support face, fingerprint, RFID, and QR code, allowing efficient attendance and access control for business, school, and industrial establishments.",
         },
@@ -497,42 +497,42 @@ export const cityData: CityData[] = [
       title: "Industries We Serve in Chandigarh",
       points: [
         {
-          icon: "/uhfReader/cowork.webp",
+          icon: "/headerImages/industries/cowork.webp",
           title: "IT & Technology Firms (Chandigarh IT Park, Mohali)",
           desc: "Unified attendance & access control solutions for an expanding workforce",
         },
         {
-          icon: "/uhfReader/school.webp",
+          icon: "/headerImages/industries/school.webp",
           title: "Schools & Colleges ( Chandigarh, Panchkula, Mohali)",
           desc: "Student and staff attendance monitoring and alerts to parents in real-time",
         },
         {
-          icon: "/uhfReader/Healthcare.webp",
+          icon: "/headerImages/industries/Healthcare.webp",
           title: "Hospitals & Clinics",
           desc: "Accurate monitoring of 24/7 shift attendance",
         },
         {
-          icon: "/uhfReader/enterprise.webp",
+          icon: "/headerImages/industries/enterprise.webp",
           title: "Manufacturing Units (Mohali, Baddi, Derabassi)",
           desc: "Robust biometric hardware for industrial environments",
         },
         {
-          icon: "/uhfReader/parking.webp",
+          icon: "/headerImages/industries/parking.webp",
           title: "Automobile & Engineering",
           desc: "Precise attendance for skilled & contractual workers",
         },
         {
-          icon: "/uhfReader/retail.webp",
+          icon: "/headerImages/industries/retail.webp",
           title: "Retail Stores & Supermarkets",
           desc: "Attendance at the branch level with a centralized report",
         },
         {
-          icon: "/uhfReader/warehouse.webp",
+          icon: "/headerImages/industries/warehouse.webp",
           title: "Logistics & Warehousing Operations",
           desc: "Shift level reporting with GPS-based attendance",
         },
         {
-          icon: "/uhfReader/complex.webp",
+          icon: "/headerImages/industries/complex.webp",
           title: "Hotels & Hospitality Sector",
           desc: "Seamless attendance monitoring for operational & service team members",
         },
@@ -547,19 +547,19 @@ export const cityData: CityData[] = [
       title: "Biometric Devices We Offer - Products",
       points: [
         {
-          icon: "/HeaderImages/ai04/242.webp",
+          icon: "/product/ai04/242.webp",
           title: "Advanced Facial Recognition",
           machine: "N-AI06",
           desc: "A high-precision user identification AI machine for large-scale databases at high speed and high accuracy. It comes with mask detection and anti-proximal attendance, making it suitable for use in offices, campuses, and transportation solutions.",
         },
         {
-          icon: "/HeaderImages/ai10/235.webp",
+          icon: "/product/ai10/235.webp",
           title: "Fingerprint with Dual Authentication",
           machine: "N-AI07F",
           desc: "Employs fingerprint and facial recognition authentication to provide enhanced security. It should run seamlessly in harsh environments such as rain, dust , or direct sunlight.",
         },
         {
-          icon: "/HeaderImages/ai09/239.webp",
+          icon: "/product/ai09/239.webp",
           title: "Multi-Mode Access Control & Attendance Terminals",
           desc: "As with other models, the N-AI07 supports face, fingerprint, RFID, and QR code for attendance and access control solutions in education, corporate, and industrial environments.",
         },
@@ -778,42 +778,42 @@ export const cityData: CityData[] = [
       title: "Industries We Serve in Nagpur",
       points: [
         {
-          icon: "/uhfReader/cowork.webp",
+          icon: "/headerImages/industries/cowork.webp",
           title: "IT & Technology Firms (Nagpur City, MIHAN)",
           desc: "Centralized attendance and access control management for efficiently expanding technology companies",
         },
         {
-          icon: "/uhfReader/school.webp",
+          icon: "/headerImages/industries/school.webp",
           title: "Schools & Colleges (Nagpur & Nearby Areas)",
           desc: "Student and staff attendance is monitored digitally, and parents receive timely notifications.",
         },
         {
-          icon: "/uhfReader/Healthcare.webp",
+          icon: "/headerImages/industries/Healthcare.webp",
           title: "Hospitals & Clinics",
           desc: "Dependable 24 /7 attendance with rotating shift schedules in healthcare. ",
         },
         {
-          icon: "/uhfReader/enterprise.webp",
+          icon: "/headerImages/industries/enterprise.webp",
           title: "Manufacturing Units (Butibori, Hingna MIDC)",
           desc: "Heavy-duty biometric machines for industry and factory environments",
         },
         {
-          icon: "/uhfReader/parking.webp",
+          icon: "/headerImages/industries/parking.webp",
           title: "Automobile & Engineering",
           desc: "Accurate attendance of regular, contract, and technical employees",
         },
         {
-          icon: "/uhfReader/retail.webp",
+          icon: "/headerImages/industries/retail.webp",
           title: "Retail Store & Supermarkets",
           desc: "Branch-level attendance with cumulative reporting at HO",
         },
         {
-          icon: "/uhfReader/warehouse.webp",
+          icon: "/headerImages/industries/warehouse.webp",
           title: "Warehousing & Logistics Operations",
           desc: "GPS attendance with shift reports for mobile and field workers",
         },
         {
-          icon: "/uhfReader/event.webp",
+          icon: "/headerImages/industries/event.webp",
           title: "Hotel & Hospitality Industry",
           desc: "Effortless management of attendance and time-in/ time-out for front-office, service, and back-office employees",
         },
@@ -828,19 +828,19 @@ export const cityData: CityData[] = [
       title: "Biometric Devices We Offer ",
       points: [
         {
-          icon: "/HeaderImages/ai04/242.webp",
+          icon: "/product/ai04/242.webp",
           title: "AI Facial Recognition Terminal",
           machine: "N-AI06",
           desc: "Designed for fast and accurate face recognition with a large-scale user database. Features include mask detection, anti-proxy, office, campus, and transport applications.",
         },
         {
-          icon: "/HeaderImages/ai10/235.webp",
+          icon: "/product/ai10/235.webp",
           title: "Dual Authentication Fingerprint Device",
           machine: "N-AI07F",
           desc: "Enables a higher level of security through the combined fingerprint and face verification. Particularly suitable for severe environmental conditions.",
         },
         {
-          icon: "/HeaderImages/ai09/239.webp",
+          icon: "/product/ai09/239.webp",
           title: "Multi-Mode Attendance and Access Control Device",
           desc: "It supports QR code, RFID card, Fingerprint, and facial recognition, the best for education, enterprise, and Industry Solutions.",
         },
@@ -1049,42 +1049,42 @@ export const cityData: CityData[] = [
       title: "Industries We Serve in Pune",
       points: [
         {
-          icon: "/uhfReader/cowork.webp",
+          icon: "/headerImages/industries/cowork.webp",
           title: "IT & Technology Firms ( Hinjewadi, Baner, Kharadi)",
           desc: "Consolidated attendance and access management for big teams",
         },
         {
-          icon: "/uhfReader/school.webp",
+          icon: "/headerImages/industries/school.webp",
           title: "Schools & Colleges ( Pune City, Pimpri- Chinchwad)",
           desc: "Students and staff in real-time attendance with parent alerts",
         },
         {
-          icon: "/uhfReader/Healthcare.webp",
+          icon: "/headerImages/industries/Healthcare.webp",
           title: "Hospitals & Clinics",
           desc: "Reliable attendance tracking for 24/7 and shift rotation",
         },
         {
-          icon: "/uhfReader/enterprise.webp",
+          icon: "/headerImages/industries/enterprise.webp",
           title: "Manufacturing Units (Chakan, Talegaon, Pimpri)",
           desc: "Robust factory suitable biometric devices",
         },
         {
-          icon: "/uhfReader/parking.webp",
+          icon: "/headerImages/industries/parking.webp",
           title: "Automobile & Engineering",
           desc: "Precise attendance records for both permanent and temporary workers",
         },
         {
-          icon: "/uhfReader/retail.webp",
+          icon: "/headerImages/industries/retail.webp",
           title: "Retail Store & Supermarkets",
           desc: "Attendance monitoring branches with central reporting",
         },
         {
-          icon: "/uhfReader/warehouse.webp",
+          icon: "/headerImages/industries/warehouse.webp",
           title: "Warehousing & Logistics Operations",
           desc: "GPS attendance with shift-wise reports",
         },
         {
-          icon: "/uhfReader/event.webp",
+          icon: "/headerImages/industries/event.webp",
           title: "Hotel & Hospitality Industry",
           desc: "Seamless attendance management for the operations and housekeeping teams",
         },
@@ -1099,19 +1099,19 @@ export const cityData: CityData[] = [
       title: "Biometric Devices We Offer",
       points: [
         {
-          icon: "/HeaderImages/ai04/242.webp",
+          icon: "/product/ai04/242.webp",
           title: "Advanced Facial Recognition Device",
           machine: "N-AI06",
           desc: "A high-speed, high-accuracy AI device that can identify a user from a large database. Support mask detection and anti-proxy attendance suitable for office, campus, and transportation systems.",
         },
         {
-          icon: "/HeaderImages/ai10/235.webp",
+          icon: "/product/ai10/235.webp",
           title: "Fingerprint with Dual Authentication",
           machine: "N-AI07F",
           desc: "Employs Fingerprint and face recognition for enhanced security. Good performance in dust, rain, and outdoor conditions.",
         },
         {
-          icon: "/HeaderImages/ai09/239.webp",
+          icon: "/product/ai09/239.webp",
           title: "Multi-Modal Attendance and Access Control Device",
           desc: "N-AI07 and similar products support face, fingerprint, RFID, and QR code-based authentication, enabling more flexible attendance and access control for schools, offices, and industrial complexes",
         },
@@ -1335,42 +1335,42 @@ export const cityData: CityData[] = [
       title: "Industries We Serve in Ahmedabad",
       points: [
         {
-          icon: "/uhfReader/cowork.webp",
+          icon: "/headerImages/industries/cowork.webp",
           title: "IT & Technology Firms (SG Highway, Prahlad Nagar, GIFT City)",
           desc: "Centralised attendance solution for corporate offices & IT parks in Ahmedabad",
         },
         {
-          icon: "/uhfReader/Healthcare.webp",
+          icon: "/headerImages/industries/Healthcare.webp",
           title: "Hospitals & Clinics",
           desc: "Centralized attendance and access control for an enterprise solution",
         },
         {
-          icon: "/uhfReader/school.webp",
+          icon: "/headerImages/industries/school.webp",
           title: "Schools & Colleges ( Ahmedabad & Neighbourhoods)",
           desc: "Attendance of students & staff with alerts to parents. Dependable attendance tracking for 24-hour & rotating work schedules",
         },
         {
-          icon: "/uhfReader/enterprise.webp",
+          icon: "/headerImages/industries/enterprise.webp",
           title: "Production Units (Vatva, Naroda, Sanand, Changodar) ",
           desc: "Robust biometric hardware for the industrial workspace",
         },
         {
-          icon: "/uhfReader/parking.webp",
+          icon: "/headerImages/industries/parking.webp",
           title: "Automobile & Engineering",
           desc: "Accurate attendance monitoring for permanent & contract employees",
         },
         {
-          icon: "/uhfReader/retail.webp",
+          icon: "/headerImages/industries/retail.webp",
           title: "Retail Store & Supermarkets",
           desc: "Multi-branch attendance monitoring with centralized reporting",
         },
         {
-          icon: "/uhfReader/warehouse.webp",
+          icon: "/headerImages/industries/warehouse.webp",
           title: "Warehousing & Logistics Operations",
           desc: "Attendance reports with GPS location-based & shift details",
         },
         {
-          icon: "/uhfReader/event.webp",
+          icon: "/headerImages/industries/event.webp",
           title: "Hotel & Hospitality Industry",
           desc: "Departmental attendance management for operations and housekeeping staff",
         },
@@ -1385,19 +1385,19 @@ export const cityData: CityData[] = [
       title: "Biometric Devices We Offer",
       points: [
         {
-          icon: "/HeaderImages/ai04/242.webp",
+          icon: "/product/ai04/242.webp",
           title: "Advanced Facial Recognition Device",
           machine: "N-AI06",
           desc: "An AI-based high-speed device can identify users from a large database. With mask detection and anti-proxy attendance features, this is an ideal solution for offices, campuses, factories, and transportation centers.",
         },
         {
-          icon: "/HeaderImages/ai10/235.webp",
+          icon: "/product/ai10/235.webp",
           title: "Fingerprint & Dual Authentication",
           machine: "N-AI07F",
           desc: "Combines fingerprint & face recognition for better security. Reliable operation in dust, rain, and extreme outdoor environments, suitable for industry applications.",
         },
         {
-          icon: "/HeaderImages/ai09/239.webp",
+          icon: "/product/ai09/239.webp",
           title: "Multi-Modal Attendance & Access Control Unit",
           desc: "N-AI07 and other modules support face, fingerprint, RFID, and QR Code-based authentication, offering a multi-mode attendance and access management solution for schools, office & industrial complexes.",
         },
@@ -1617,42 +1617,42 @@ export const cityData: CityData[] = [
       title: "Industries We Serve in Gujarat",
       points: [
         {
-          icon: "/uhfReader/cowork.webp",
+          icon: "/headerImages/industries/cowork.webp",
           title: "IT & Technology Firms (Ahmedabad, Gandhinagar)",
           desc: "Centralised attendance solution for corporate offices & IT parks in Gujarat",
         },
         {
-          icon: "/uhfReader/school.webp",
+          icon: "/headerImages/industries/school.webp",
           title: "Schools & Colleges (Ahmedabad, Vadodara)",
           desc: "Accurate student and staff attendance data, with parent notification and ERP integration.",
         },
         {
-          icon: "/uhfReader/Healthcare.webp",
+          icon: "/headerImages/industries/Healthcare.webp",
           title: "Hospitals & Clinics ",
           desc: "Accurate attendance management for a 24/7 operating hospital with shift-based medical workers. ",
         },
         {
-          icon: "/uhfReader/enterprise.webp",
+          icon: "/headerImages/industries/enterprise.webp",
           title: "Manufacturing & Industrial Units (Sanand, Ankleshwar)",
           desc: "Heavy-duty biometric devices for factory, plant, and industrial locations",
         },
         {
-          icon: "/uhfReader/parking.webp",
+          icon: "/headerImages/industries/parking.webp",
           title: "Automobile & Engineering",
           desc: "Attendance monitoring for your permanent, contract, and temporary staff",
         },
         {
-          icon: "/uhfReader/retail.webp",
+          icon: "/headerImages/industries/retail.webp",
           title: "Retail Chains & Supermarkets ",
           desc: "Consolidated attendance report for stores/ outlets ",
         },
         {
-          icon: "/uhfReader/warehouse.webp",
+          icon: "/headerImages/industries/warehouse.webp",
           title: "Warehousing & Logistics Operations",
           desc: "GPS-based attendance for warehouse staff, drivers, & shift based team",
         },
         {
-          icon: "/uhfReader/event.webp",
+          icon: "/headerImages/industries/event.webp",
           title: "Hotel & Hospitality Industry",
           desc: "Low-cost attendance solution for front office, operations, and housekeeping staff",
         },
@@ -1667,19 +1667,19 @@ export const cityData: CityData[] = [
       title: "Biometric Devices We Offer ",
       points: [
         {
-          icon: "/HeaderImages/ai04/242.webp",
+          icon: "/product/ai04/242.webp",
           title: "Advanced Facial Recognition Device",
           machine: "N-AI06",
           desc: "High-speed and high-accuracy identification using a large database with an AI-based facial recognition terminal. With the support for mask detection and anti-proxy attendance, it is suitable for offices, campuses, factories, or public entrances.",
         },
         {
-          icon: "/HeaderImages/ai10/235.webp",
+          icon: "/product/ai10/235.webp",
           title: "Fingerprint with Dual Authentication",
           machine: "N-AI07F",
           desc: "Combines fingerprint & face recognition for stricter identity verification. Outdoor dust and a wet industrial environment are suitable for use.",
         },
         {
-          icon: "/HeaderImages/ai09/239.webp",
+          icon: "/product/ai09/239.webp",
           title: "Multi-Modal Attendance and Access Control Machine",
           desc: "N-AI07 and other terminals that support face, fingerprint, RFID & QR code as a method of authentication. They offer adaptable solutions to control access and attendance in education, business, and industrial settings.",
         },
@@ -1889,42 +1889,42 @@ export const cityData: CityData[] = [
       title: "Industries We Serve in Coimbatore",
       points: [
         {
-          icon: "/uhfReader/cowork.webp",
+          icon: "/headerImages/industries/cowork.webp",
           title: "IT & Technology Firms (Saravanampatti, Peelamedu)",
           desc: "Centralised attendance solution for IT offices and technology parks.",
         },
         {
-          icon: "/uhfReader/school.webp",
+          icon: "/headerImages/industries/school.webp",
           title: "Schools & Colleges (Coimbatore & Nearby Areas) ",
           desc: "Precision in student and staff attendance with alerts to parents and ERP integration. ",
         },
         {
-          icon: "/uhfReader/Healthcare.webp",
+          icon: "/headerImages/industries/Healthcare.webp",
           title: "Hospitals & Clinics",
           desc: "24/7 hospital attendance management with shift-based staff is guaranteed",
         },
         {
-          icon: "/uhfReader/enterprise.webp",
+          icon: "/headerImages/industries/enterprise.webp",
           title: "Manufacturing and Industrial Units (SIDCO, Kurichi, Singanallur)",
           desc: "Advanced industrial biometric hardware for workplace and worksite applications",
         },
         {
-          icon: "/uhfReader/parking.webp",
+          icon: "/headerImages/industries/parking.webp",
           title: "Automobile & Engineering ",
           desc: "Time & attendance management for permanent, contract, and temporary employees",
         },
         {
-          icon: "/uhfReader/retail.webp",
+          icon: "/headerImages/industries/retail.webp",
           title: "Retail Chains & Supermarkets",
           desc: "Attendance reports are centralised for multiple stores and outlets",
         },
         {
-          icon: "/uhfReader/warehouse.webp",
+          icon: "/headerImages/industries/warehouse.webp",
           title: "Warehousing & Logistics Operations",
           desc: "GPS-based attendance for warehouse teams and field workers",
         },
         {
-          icon: "/uhfReader/event.webp",
+          icon: "/headerImages/industries/event.webp",
           title: "Hotel & Hospitality Industry",
           desc: "Effective management of attendance for the operation and housekeeping team",
         },
@@ -1939,19 +1939,19 @@ export const cityData: CityData[] = [
       title: "Biometric Devices We Offer",
       points: [
         {
-          icon: "/HeaderImages/ai04/242.webp",
+          icon: "/product/ai04/242.webp",
           title: "Advanced Face Recognition Device",
           machine: "N-AI06",
           desc: "High-performance AI face recognition device for rapid identification of users in large databases. With support for mask detection and anti-proxy, it can be deployed to offices, schools, campuses, factories, and transit sites.",
         },
         {
-          icon: "/HeaderImages/ai10/235.webp",
+          icon: "/product/ai10/235.webp",
           title: "Fingerprint with Dual Authentication",
           machine: "N-AI07F",
           desc: "The product incorporates a fingerprint and face recognition to provide enhanced security. It is specially designed to work stably in dusty, wet, and outdoor surroundings, which makes it an outstanding choice for industry and field work.",
         },
         {
-          icon: "/HeaderImages/ai09/239.webp",
+          icon: "/product/ai09/239.webp",
           title: "Multi-Modal Attendance & Access Control Terminal",
           desc: "N-AI07 and other models support multi-authentication, including face, fingerprint, RFID, and QR code. This makes it perfect for schools, corporate offices, and manufacturing facilities to track attendance and control access.",
         },
@@ -2170,42 +2170,42 @@ export const cityData: CityData[] = [
       title: "Industries We Serve in Delhi",
       points: [
         {
-          icon: "/uhfReader/cowork.webp",
+          icon: "/headerImages/industries/cowork.webp",
           title: "IT & Technology Firms",
           desc: "Simplified employee attendance tracking across departments",
         },
         {
-          icon: "/uhfReader/school.webp",
+          icon: "/headerImages/industries/school.webp",
           title: "Schools & Colleges",
           desc: "Student and staff attendance management in real-time with enhanced class management",
         },
         {
-          icon: "/uhfReader/Healthcare.webp",
+          icon: "/headerImages/industries/Healthcare.webp",
           title: "Hospitals & Clinics",
           desc: "An effective attendance system is required for doctors, nurses, and hospital staff.",
         },
         {
-          icon: "/uhfReader/enterprise.webp",
+          icon: "/headerImages/industries/enterprise.webp",
           title: "Industrial & Manufacturing Units (Okhla & Bawana Areas)",
           desc: "Rugged industrial biometric readers",
         },
         {
-          icon: "/uhfReader/parking.webp",
+          icon: "/headerImages/industries/parking.webp",
           title: "Automobile & Engineering",
           desc: "Time clocking service for all full-time, contractual, and temporary employees",
         },
         {
-          icon: "/uhfReader/retail.webp",
+          icon: "/headerImages/industries/retail.webp",
           title: "Retail Chains & Supermarkets",
           desc: "Access control and attendance in a multi-branch scenario",
         },
         {
-          icon: "/uhfReader/warehouse.webp",
+          icon: "/headerImages/industries/warehouse.webp",
           title: "Logistics & warehousing",
           desc: "Attendance management for employees working in warehouses and in the field",
         },
         {
-          icon: "/uhfReader/event.webp",
+          icon: "/headerImages/industries/event.webp",
           title: "Hotel & hospitality industry",
           desc: "Shift attendance across service and housekeeping shifts",
         },
@@ -2220,19 +2220,19 @@ export const cityData: CityData[] = [
       title: "Biometric Devices We Offer ",
       points: [
         {
-          icon: "/HeaderImages/ai04/242.webp",
+          icon: "/product/ai04/242.webp",
           title: "Advanced Facial Recognition",
           machine: "N-AI06",
           desc: "A high-precision user identification AI machine for large-scale databases at high speed and high accuracy. It also includes mask detection and anti-proximal attendance, so it can be applied in offices, campuses, and transport solutions.",
         },
         {
-          icon: "/HeaderImages/ai10/235.webp",
+          icon: "/product/ai10/235.webp",
           title: "Fingerprint with Dual Authentication",
           machine: "N-AI07F",
           desc: "Employs fingerprint and facial recognition authentication for enhanced security. It should work seamlessly in the outdoors, in the rain, dust, or in direct sunlight. ",
         },
         {
-          icon: "/HeaderImages/ai09/239.webp",
+          icon: "/product/ai09/239.webp",
           title: "Multi-Mode Access Control & Attendance Terminals",
           desc: "As with other models, the N-AI07 supports face, fingerprint, RFID, and QR code for attendance and access control solutions in education, corporate, and industrial environments.",
         },
@@ -2448,47 +2448,47 @@ export const cityData: CityData[] = [
       title: "Industries We Serve in Hyderabad",
       points: [
         // {
-        //   icon: "/uhfReader/",
+        //   icon: "/headerImages/industries/",
         //   title: "IT & Technology Firms (HITEC City, Gachibowli, Madhapur)",
         //   desc: "Consolidate attendance tracking for IT Parks & the corporate office",
         // },
         {
-          icon: "/uhfReader/school.webp",
+          icon: "/headerImages/industries/school.webp",
           title: "Schools & Colleges ( Hyderabad & Suburbs)",
           desc: "Student & staff attendance with real-time alert to parents",
         },
         {
-          icon: "/uhfReader/Healthcare.webp",
+          icon: "/headerImages/industries/Healthcare.webp",
           title: "Hospitals & Clinics",
           desc: "Precise attendance and access for medical & admin staff",
         },
         {
-          icon: "/uhfReader/enterprise.webp",
+          icon: "/headerImages/industries/enterprise.webp",
           title: "Production Units(Jeedimetla, Patancheru, Uppal)",
           desc: "Strong biometric hardware for a multi-shift factory environment",
         },
         {
-          icon: "/uhfReader/parking.webp",
+          icon: "/headerImages/industries/parking.webp",
           title: "Automobile & Engineering",
           desc: "Secure attendance tracking in a regulated workplace",
         },
         {
-          icon: "/uhfReader/retail.webp",
+          icon: "/headerImages/industries/retail.webp",
           title: "Retail Chains & Supermarkets",
           desc: "Consolidated attendance tracking in multiple stores",
         },
         {
-          icon: "/uhfReader/warehouse.webp",
+          icon: "/headerImages/industries/warehouse.webp",
           title: "Logistics & Warehousing",
           desc: "Shift-wise and GPS-based attendance analysis",
         },
         {
-          icon: "/uhfReader/resident.webp",
+          icon: "/headerImages/industries/resident.webp",
           title: "Hotel & Hospitality Industry",
           desc: "Department-wise attendance for operation and service staff",
         },
         {
-          icon: "/uhfReader/cowork.webp",
+          icon: "/headerImages/industries/cowork.webp",
           title: "Start-ups & Co-working spaces",
           desc: "Flexible, scalable attendance solutions for growing teams",
         },
@@ -2498,19 +2498,19 @@ export const cityData: CityData[] = [
       title: "Biometric Devices We Offer",
       points: [
         {
-          icon: "/HeaderImages/ai04/242.webp",
+          icon: "/product/ai04/242.webp",
           title: "AI Face Recognition Device",
           machine: "N-AI06",
           desc: "A fast AI device that can recognize users among massive user bases. The mask detection and anti-proxy functions are suitable for office, campus, factory, and transport facilities.",
         },
         {
-          icon: "/HeaderImages/ai10/235.webp",
+          icon: "/product/ai10/235.webp",
           title: "Fingerprint & Dual Authentication Device",
           machine: "N-AI07F",
           desc: "Integrates face and fingerprint authentication for a higher level of security. Suitable for outdoor use and for industrial applications.",
         },
         {
-          icon: "/HeaderImages/ai09/239.webp",
+          icon: "/product/ai09/239.webp",
           title: "Multi-Modal Attendance and Access Control Device",
           desc: "The face, fingerprint, and RFID-enabled N-AI07, along with other models, are designed for the school, office, and industry.",
         },
@@ -2719,47 +2719,47 @@ export const cityData: CityData[] = [
       title: "Industries We Serve in Gurugram",
       points: [
         // {
-        //   icon: "/uhfReader/",
+        //   icon: "/headerImages/industries/",
         //   title: "IT & Technology Firms ( Cyber City, Golf Course Road, Udyog Vihar)",
         //   desc: "Attendance management for larger office spaces",
         // },
         {
-          icon: "/uhfReader/school.webp",
+          icon: "/headerImages/industries/school.webp",
           title: "Schools & Colleges",
           desc: "Real-time attendance monitoring at student and staff levels, with notifications to parents.",
         },
         {
-          icon: "/uhfReader/Healthcare.webp",
+          icon: "/headerImages/industries/Healthcare.webp",
           title: "Hospitals & Clinics",
           desc: "Precise attendance and access for medical & admin staff",
         },
         {
-          icon: "/uhfReader/enterprise.webp",
+          icon: "/headerImages/industries/enterprise.webp",
           title: "Production Units (Manesar, Sector 37, IMT)",
           desc: "Rugged biometric devices for 24x7 operations",
         },
         {
-          icon: "/uhfReader/parking.webp",
+          icon: "/headerImages/industries/parking.webp",
           title: "Automobile & Engineering",
           desc: "Time & attendance management for permanent, contract, and temporary employees",
         },
         {
-          icon: "/uhfReader/retail.webp",
+          icon: "/headerImages/industries/retail.webp",
           title: "Retail Chains & Supermarkets",
           desc: "To bring uniformity in the reporting of attendance for all outlets",
         },
         {
-          icon: "/uhfReader/warehouse.webp",
+          icon: "/headerImages/industries/warehouse.webp",
           title: "Logistics & Warehousing",
           desc: "GPS-based attendance for warehouse teams and field workers",
         },
         {
-          icon: "/uhfReader/resident.webp",
+          icon: "/headerImages/industries/resident.webp",
           title: "Hotel & Hospitality Industry",
           desc: "Seamless attendance management for the operations and housekeeping teams",
         },
         {
-          icon: "/uhfReader/cowork.webp",
+          icon: "/headerImages/industries/cowork.webp",
           title: "Start-ups & Co- working spaces",
           desc: "Scalable and cost-effective solutions for growing companies",
         },
@@ -2769,19 +2769,19 @@ export const cityData: CityData[] = [
       title: "Biometric Devices We Offer",
       points: [
         {
-          icon: "/HeaderImages/ai04/242.webp",
+          icon: "/product/ai04/242.webp",
           title: "AI Face Recognition Terminal",
           machine: "N-AI06",
           desc: "This is a high-speed facial recognition terminal capable of large scale users environment. With the features of mask detection and anti-proxy attendance, it is ideal for offices, schools, and industrial entrances.",
         },
         {
-          icon: "/HeaderImages/ai10/235.webp",
+          icon: "/product/ai10/235.webp",
           title: "Fingerprint & Dual Authentication Device",
           machine: "N-AI07F",
           desc: "Offers fingerprint and face recognition security for two-factor authentication. Built for robust outdoor and industrial environment performance",
         },
         {
-          icon: "/HeaderImages/ai09/239.webp",
+          icon: "/product/ai09/239.webp",
           title: "Multi-mode attendance & access control unit",
           desc: "Products such as N-AI07 provide authentication via face, fingerprint, and RFID, and cater to businesses with diverse needs in attendance and access control.",
         },
