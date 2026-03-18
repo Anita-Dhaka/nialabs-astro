@@ -2894,4 +2894,279 @@ export const cityData: CityData[] = [
       ],
     }
   },
+  {
+    route: "biometric-attendance-system-in-chennai",
+    metaTitle: "Biometric Attendance System Chennai | Face & Fingerprint",
+    metaDesc: "Nialabs offers the best biometric attendance system in India with fast face recognition, accurate attendance tracking, cloud reports, and seamless integration for all industries.",
+    heading: "Chennai",
+    image: "/cityImages/Chennai.webp",
+    subHeading: "Reliable Attendance Management for Chennai’s Industrial & Education Sectors",
+    desc: [
+      "Tracking employee attendance is necessary for operational efficiency, particularly in an expanding city like Chennai. With a dispersed workforce, multiple shifts, and rigorous compliance requirements, manual tracking is prone to errors and delays.",
+      "Nialabs was built to meet the business needs in Chennai with advanced solutions that deliver accurate, real-time attendance data, prevent proxy punching, offer real-time insights, and are integrated seamlessly into payroll and HR solutions. Whether it's an IT company in OMR, a production house in Ambattur, or a school in the heart of the city, Nialabs provides the ideal biometric solution to make your attendance process hassle-free and easy.",
+    ],
+    whyNia: {
+      title: "Why Choose Nialabs?",
+      points: [
+        {
+          icon: "/homePage/identification.png",
+          text: "99.9% accurate biometric ID — contactless & fraud-proof.",
+        },
+        {
+          icon: "/homePage/server.png",
+          text: "Live attendance data from any device, anywhere, anytime.",
+        },
+        {
+          icon: "/homePage/metrics.png",
+          text: "Quick setup at offices, factories & sites in Chennai.",
+        },
+        {
+          icon: "/homePage/backend-coding.webp",
+          text: "Auto-manage shifts, overtime & leave — zero manual effort.",
+        },
+        {
+          icon: "/homePage/encrypted.png",
+          text: "Buddy punching & manual data errors permanently eliminated.",
+        },
+        {
+          icon: "/homePage/workforce.png",
+          text: "Reliable in dim light, outdoors & high-footfall entrances.",
+        },
+        {
+          icon: "/homePage/notification.webp",
+          text: "Instant SMS to parents for every student check-in event.",
+        },
+        {
+          icon: "/homePage/api.png",
+          text: "Seamless API sync with payroll, HRMS & school ERP tools.",
+        },
+      ]
+    },
+    features: {
+      title: "Features of Nialabs Biometric Attendance System",
+      desc: "Discover the advanced capabilities of Nialabs biometric systems designed for modern businesses.",
+      points: [
+        {
+          icon: "/homePage/face-scan.png",
+          text: "Instant ID in <0.3 sec — fastest biometric on the market.",
+        },
+        {
+          icon: "/homePage/identification.png",
+          text: "3-in-1 attendance modes for every workforce type on site.",
+        },
+        {
+          icon: "/homePage/location.png",
+          text: "Field staff mark attendance via app with live GPS tracking.",
+        },
+        {
+          icon: "/homePage/accountant.webp",
+          text: "Auto-schedule shifts, compute OT & track leave seamlessly.",
+        },
+        {
+          icon: "/homePage/check.png",
+          text: "Location-locked check-ins enforce site-based attendance rules.",
+        },
+        {
+          icon: "/homePage/api.png",
+          text: "Real-time auto-sync with all major HR and payroll platforms.",
+        },
+        {
+          icon: "/homePage/visitors.png",
+          text: "Optional module for door access and visitor entry management.",
+        },
+        {
+          icon: "/homePage/cyber-security.png",
+          text: "Tamper-proof devices block fake biometric attempts always.",
+        },
+        {
+          icon: "/homePage/deployment.webp",
+          text: "Zero-IT setup — device activates and goes live in minutes.",
+        },
+        {
+          icon: "/homePage/seo-report.png",
+          text: "One-click attendance reports with real-time data dashboards.",
+        },
+      ]
+    },
+    industries: {
+      title: "Industries We Serve in Chennai",
+      points: [
+        {
+          icon: "/headerImages/industries/cowork.webp",
+          title: "IT & Software Companies (OMR, ECR, Tidel Park)",
+          desc: "Multi-location sync, security, access, and analytics for large teams",
+        },
+        {
+          icon: "/headerImages/industries/school.webp",
+          title: "Schools & Colleges",
+          desc: "Student and staff attendance with instant parent alerts",
+        },
+        {
+          icon: "/headerImages/industries/Healthcare.webp",
+          title: "Hospitals & Clinics",
+          desc: "24/7 shift attendance and security access control",
+        },
+        {
+          icon: "/headerImages/industries/enterprise.webp",
+          title: "Manufacturing Units (Ambattur, Sriperumbudur, Oragadam)",
+          desc: "Durable devices for factory and contract workforces",
+        },
+        {
+          icon: "/headerImages/industries/parking.webp",
+          title: "Automobile & Engineering",
+          desc: "Technical teams receive high-precision attendance logs.",
+        },
+        {
+          icon: "/headerImages/industries/retail.webp",
+          title: "Retail & Supermarkets",
+          desc: "Attendance at the branch level with centralised reporting",
+        },
+        {
+          icon: "/headerImages/industries/warehouse.webp",
+          title: "Logistics & Warehousing",
+          desc: "GPS attendance for shift workers and fleets",
+        },
+        {
+          icon: "/headerImages/industries/event.webp",
+          title: "Hotels & Hospitality",
+          desc: "Streamlined staff attendance for the kitchen, housekeeping, and operations",
+        },
+      ],
+    },
+    deviceOffer: {
+      title: "Biometric Devices We Offer",
+      points: [
+        {
+          icon: "/product/ai04/242.webp",
+          title: "Advanced Facial Recognition Terminal",
+          machine: "N-AI06",
+          desc: "High-speed AI face recognition device for user identification of a large database. Mask detection and anti-proxy attendance functions.",
+        },
+        {
+          icon: "/product/ai10/235.webp",
+          title: "Face, Fingerprint & Dual Authentication",
+          machine: "N-AI07",
+          desc: "Both fingerprint and face recognition are supported for higher security. Reliable performance in industrial and outdoor environments.",
+        },
+        {
+          icon: "/product/ai09/239.webp",
+          title: "Multimodal Bus Attendance System",
+          machine: "N-AI10",
+          desc: "N-AI10 Bus Attendance Machine with AI Face Recognition & GPS, ideal for tracking real-time student activity.",
+        },
+      ]
+    },
+    whyBetter: {
+      title: "Why Choose Nialabs?",
+      desc: "Nialabs offers the most reliable biometric attendance systems, ensuring 99.9% accurate time tracking for offices, factories, and institutions.",
+      points: [
+        {
+          icon: "/homePage/customer-service.png",
+          text: "City-specific support team available in Chennai & region.",
+        },
+        {
+          icon: "/homePage/server.png",
+          text: "One cloud system tracks attendance across all your branches."
+        },
+        {
+          icon: "/homePage/encrypted.png",
+          text: "Affordable, clearly priced AMC and warranty plans — no hidden fees.",
+        },
+        {
+          icon: "/homePage/artificial-intelligence.webp",
+          text: "Best-in-class AI models deliver the highest recognition rates.",
+        },
+        {
+          icon: "/homePage/education.png",
+          text: "Custom-fit for schools, corporates, hospitals & industries.",
+        },
+        {
+          icon: "/homePage/personalization.webp",
+          text: "One-click sync with all major payroll and HR management tools.",
+        },
+        {
+          icon: "/homePage/metrics.png",
+          text: "Fastest deployment — fully operational within 48 hours.",
+        },
+        {
+          icon: "/homePage/access-control.png",
+          text: "Enterprise-grade encryption and full compliance guaranteed.",
+        },
+      ],
+    },
+    testimonials: {
+      title: "Client Testimonials",
+      points: [
+        {
+          desc: "“Nialabs has fully automated our attendance system in all our Chennai branches; their face recognition device even works in lowlight.”",
+          position: "HR Manager",
+          place: "OMR IT Company",
+        },
+        {
+          desc: "“Our Sriperumbudur factory experienced a 90% reduction in manual errors post-implementation of Nialabs.”",
+          position: "Head of Plant",
+          place: "Automotive Unit",
+        },
+        {
+          desc: "“Nialabs simplified our shift and OT tracking. The cloud report is allowing us to save hours each week.”",
+          position: "Operations Manager",
+          place: "Ambattur Manufacturing Unit",
+        },
+        {
+          desc: "“Nialabs simplified our shift and OT tracking. The cloud report is allowing us to save hours each week.”",
+          position: "Operations Manager",
+          place: "Ambattur Manufacturing Unit",
+        },
+      ]
+    },
+    faqs: [
+      {
+        question: "Do you provide installation services in Chennai?",
+        solution: "Yes, our local operations team ensures fast deployment and installation universally within Chennai and surrounding industrial areas.",
+      },
+      {
+        question: "Can my payroll be integrated with your system?",
+        solution: "Absolutely, it offers one-click, seamless API sync with all major payroll and HRMS management tools.",
+      },
+      {
+        question: "Are both Face & Fingerprint machines available?",
+        solution: "Yes, we offer advanced devices that include multi-modal (face, fingerprint, and RFID) tracking specifically adapted for mixed environments.",
+      },
+      {
+        question: "What is the duration of the warranty?",
+        solution: "We provide comprehensive, fully transparent AMC and warranty plans to ensure lifetime usability with minimal interruption.",
+      },
+      {
+        question: "Can you manage 24/7 support?",
+        solution: "Yes, our dedicated local support handles technical queries and ensures minimal downtime for rotational operational environments like hospitals and IT companies.",
+      },
+      {
+        question: "Do you provide AMC and after-sales service in Chennai?",
+        solution: "Yes, our transparently priced AMC guarantees ongoing maintenance, repairs, and updates to the service.",
+      },
+      {
+        question: "Does it support multiple shifts, including night shifts?",
+        solution: "Definitely, it features auto-management of multiple changing shifts including precise OT calculations for operations at factories and 24/7 offices.",
+      },
+      {
+        question: "What if we lose Internet Connectivity?",
+        solution: "All tracking continues natively offline and securely buffers the logs until connection is re-established where it seamlessly syncs without manual intervention.",
+      },
+      {
+        question: "Can we install Nialabs devices outdoors and in dim lighting conditions?",
+        solution: "Yes, our anti-spoofing hardware and AI cameras are built rugged and perform flawlessly in dim light, outdoors, and high-footfall entrance contexts.",
+      },
+      {
+        question: "Are demo sessions available?",
+        solution: "Yes, you can readily book a free demo allowing us to walk through exactly how our systems will cater to your needs.",
+      },
+    ],
+    cta: {
+      title: "Ready to automate attendance in Chennai?",
+      desc: [
+        "Get the most effective Biometric Attendance System from Nialabs - Fast, Accurate & Reliable.",
+        "Book your free demo with Nialabs today!",
+      ],
+    }
+  }
 ];

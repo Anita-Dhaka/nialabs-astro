@@ -1,0 +1,219 @@
+---
+// GlobalContactModal.astro
+---
+
+<div id="globalContactModalOverlay" class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-500 bg-slate-900/60 backdrop-blur-sm">
+  
+  <!-- Modal Content -->
+  <div id="globalContactModalContent" class="relative w-full max-w-[500px] bg-white rounded-3xl shadow-2xl overflow-hidden transform scale-95 transition-all duration-500 flex flex-col max-h-[90vh]">
+    
+    <!-- Close Button -->
+    <button id="closeGlobalModalBtn" class="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-slate-100/50 hover:bg-slate-200 text-slate-500 hover:text-slate-700 transition-colors" aria-label="Close popup">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+    </button>
+    
+    <div class="h-full overflow-y-auto p-6 sm:p-8 flex flex-col justify-center">
+      <div class="text-center mb-6">
+        <h2 class="text-2xl font-extrabold tracking-tight mb-2 text-slate-900 leading-tight">Get in Touch</h2>
+        <p class="text-slate-600 font-medium text-sm">Please drop us a message and we'll get back to you soon.</p>
+      </div>
+
+      <form id="globalContactForm" class="space-y-4">
+        <div>
+          <label for="globalName" class="block text-xs font-bold text-slate-700 mb-1 uppercase tracking-wide">Name <span class="text-red-500">*</span></label>
+          <input type="text" id="globalName" name="name" placeholder="Enter your name" required minlength="2"
+            class="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium" />
+        </div>
+
+        <div>
+          <label for="globalEmail" class="block text-xs font-bold text-slate-700 mb-1 uppercase tracking-wide">Email <span class="text-red-500">*</span></label>
+          <input type="email" id="globalEmail" name="email" placeholder="Enter your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            class="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium" />
+        </div>
+
+        <div>
+          <label for="globalContact" class="block text-xs font-bold text-slate-700 mb-1 uppercase tracking-wide">Contact <span class="text-red-500">*</span></label>
+          <input type="tel" id="globalContact" name="contact" placeholder="10-digit phone number" required pattern="[0-9]{10}"
+            class="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium" />
+          <p class="mt-1 text-[10px] text-slate-500 hidden" id="globalContactError">Please enter a valid 10-digit phone number.</p>
+        </div>
+
+        <div>
+          <label for="globalMessage" class="block text-xs font-bold text-slate-700 mb-1 uppercase tracking-wide">Message <span class="text-red-500">*</span></label>
+          <textarea id="globalMessage" name="message" rows="3" placeholder="Enter your message" required minlength="10"
+            class="w-full px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all font-medium resize-none"></textarea>
+        </div>
+
+        <!-- Extract UTM parameters -->
+        <div class="pt-2 flex gap-3">
+          <button type="button" id="globalCancelBtn" class="w-1/3 py-2.5 bg-slate-50 hover:bg-slate-100 text-slate-600 font-bold rounded-lg border border-slate-200 transition-colors text-sm">
+            Cancel
+          </button>
+          <button type="submit" id="globalSubmitBtn" class="w-2/3 py-2.5 bg-[#2067e2] hover:bg-blue-700 text-white font-extrabold text-sm rounded-lg shadow-lg shadow-blue-500/25 transform transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+            <span id="globalBtnText">Submit Request</span>
+            <svg id="globalLoadingIcon" class="hidden animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div id="globalFormStatus" class="hidden p-2 rounded-lg text-center font-bold text-xs mt-2"></div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  let isGlobalModalOpen = false;
+
+  const overlay = document.getElementById('globalContactModalOverlay');
+  const modal = document.getElementById('globalContactModalContent');
+  const closeBtn = document.getElementById('closeGlobalModalBtn');
+  const cancelBtn = document.getElementById('globalCancelBtn');
+  
+  const form = document.getElementById('globalContactForm') as HTMLFormElement;
+  const submitBtn = document.getElementById('globalSubmitBtn') as HTMLButtonElement;
+  const btnText = document.getElementById('globalBtnText');
+  const loadingIcon = document.getElementById('globalLoadingIcon');
+  const formStatus = document.getElementById('globalFormStatus');
+  const contactInput = document.getElementById('globalContact') as HTMLInputElement;
+  const contactError = document.getElementById('globalContactError');
+
+  // Input validation UI
+  contactInput?.addEventListener('input', () => {
+    if (contactInput.validity.patternMismatch) {
+      contactError?.classList.remove('hidden');
+      contactInput.classList.add('border-red-500');
+    } else {
+      contactError?.classList.add('hidden');
+      contactInput.classList.remove('border-red-500');
+    }
+  });
+
+  const showGlobalModal = () => {
+    isGlobalModalOpen = true;
+    
+    // Show overlay
+    overlay?.classList.remove('opacity-0', 'pointer-events-none');
+    overlay?.classList.add('opacity-100');
+    
+    // Animate modal in
+    modal?.classList.remove('scale-95');
+    modal?.classList.add('scale-100');
+  };
+
+  const hideGlobalModal = () => {
+    isGlobalModalOpen = false;
+    
+    // Hide overlay
+    overlay?.classList.add('opacity-0', 'pointer-events-none');
+    overlay?.classList.remove('opacity-100');
+    
+    // Animate modal out
+    modal?.classList.add('scale-95');
+    modal?.classList.remove('scale-100');
+    
+    // Reset form states if desired
+    if (formStatus) formStatus.classList.add('hidden');
+  };
+
+  closeBtn?.addEventListener('click', hideGlobalModal);
+  cancelBtn?.addEventListener('click', hideGlobalModal);
+  
+  // Close on outside click
+  overlay?.addEventListener('click', (e) => {
+    if (e.target === overlay) hideGlobalModal();
+  });
+
+  // Export to window so other components can trigger it programmatically if needed
+  (window as any).openGlobalContactModal = showGlobalModal;
+
+  // Add click listeners to all open-contact-modal-btn elements globally
+  // We use event delegation on document.body so it works even for dynamically added buttons
+  document.body.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    // Check if clicked element or its parent has the class
+    const triggerBtn = target.closest('.open-contact-modal-btn');
+    if (triggerBtn) {
+      e.preventDefault(); // Prevent default link behavior if it's an <a> tag
+      showGlobalModal();
+    }
+  });
+
+  // Handle form submission
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Extract UTM parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmParams = {
+      utmSource: urlParams.get('utm_source') || '',
+      utmTerm: urlParams.get('utm_term') || '',
+      utmMedium: urlParams.get('utm_medium') || '',
+      utmCampaign: urlParams.get('utm_campaign') || '',
+      utmContent: urlParams.get('utm_content') || '',
+    };
+
+    // Set loading state
+    submitBtn.disabled = true;
+    if(btnText) btnText.textContent = 'Submitting...';
+    loadingIcon?.classList.remove('hidden');
+    formStatus?.classList.add('hidden');
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    const payload = {
+      leadListId: "68b53c175188bd06232e87ea",
+      name: data.name || "",
+      email: data.email || "",
+      contact1: data.contact || "",
+      customFields: [
+        { customFieldId: "6839353dbfaf99e09d8c633c", key: "custom_leads_source", value: utmParams.utmSource },
+        { customFieldId: "68393882bfaf99e09d8c8a55", key: "utm_term", value: utmParams.utmTerm },
+        { customFieldId: "683938a2bfaf99e09d8c8c9e", key: "utm_medium", value: utmParams.utmMedium },
+        { customFieldId: "683938b4bfaf99e09d8c8dc9", key: "utm_campaign", value: utmParams.utmCampaign },
+        { customFieldId: "683938cdbfaf99e09d8c8e21", key: "utm_content", value: utmParams.utmContent },
+        { customFieldId: "68b53c9b5188bd06232e96a9", key: "nialabs_message", value: data.message || "" }
+      ]
+    };
+
+    try {
+      const response = await fetch("https://api.next.coachinglog.in/api/v1/lead/website", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "iid": "6502a77c6d074427b15f5230"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (response.ok) {
+        if(formStatus) {
+            formStatus.textContent = "Request submitted successfully!";
+            formStatus.className = "p-3 mt-4 rounded-lg flex items-center justify-center gap-2 text-green-700 bg-green-50 border border-green-200 block";
+        }
+        form.reset();
+        
+        // Auto close after 2 seconds
+        setTimeout(() => {
+          hideGlobalModal();
+        }, 2000);
+      } else {
+        throw new Error('API request failed');
+      }
+    } catch (err) {
+      if(formStatus) {
+        formStatus.textContent = "Failed to submit request. Please try again.";
+        formStatus.className = "p-3 mt-4 rounded-lg flex items-center justify-center gap-2 text-red-700 bg-red-50 border border-red-200 block";
+      }
+    } finally {
+      submitBtn.disabled = false;
+      if(btnText) btnText.textContent = 'Submit Request';
+      loadingIcon?.classList.add('hidden');
+    }
+  });
+
+</script>
