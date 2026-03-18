@@ -8,6 +8,7 @@ import Faq from '../components/Faq.astro';
 
 import { cityData } from '../data/cityData';
 import type { CityData } from '../data/cityData';
+import Products from '../components/Products.astro';
 
 export function getStaticPaths() {
   return cityData.map((data) => ({
@@ -65,32 +66,9 @@ const { data } = Astro.props;
   )}
 
   {/* Devices Offered */}
-  {data.deviceOffer && (
     <section class="py-20 bg-slate-50 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">{data.deviceOffer.title}</h2>
-                <div class="w-16 h-1.5 bg-blue-600 rounded-full mx-auto mb-8"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {data.deviceOffer.points.map(device => (
-                    <div class="bg-white rounded-[2rem] p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-                        <div class="h-80 mb-4 bg-slate-50/50 rounded-2xl p-2 flex items-center justify-center shrink-0">
-                            <img src={device.icon} alt={device.title} class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" />
-                        </div>
-                        <div class="flex-grow flex flex-col items-center text-center">
-                            {device.machine && (
-                                <span class="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 font-bold text-sm rounded-full mb-4">{device.machine}</span>
-                            )}
-                            <h3 class="text-xl font-bold text-slate-900 mb-4">{device.title}</h3>
-                            <p class="text-slate-600 leading-relaxed text-sm">{device.desc}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
+      <Products />
     </section>
-  )}
 
   {/* Why Better */}
   {data.whyBetter && (
