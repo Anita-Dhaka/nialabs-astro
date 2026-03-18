@@ -35,7 +35,7 @@ const products = [
     {
         id: "N-AI07-face-fingerprint",
         title: "Dynamic Face & Fingerprint Recognition Terminal",
-        desc: "The N-AI07F Dynamic Face & Fingerprint Recognition Terminal is an advanced dual identification access control and attendance management system. This device combines high-precision fingerprint authentication with AI-powered face recognition to ensure accurate and reliable identification. With mask detection, anti-spoofing, and multiple authentication modes, including face, fingerprint, QR code, and RFID card, the N-AI07F offers top-notch security and flexibility. This convenience is further enhanced with the user-friendly interface and support for a biometric API. The N-AI07F promises real-time monitoring, remote access control, and cloud connectivity for effortless integration and management. With dual identification, smart features, and an option to expand user capacity, the N-AI07F is an ideal choice for businesses of all sizes.",
+        desc: "The N-AI07 Dynamic Face & Fingerprint Recognition Terminal is an advanced dual identification access control and attendance management system. This device combines high-precision fingerprint authentication with AI-powered face recognition to ensure accurate and reliable identification. With mask detection, anti-spoofing, and multiple authentication modes, including face, fingerprint, QR code, and RFID card, the N-AI07 offers top-notch security and flexibility. This convenience is further enhanced with the user-friendly interface and support for a biometric API. The N-AI07 promises real-time monitoring, remote access control, and cloud connectivity for effortless integration and management. With dual identification, smart features, and an option to expand user capacity, the N-AI07 is an ideal choice for businesses of all sizes.",
         image: "/product/ai07/218.webp",
         badge: "Face + Fingerprint"
     },
@@ -75,6 +75,7 @@ const description = "Explore biometric attendance machines with AI face detectio
             desc={headerData.desc}
             image={headerData.image}
             badge="Premium Biometrics"
+            splitWord={4}
         />
 
         <!-- Products Listing Section -->
@@ -84,7 +85,7 @@ const description = "Explore biometric attendance machines with AI face detectio
                 <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
             </div>
 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-20">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-semibold mb-6">
                         <span class="w-2 h-2 rounded-full bg-blue-600"></span>
@@ -94,14 +95,14 @@ const description = "Explore biometric attendance machines with AI face detectio
                     <p class="text-lg text-slate-600 font-medium">From schools to smart offices, discover the perfect biometric attendance machine tailored for your specific needs.</p>
                 </div>
 
-                <div class="grid grid-cols-1 gap-16 lg:gap-24">
+                <div class="grid grid-cols-1 gap-16">
                     {products.map((product, index) => (
-                        <div class={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20 bg-white rounded-[40px] p-8 md:p-12 lg:p-16 shadow-2xl shadow-slate-200/50 border border-slate-100 hover:border-blue-100 transition-colors duration-500 group`}>
+                        <div class={`flex flex-col ${index % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20 bg-white rounded-[40px] p-8 md:p-12 lg:p-10 shadow-2xl shadow-slate-200/50 border border-slate-100 hover:border-blue-100 transition-colors duration-500 group`}>
                             
                             <!-- Product Image Area -->
-                            <div class="w-full lg:w-5/12 relative">
+                            <div class="w-full lg:w-4/12 relative">
                                 <div class="absolute inset-0 bg-blue-600/5 rounded-full blur-[60px] transform group-hover:scale-110 transition-transform duration-700"></div>
-                                <div class="relative aspect-square flex items-center justify-center p-8 bg-slate-50 rounded-[32px] border border-slate-100 overflow-hidden transform group-hover:shadow-xl transition-all duration-500">
+                                <div class="relative aspect-square flex items-center justify-center p-2 bg-slate-50 rounded-[32px] border border-slate-100 overflow-hidden transform group-hover:shadow-xl transition-all duration-500">
                                     <img 
                                         src={product.image} 
                                         alt={product.title} 
@@ -112,14 +113,14 @@ const description = "Explore biometric attendance machines with AI face detectio
                             </div>
 
                             <!-- Product Content Area -->
-                            <div class="w-full lg:w-7/12 flex flex-col justify-center">
-                                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider mb-6 w-max">
+                            <div class="w-full lg:w-8/12 flex flex-col justify-center">
+                                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider mb-4 w-max">
                                     {product.badge}
                                 </div>
-                                <h3 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-6">
+                                <h3 class="text-3xl md:text-4xl font-black text-slate-900 leading-tight mb-4">
                                     {product.title}
                                 </h3>
-                                <p class="text-lg text-slate-600 leading-relaxed font-medium mb-10">
+                                <p class="text-lg text-slate-600 leading-relaxed font-medium mb-6">
                                     {product.desc}
                                 </p>
                                 
