@@ -71,7 +71,7 @@ const ProductData = [
       <div id="carousel"
         class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 scrollbar-hide">
 
-        {ProductData.map((product) => (
+        {[...ProductData, ...ProductData, ...ProductData].map((product) => (
           <a 
             href={`/products/biometric-attendance-machine/${product.routeName}`}
             class="group relative min-w-[260px] sm:min-w-[280px] lg:min-w-[350px] snap-start bg-white rounded-3xl p-6 border border-slate-100 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-100 transition-all duration-500 flex flex-col items-center text-center overflow-hidden"
@@ -212,14 +212,16 @@ const ProductData = [
     let autoScroll = setInterval(() => {
       if (!container) return;
 
-      // If reached end → go back to start
-      if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 10) {
-        container.scrollTo({ left: 0, behavior: 'smooth' });
+      const maxScroll = container.scrollWidth / 3; // 1 set width
+
+      // When reaching near end of 2nd set → jump back silently
+      if (container.scrollLeft >= maxScroll * 2) {
+        container.scrollLeft = maxScroll; // no animation → seamless
       } else {
         container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       }
-    }, 3000); // every 3 sec
 
+    }, 3000);
     // ✅ Pause on hover (VERY IMPORTANT UX)
     container?.addEventListener("mouseenter", () => {
       clearInterval(autoScroll);
