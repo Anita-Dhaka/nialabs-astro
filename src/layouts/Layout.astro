@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import GlobalContactModal from '../components/GlobalContactModal.astro';
+import Whatsapp from '../components/Whatsapp.astro';
+import Phonecall from '../components/Phonecall.astro';
 
 export interface Props {
 	title?: string;
@@ -64,6 +66,8 @@ const {
 		<div class="flex-grow flex flex-col">
 			<slot />
 		</div>
+		<Phonecall />
+		<Whatsapp />
 		<Footer />
 		<GlobalContactModal />
 	</body>

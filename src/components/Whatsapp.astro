@@ -1,0 +1,179 @@
+---
+// No React state here — handled via JS
+---
+
+<div>
+  <!-- Floating Button -->
+  <div
+    id="chatBtn"
+    class="fixed bottom-5 right-5 z-[1000] cursor-pointer rounded-lg bg-green-500 shadow-lg p-2 hover:bg-green-700 hover:scale-110 transition animate-[pulseSoft_2s_infinite]"
+  >
+    <div class="w-8 h-8 flex items-center justify-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-10 h-10 text-white"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 .01 5.36.01 12c0 2.11.55 4.18 1.6 6.02L0 24l6.15-1.6A11.94 11.94 0 0012 24c6.63 0 12-5.36 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.66-.5-5.24-1.45l-.38-.22-3.65.95.97-3.55-.25-.37A9.93 9.93 0 012 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.03-7.39c-.27-.14-1.6-.79-1.84-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.35-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.44-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3s.98 2.67 1.12 2.85c.14.18 1.94 2.96 4.7 4.15.66.28 1.18.45 1.58.58.66.21 1.26.18 1.74.11.53-.08 1.6-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
+        ></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="chatModal" class="fixed inset-0 hidden z-[1000]">
+    <!-- Overlay -->
+    <div id="overlay" class="absolute inset-0 bg-black/40"></div>
+
+    <!-- Chat Box -->
+    <div
+      class="absolute bottom-0 right-0 w-full sm:w-[350px] bg-white rounded-t-lg sm:rounded-lg shadow-lg"
+    >
+      <!-- Header -->
+      <div
+        class="bg-[#075E54] text-white p-4 flex items-center gap-3 rounded-t-lg"
+      >
+        <img
+          src="/favicon.ico"
+          class="w-10 h-10 rounded-full bg-white"
+        />
+        <div>
+          <p class="font-semibold">NIALABS</p>
+          <p class="text-xs opacity-70">
+            Response time typically within an hour
+          </p>
+        </div>
+        <button id="closeBtn" class="ml-auto text-white text-lg">✕</button>
+      </div>
+
+      <!-- Chat Body -->
+      <div
+        class="bg-[url('/mainImages/whatsapp-bg.webp')] bg-cover p-4 flex flex-col h-[200px] overflow-y-auto gap-3"
+        id="chatBox"
+      >
+      </div>
+
+      <!-- Input -->
+      <div class="p-3 flex gap-2">
+        <input
+          id="chatInput"
+          placeholder="Type a message..."
+          class="flex-1 border rounded px-3 py-2 text-sm"
+        />
+        <button
+          id="sendBtn"
+          class="bg-[#2f855a] text-white px-4 py-2 rounded disabled:opacity-50 hover:bg-[#075E54]"
+        >
+          Send
+        </button>
+      </div>
+
+      <!-- Footer -->
+      <div class="p-4 bg-white text-center">
+        <p class="text-sm text-gray-600">
+          Contact us at <span class="font-bold text-[#2f855a]"
+            >+91 8069409217</span
+          >
+        </p>
+
+        <a
+          href="https://wa.me/918588816148"
+          target="_blank"
+          class="block mt-3 bg-[#2f855a] text-white py-2 rounded font-bold hover:bg-[#075E54]"
+        >
+          Start Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const chatBtn = document.getElementById("chatBtn");
+    const modal = document.getElementById("chatModal");
+    const closeBtn = document.getElementById("closeBtn");
+    const overlay = document.getElementById("overlay");
+    const chatBox = document.getElementById("chatBox");
+    const input = document.getElementById("chatInput");
+    const sendBtn = document.getElementById("sendBtn");
+
+    if (
+      !chatBtn ||
+      !modal ||
+      !closeBtn ||
+      !overlay ||
+      !chatBox ||
+      !input ||
+      !sendBtn
+    )
+      return;
+
+    let messages = [
+      { sender: "bot", text: "Hi, how can we assist you today?" },
+    ];
+
+    function renderMessages() {
+      chatBox.innerHTML = "";
+      messages.forEach((msg, i) => {
+        const div = document.createElement("div");
+        div.className = `max-w-[75%] px-3 py-2 rounded text-sm ${
+          msg.sender === "user" ? "bg-green-100 ml-auto" : "bg-white"
+        }`;
+
+        div.innerHTML = `
+        ${i === 0 ? `<p class="font-medium text-sm">Nialabs</p>` : ""}
+        <p class="opacity-80">${msg.text}</p>
+      `;
+
+        chatBox.appendChild(div);
+      });
+
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function sendMessage() {
+      const value = input.value.trim();
+      if (!value) return;
+
+      messages.push({ sender: "user", text: value });
+      messages.push({
+        sender: "bot",
+        text: "Thank you for reaching out! Call us at +91 8588816148",
+      });
+
+      input.value = "";
+      renderMessages();
+    }
+
+    chatBtn.onclick = () => {
+      modal.classList.remove("hidden");
+      renderMessages();
+    };
+
+    closeBtn.onclick = overlay.onclick = () => {
+      modal.classList.add("hidden");
+      messages = [{ sender: "bot", text: "Hi, how can we assist you today?" }];
+    };
+
+    sendBtn.onclick = sendMessage;
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") sendMessage();
+    });
+  });
+</script>
+
+<style>
+  @keyframes pulseSoft {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.08);
+    }
+  }
+</style>
