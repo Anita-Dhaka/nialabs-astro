@@ -130,7 +130,8 @@ export const PRODUCTDETAILS = [
     },
     {
         id: '2',
-        metaTitle: "N- AI09 Face Attendance Machine",
+        metaTitle: "N-AI09 Face Recognition Attendance Machine with Cloud & Access Control",
+        metaDesc: "N-AI09 AI face recognition attendance machine with touchless verification, cloud integration, dual biometric security & real-time access control. Ideal for schools, offices & factories.",
         title: 'AI Face Recognition Attendance & Access Control System',
         img: '/product/ai09/239.webp',
         images: ['/product/ai09/241.webp', '/product/ai09/242.webp', '/product/ai09/243.webp'],
@@ -246,6 +247,7 @@ export const PRODUCTDETAILS = [
     {
         id: '3',
         metaTitle: "N- AI08 Face Attendance Machine",
+        metaDesc: "The N-AI08 AI Biometric Device by Nialabs is a powerful face recognition terminal designed for smart attendance and secure access control. Equipped with dual cameras, AI-based live face detection, night vision, and 4G SIM connectivity, it delivers reliable performance even in remote or Wi-Fi-restricted locations.",
         title: 'Dynamic Face Recognition Terminal with 4G Sim',
         img: '/product/ai08/229.webp',
         images: ['/product/ai08/231.webp', '/product/ai08/232.webp', '/product/ai08/233.webp', '/product/ai08/234.webp'],
@@ -373,6 +375,7 @@ export const PRODUCTDETAILS = [
     {
         id: '5',
         metaTitle: "N- AI07 Face & Fingerprint Attendance Machine",
+        metaDesc: "The N-AI07 combines advanced facial-recognition intelligence and high-precision fingerprint scanning in a robust, enterprise-grade terminal designed for modern workplaces, campuses, and high-traffic facilities.",
         title: 'Dynamic Face & Fingerprint Recognition Terminal',
         img: '/product/ai07/218.webp',
         images: ['/product/ai07/220.webp', '/product/ai07/221.webp', '/product/ai07/222.webp', '/product/ai07/223.webp',],
@@ -629,8 +632,7 @@ export const PRODUCTDETAILS = [
     {
         id: '6',
         metaTitle: "N- AI05 Face & Fingerprint Attendance Machine",
-        modalName: 'AI05',
-        title: 'Face Recognition Biometric Terminal - Cloud & AI-Powered Attendance Solution',
+        title: 'Face Recognition Time Attendance & Access Control System',
         img: '/product/ai04/242.webp',
         routeName: 'AI05-face-recognition',
         desc: 'The AI05 is an innovative biometric terminal designed to deliver advanced attendance tracking and access control systems. Empowered with artificial intelligence and cloud software, the biometric terminal adds another layer of convenience, enabling real-time monitoring and smooth operation.',

@@ -19,7 +19,7 @@ const navLinks = [
     ]
   },
   { name: "Become a Partner", url: "/become-a-partner" },
-  { name: "Contact Us", url: "/contactUs" },
+  { name: "Cities", url: "/cities" },
   { name: "API Docs", url: "/docs" },
   {
     name: "More",
@@ -28,18 +28,6 @@ const navLinks = [
       { name: "Blog", url: "https://blogs.nialabs.in" },
       { name: "FAQs", url: "/faqs" },
       { name: "AI vs Traditional Attendance Systems", url: "/ai-biometric-vs-traditional-attendance-systems" },
-      { name: "Biometric Attendance System in Ahmedabad", url: "/biometric-attendance-system-in-ahmedabad" },
-      { name: "Biometric Attendance System in Bangalore", url: "/biometric-attendance-system-in-bangalore" },
-      { name: "Biometric Attendance System in Chandigarh", url: "/biometric-attendance-system-in-chandigarh" },
-      { name: "Biometric Attendance System in Chennai", url: "/biometric-attendance-system-in-chennai" },
-      { name: "Biometric Attendance System in Coimbatore", url: "/biometric-attendance-system-in-coimbatore" },
-      { name: "Biometric Attendance System in Delhi", url: "/biometric-attendance-system-in-delhi" },
-      { name: "Biometric Attendance System in Gujarat", url: "/biometric-attendance-system-in-gujarat" },
-      { name: "Biometric Attendance System in Gurugram", url: "/biometric-attendance-system-in-gurugram" },
-      { name: "Biometric Attendance System in Hyderabad", url: "/biometric-attendance-system-in-hyderabad" },
-      { name: "Biometric Attendance System in Maharashtra", url: "/biometric-attendance-system-in-maharashtra" },
-      { name: "Biometric Attendance System in Nagpur", url: "/biometric-attendance-system-in-nagpur" },
-      { name: "Biometric Attendance System in Pune", url: "/biometric-attendance-system-in-pune" },
       { name: "Privacy Policy", url: "/privacy-policy" },
       { name: "Terms and Conditions", url: "/terms-and-conditions" },
       { name: "Return Policy", url: "/return-policy" },
@@ -61,11 +49,11 @@ const navLinks = [
 
     <!-- Desktop Nav -->
     <nav class="hidden font-medium text-slate-600 lg:block">
-      <ul class="flex items-center gap-1 xl:gap-4">
+      <ul class="flex items-center gap-1 lg:gap-1 xl:gap-4">
         {navLinks.map((link) => (
           <li class="relative group">
             {link.dropdown ? (
-              <button class="flex items-center gap-1 rounded-md px-3 py-2 text-sm transition-colors hover:bg-slate-50 hover:text-blue-600 focus:outline-none">
+              <button class="flex items-center gap-1 rounded-md px-2 xl:px-3 py-2 text-sm xl:text-base transition-colors hover:bg-slate-50 hover:text-blue-600 focus:outline-none">
                 {link.name}
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -74,7 +62,7 @@ const navLinks = [
               
               <!-- Desktop Dropdown -->
               <div class="absolute -right-4 lg:right-auto lg:left-0 top-full pt-2 hidden group-hover:block z-50">
-                <ul class="w-max min-w-[240px] max-h-[70vh] overflow-y-auto overscroll-contain origin-top bg-white p-2 shadow-xl border border-gray-100 rounded-xl flex flex-col space-y-1">
+                <ul class="w-max min-w-[200px] xl:min-w-[240px] max-h-[70vh] overflow-y-auto overscroll-contain origin-top bg-white p-2 shadow-xl border border-gray-100 rounded-xl flex flex-col space-y-1">
                   {link.dropdown.map((subLink) => (
                     <li>
                       <a 
@@ -93,7 +81,7 @@ const navLinks = [
                 </ul>
               </div>
             ) : (
-              <a href={link.url} class="block rounded-md px-3 py-2 text-sm transition-colors hover:bg-slate-50 hover:text-blue-600">
+              <a href={link.url} class="block rounded-md px-1 xl:px-3 py-2 text-sm xl:text-base transition-colors hover:bg-slate-50 hover:text-blue-600">
                 {link.name}
               </a>
             )}

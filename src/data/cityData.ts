@@ -126,7 +126,7 @@ export const cityData: CityData[] = [
     metaTitle: "Biometric Attendance System Maharashtra | Face & Fingerprint",
     metaDesc: "Automate workforce tracking with Nialabs’ biometric attendance system in Maharashtra. Face & fingerprint devices, cloud reports, payroll sync, GPS tracking & local support.",
     heading: "Maharashtra",
-    image: "/cityImages/Maharashtra.webp",
+    image: "/cityImages/maharashtra.webp",
     subHeading: "Accurate monitoring is a necessity. Nialabs offers superior-quality, AI-enabled biometric solutions for schools, colleges, IT parks, and factories across Mumbai, Pune, Nagpur, and Nashik.",
     desc: [
       "Accurate monitoring of attendance is a necessity in a growing state like Maharashtra to run its machinery smoothly. Nialabs offers a superior-quality biometric attendance system for schools, colleges, IT parks, factories, hospitals, retail chains, and many other industries. This system is 100% accurate, provides real-time data, eliminates proxy attendance, offers complete integration with HR and payroll, and even includes a school ERP solution.",
@@ -2077,7 +2077,7 @@ export const cityData: CityData[] = [
     metaTitle: "Biometric Attendance System Delhi | Face & Fingerprint",
     metaDesc: "Looking for a top biometric attendance system in Delhi? Nialabs provides AI-enabled face and fingerprint attendance solutions with cloud accessibility, payroll integration, and rapid local customer support.",
     heading: "Delhi",
-    image: "/cityImages/Delhi.webp",
+    image: "/cityImages/delhi.webp",
     subHeading: "Delhi’s Trusted Partner for School Biometric & Bus Attendance Systems",
     desc: [
       "Gujarat has emerged as one of the most forward-looking states in India in terms of manufacturing and industrial development, IT services, education, healthcare, and retail enterprises. Nialabs provides a smart biometric attendance system for schools, colleges, offices, industries, hospitals, and retail chains, enabling real-time monitoring, eradication of proxy attendance,e and integration with payroll, HRMS, and ERP in schools.",
@@ -2358,7 +2358,7 @@ export const cityData: CityData[] = [
     route: "biometric-attendance-system-in-hyderabad",
     metaTitle: "Biometric Attendance System Hyderabad | Face & Fingerprint",
     metaDesc: "Simplify attendance tracking with Nialabs in Hyderabad using our biometric solutions. AI-based face and fingerprint devices, cloud dashboard, integration into HRMS & Payroll, GPS attendance, and speedy local support.",
-    heading: "Biometric Attendance System in Hyderabad",
+    heading: "Hyderabad",
     image: "/cityImages/Hyderabad.webp",
     subHeading: "Powering Offices, Schools, Hospitals & Factories Across Hyderabad with Smart Attendance",
     desc: [
@@ -2629,7 +2629,7 @@ export const cityData: CityData[] = [
     route: "biometric-attendance-system-in-gurugram",
     metaTitle: "Biometric Attendance System Gurugram | Face & Fingerprint",
     metaDesc: "Keep Track of Attendance easily through Nialabs Biometric Solutions, Gurugram.  AI smart face attendance & fingerprint, cloud dashboard, HRMS, Payroll Integration, GPS attendance, and quick local support.",
-    heading: "Biometric Attendance System in Gurugram",
+    heading: "Gurugram",
     desc: [
       "Gurugram is one of India's leading corporate and industrial hubs and home to multinational offices, IT parks, production units, schools, and hospitals. High employee mobility, large teams, and multishift work necessitate precision and automation in attendance management.",
       "Nialabs offers a modern office with the best biometric attendance system for schools, offices, factories, hospitals, and retail chains in Gurugram with real-time monitoring and integration with payroll, HRMS, and School ERP solutions.",
@@ -2899,7 +2899,7 @@ export const cityData: CityData[] = [
     metaTitle: "Biometric Attendance System Chennai | Face & Fingerprint",
     metaDesc: "Nialabs offers the best biometric attendance system in India with fast face recognition, accurate attendance tracking, cloud reports, and seamless integration for all industries.",
     heading: "Chennai",
-    image: "/cityImages/Chennai.webp",
+    image: "/cityImages/chennai.webp",
     subHeading: "Reliable Attendance Management for Chennai’s Industrial & Education Sectors",
     desc: [
       "Tracking employee attendance is necessary for operational efficiency, particularly in an expanding city like Chennai. With a dispersed workforce, multiple shifts, and rigorous compliance requirements, manual tracking is prone to errors and delays.",
