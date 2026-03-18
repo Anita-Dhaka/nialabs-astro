@@ -1,317 +1,500 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import ProductHero from '../components/ProductHero.astro';
-import ProductFeatures from '../components/ProductFeatures.astro';
-import ProductIndustries from '../components/ProductIndustries.astro';
-import Footer from '../components/Footer.astro';
-import Faq from '../components/Faq.astro';
-import WhyChooseNialabs from '../components/WhyChooseNialabs.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import ProductHero from "../components/ProductHero.astro";
+import ProductFeatures from "../components/ProductFeatures.astro";
+import ProductIndustries from "../components/ProductIndustries.astro";
+import Footer from "../components/Footer.astro";
+import Faq from "../components/Faq.astro";
+import WhyChooseNialabs from "../components/WhyChooseNialabs.astro";
 
 const headerData = {
-    title: "UHF Reader by Nialabs",
-    desc: "Long-Range, Contactless UHF Reader for Seamless Access Automation.",
-    image: "/headerImages/cards/UHF-Reader.webp",
+  title: "UHF Reader by Nialabs",
+  desc: "Long-Range, Contactless UHF Reader for Seamless Access Automation.",
+  image: "/headerImages/cards/UHF-Reader.webp",
 };
 
 const whatData = {
-    title: "What is a UHF RFID Reader?",
-    desc: [
-        "UHF (Ultra High Frequency) is a device that wirelessly reads data from UHF RFID tags using radio waves, without physical contact or line-of-sight. The frequency range varies from 840MHz to 940MHz. In India, they operate at the levels of 865-867MHz.",
-        "UHF readers can detect multiple tags simultaneously from distances of up to 12–15 meters, making them ideal for large-scale automation."
-    ],
-    bullets: [
-        "Long-range scanning",
-        "Bulk tag reading",
-        "High-speed data capture",
-        "Real-time system integration"
-    ]
+  title: "What is a UHF RFID Reader?",
+  desc: [
+    "UHF (Ultra High Frequency) is a device that wirelessly reads data from UHF RFID tags using radio waves, without physical contact or line-of-sight. The frequency range varies from 840MHz to 940MHz. In India, they operate at the levels of 865-867MHz.",
+    "UHF readers can detect multiple tags simultaneously from distances of up to 12–15 meters, making them ideal for large-scale automation.",
+  ],
+  bullets: [
+    "Long-range scanning",
+    "Bulk tag reading",
+    "High-speed data capture",
+    "Real-time system integration",
+  ],
 };
 
 const howItWorks = [
-    "The UHF reader emits radio signals via antennas",
-    "RFID tags entering the field respond with a unique ID",
-    "Reader captures and validates tag data",
-    "Data is sent to the Nialabs software or the client ERP",
-    "Attendance, access, or inventory action is recorded instantly"
+  "The UHF reader emits radio signals via antennas",
+  "RFID tags entering the field respond with a unique ID",
+  "Reader captures and validates tag data",
+  "Data is sent to the Nialabs software or the client ERP",
+  "Attendance, access, or inventory action is recorded instantly",
 ];
 
 const keyFeatures = {
-    title: "Benefits of Using a UHF Reader",
-    points: [
-        { text: "Long-Range Contactless Identification: UHF readers can detect RFID tags from a distance of 3 to 12 meters, enabling hands-free access.", icon: "gps" },
-        { text: "High-Speed & Bulk Tag Reading: Unlike conventional RFID systems, UHF readers can simultaneously read multiple tags.", icon: "ai" },
-        { text: "Perfect for Vehicle Access & Parking: UHF readers allow seamless vehicle identification without manual intervention.", icon: "integration" },
-        { text: "Enhanced Security & Accuracy: Each UHF tag has a unique encrypted ID, minimizing duplication and unauthorized access.", icon: "spoofing" },
-        { text: "Reliable in Outdoor & Industrial Environments: Designed for rugged use, UHF readers perform consistently in dust, rain, sunlight, and harsh weather.", icon: "cloud" },
-        { text: "Scalable for Large Installations: From a single gate to large campuses, factories, toll plazas, or logistics hubs.", icon: "analytics" },
-    ]
+  title: "Benefits of Using a UHF Reader",
+  points: [
+    {
+      text: "Long-Range Contactless Identification: UHF readers can detect RFID tags from a distance of 3 to 12 meters, enabling hands-free access.",
+      icon: "gps",
+    },
+    {
+      text: "High-Speed & Bulk Tag Reading: Unlike conventional RFID systems, UHF readers can simultaneously read multiple tags.",
+      icon: "ai",
+    },
+    {
+      text: "Perfect for Vehicle Access & Parking: UHF readers allow seamless vehicle identification without manual intervention.",
+      icon: "integration",
+    },
+    {
+      text: "Enhanced Security & Accuracy: Each UHF tag has a unique encrypted ID, minimizing duplication and unauthorized access.",
+      icon: "spoofing",
+    },
+    {
+      text: "Reliable in Outdoor & Industrial Environments: Designed for rugged use, UHF readers perform consistently in dust, rain, sunlight, and harsh weather.",
+      icon: "cloud",
+    },
+    {
+      text: "Scalable for Large Installations: From a single gate to large campuses, factories, toll plazas, or logistics hubs.",
+      icon: "analytics",
+    },
+  ],
 };
 
 const applications = {
-    title: "UHF RFID Reader Applications",
-    items: [
-        {
-            title: "Schools & Institutions",
-            text: "Student attendance (gate-based), library automation, and asset tracking for labs and classrooms.",
-            image: "/headerImages/industries/school.webp"
-        },
-        {
-            title: "Transport & Fleet",
-            text: "School bus attendance, vehicle identification, and parking management.",
-            image: "/headerImages/industries/parking.webp"
-        },
-        {
-            title: "Warehouses & Factories",
-            text: "Inventory & pallet tracking, inward/outward movement, and theft prevention.",
-            image: "/headerImages/industries/warehouse.webp"
-        },
-        {
-            title: "Enterprises",
-            text: "Visitor management, asset lifecycle management, and automation workflows.",
-            image: "/headerImages/industries/enterprise.webp"
-        }
-    ]
+  title: "UHF RFID Reader Applications",
+  items: [
+    {
+      title: "Schools & Institutions",
+      text: "Student attendance (gate-based), library automation, and asset tracking for labs and classrooms.",
+      image: "/headerImages/industries/school.webp",
+    },
+    {
+      title: "Transport & Fleet",
+      text: "School bus attendance, vehicle identification, and parking management.",
+      image: "/headerImages/industries/parking.webp",
+    },
+    {
+      title: "Warehouses & Factories",
+      text: "Inventory & pallet tracking, inward/outward movement, and theft prevention.",
+      image: "/headerImages/industries/warehouse.webp",
+    },
+    {
+      title: "Enterprises",
+      text: "Visitor management, asset lifecycle management, and automation workflows.",
+      image: "/headerImages/industries/enterprise.webp",
+    },
+  ],
 };
 
 const whyChooseData = {
-    title: "Why Choose Nialabs UHF RFID Readers?",
-    desc: [
-        "Enterprise-Grade Performance: Long-range reading (up to 15 meters), reads hundreds of tags in one scan, anti-collision & high accuracy.",
-        "Seamless Integration: Works with biometric attendance systems, REST APIs & SDKs available, ERP, WMS, SIS & access control ready.",
-        "Industrial Reliability: Designed for Indian environments, stable performance in high-traffic areas, compatible with outdoor & indoor deployments.",
-        "Compliance & Security: Frequency compliant for India (865–867 MHz), no personal data stored on tags, secure encrypted backend processing."
-    ]
+  title: "Why Choose Nialabs UHF RFID Readers?",
+  desc: [
+    "Enterprise-Grade Performance: Long-range reading (up to 15 meters), reads hundreds of tags in one scan, anti-collision & high accuracy.",
+    "Seamless Integration: Works with biometric attendance systems, REST APIs & SDKs available, ERP, WMS, SIS & access control ready.",
+    "Industrial Reliability: Designed for Indian environments, stable performance in high-traffic areas, compatible with outdoor & indoor deployments.",
+    "Compliance & Security: Frequency compliant for India (865–867 MHz), no personal data stored on tags, secure encrypted backend processing.",
+  ],
 };
 
 const faqData = [
-    {
-        question: "What is a UHF reader?",
-        solution:
-            "A UHF (Ultra-High Frequency) reader is a long-range RFID device that reads UHF RFID tags operating between 860–960 MHz. It enables fast, contactless identification of people, vehicles, or assets from several meters away.",
-    },
-    {
-        question: "What is the reading range of a UHF reader?",
-        solution:
-            "Depending on antenna, tag type, and environment, a UHF reader can read tags from 3 meters up to 12 meters or more, making it ideal for vehicle access, parking, and asset tracking.",
-    },
-    {
-        question: "Where are UHF readers commonly used?",
-        solution:
-            "UHF readers are widely used in vehicle access control, parking management, toll systems, warehouses, logistics, inventory tracking, campuses, and industrial zones.",
-    },
-    {
-        question: "What is the difference between UHF and HF RFID readers?",
-        solution:
-            "HF readers work at 13.56 MHz with a short range (up to 10 cm), while UHF readers work at 860–960 MHz and support long-range, bulk, and high-speed scanning.",
-    },
-    {
-        question: "Can a UHF reader read multiple tags at the same time?",
-        solution:
-            "Yes. UHF readers support anti-collision technology, allowing them to read multiple RFID tags simultaneously, even when vehicles or assets move at speed.",
-    },
-    {
-        question: "Are UHF readers suitable for vehicle access control?",
-        solution:
-            "Yes. UHF readers are one of the best solutions for vehicle access, as they can identify vehicles without stopping, using windshield or number-plate UHF RFID tags.",
-    },
-    {
-        question: "Do UHF readers work in outdoor environments?",
-        solution:
-            "Yes. Industrial-grade UHF readers are designed to work outdoors, with weather-resistant enclosures and stable performance in dust, heat, and rain.",
-    },
-    {
-        question: "Can UHF readers work without an internet connection?",
-        solution:
-            "Yes. UHF readers can operate offline and store data locally. Once the internet is restored, the data syncs automatically with the central system.",
-    },
-    {
-        question: "Is UHF RFID secure?",
-        solution:
-            "Yes. UHF systems use unique tag IDs, encrypted communication, and access control logic. Security can be further enhanced using authenticated tags and backend software rules.",
-    },
-    {
-        question: "Why choose Nialabs UHF readers?",
-        solution:
-            "Nialabs UHF readers offer long reading range, high accuracy, fast processing, easy integration with access control and attendance systems, competitive pricing, and reliable technical support across India.",
-    },
+  {
+    question: "What is a UHF reader?",
+    solution:
+      "A UHF (Ultra-High Frequency) reader is a long-range RFID device that reads UHF RFID tags operating between 860–960 MHz. It enables fast, contactless identification of people, vehicles, or assets from several meters away.",
+  },
+  {
+    question: "What is the reading range of a UHF reader?",
+    solution:
+      "Depending on antenna, tag type, and environment, a UHF reader can read tags from 3 meters up to 12 meters or more, making it ideal for vehicle access, parking, and asset tracking.",
+  },
+  {
+    question: "Where are UHF readers commonly used?",
+    solution:
+      "UHF readers are widely used in vehicle access control, parking management, toll systems, warehouses, logistics, inventory tracking, campuses, and industrial zones.",
+  },
+  {
+    question: "What is the difference between UHF and HF RFID readers?",
+    solution:
+      "HF readers work at 13.56 MHz with a short range (up to 10 cm), while UHF readers work at 860–960 MHz and support long-range, bulk, and high-speed scanning.",
+  },
+  {
+    question: "Can a UHF reader read multiple tags at the same time?",
+    solution:
+      "Yes. UHF readers support anti-collision technology, allowing them to read multiple RFID tags simultaneously, even when vehicles or assets move at speed.",
+  },
+  {
+    question: "Are UHF readers suitable for vehicle access control?",
+    solution:
+      "Yes. UHF readers are one of the best solutions for vehicle access, as they can identify vehicles without stopping, using windshield or number-plate UHF RFID tags.",
+  },
+  {
+    question: "Do UHF readers work in outdoor environments?",
+    solution:
+      "Yes. Industrial-grade UHF readers are designed to work outdoors, with weather-resistant enclosures and stable performance in dust, heat, and rain.",
+  },
+  {
+    question: "Can UHF readers work without an internet connection?",
+    solution:
+      "Yes. UHF readers can operate offline and store data locally. Once the internet is restored, the data syncs automatically with the central system.",
+  },
+  {
+    question: "Is UHF RFID secure?",
+    solution:
+      "Yes. UHF systems use unique tag IDs, encrypted communication, and access control logic. Security can be further enhanced using authenticated tags and backend software rules.",
+  },
+  {
+    question: "Why choose Nialabs UHF readers?",
+    solution:
+      "Nialabs UHF readers offer long reading range, high accuracy, fast processing, easy integration with access control and attendance systems, competitive pricing, and reliable technical support across India.",
+  },
+];
+
+// StatsBar.astro
+const stats = [
+  { value: "100%", label: "Contactless\nAccuracy" },
+  { value: "12m", label: "Read Range" },
+  { value: "500+", label: "Organizations" },
+  { value: "<0.5s", label: "Response Time" },
+];
+
+const features = [
+  { label: "Cloud Connected", icon: "star" },
+  { label: "Real-time Sync", icon: "clock" },
+  { label: "99.9% Uptime", icon: "star" },
+  { label: "ERP Integration", icon: "monitor" },
+  { label: "Global Frequency Support", icon: "globe" },
 ];
 
 const title = "UHF RFID Reader Supplier in India | Nialabs";
-const description = "Leading UHF RFID reader supplier in India offering long-range solutions for enterprises, logistics, and smart access control systems.";
+const description =
+  "Leading UHF RFID reader supplier in India offering long-range solutions for enterprises, logistics, and smart access control systems.";
 ---
 
 <Layout title={title} description={description}>
-    <Navbar />
-    <main class="bg-white">
-        <ProductHero 
-            title={headerData.title}
-            desc={headerData.desc}
-            image={headerData.image}
-            badge="Long-Range UHF"
-        />
+  <Navbar />
+  <main class="bg-white">
+    <ProductHero
+      title={headerData.title}
+      desc={headerData.desc}
+      image={headerData.image}
+      badge="Long-Range UHF"
+    />
 
-        <!-- What is Section -->
-        <section class="py-16 bg-[#f8fafc] relative overflow-hidden" id="explore">
-            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
-            <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4"></div>
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-                    <div class="lg:col-span-7 bg-white/60 backdrop-blur-xl rounded-[48px] p-8 md:p-12 lg:p-16 border border-white shadow-2xl shadow-slate-200/50">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-1 bg-[#2067e2] rounded-full"></div>
-                            <p class="text-sm font-black text-blue-600 uppercase tracking-widest">About UHF Readers</p>
-                        </div>
-                        <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-8">
-                            {whatData.title}
-                        </h2>
-                        <div class="space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
-                            {whatData.desc.map((paragraph) => (
-                                <p>{paragraph}</p>
-                            ))}
-                        </div>
-                        <div class="mt-8 grid grid-cols-2 gap-3">
-                            {whatData.bullets.map((point) => (
-                                <div class="flex items-center gap-3 bg-blue-50 rounded-xl px-4 py-3">
-                                    <div class="w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></div>
-                                    <p class="text-slate-700 font-semibold text-sm">{point}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <div class="lg:col-span-5 relative group mt-8 lg:mt-0">
-                        <div class="relative w-full rounded-[48px] overflow-hidden shadow-2xl border border-white transform transition-all duration-700 group-hover:scale-[1.02] bg-white p-6">
-                            <img 
-                                src="/headerImages/cards/UHF-Reader.webp" 
-                                alt={whatData.title} 
-                                class="w-full h-auto object-contain transform transition-transform duration-1000 group-hover:scale-105"
-                            />
-                        </div>
-                    </div>
-                </div>
+    <section
+      class="w-full bg-gradient-to-r from-[#161B3E] via-[#0F172C] to-[#0F1A34] px-6 py-6 md:px-12 lg:px-20"
+    >
+      <!-- Stats row -->
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 border-b border-white/[0.08] mb-6"
+      >
+        {
+          stats.map((stat, i) => (
+            <div
+              class="p-4 md:px-6 md:py-4 text-center md:text-left border-b border-white/10 md:border-b-0 md:border-r md:border-white/10 last:border-r-0 even:md:border-r">
+              <div class="text-2xl md:text-4xl font-black text-[#2A6DE4]">
+                {stat.value}
+              </div>
+              <div class="mt-1 text-[9px] md:text-[11px] tracking-wider uppercase text-slate-400">
+                {stat.label}
+              </div>
             </div>
-        </section>
+          ))
+        }
+      </div>s
 
-        <!-- How It Works Section -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-3xl font-extrabold text-gray-900 mb-6">How Nialabs UHF RFID Reader Works</h2>
-                        <ul class="space-y-6">
-                            {howItWorks.map((step, index) => (
-                                <li class="flex items-start">
-                                    <div class="flex-none bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 mt-1">
-                                        {index + 1}
-                                    </div>
-                                    <p class="text-gray-600 text-lg">{step}</p>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-3xl shadow-lg border border-gray-100">
-                        <img src="/headerImages/cards/reader-work.webp" alt="UHF RFID Reader Working" class="rounded-2xl w-full h-auto" />
-                    </div>
-                </div>
+      <!-- Feature pills row -->
+      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+        {
+          features.map((f) => (
+            <div class="flex items-center gap-2 text-[#2A6DE4] text-sm font-medium">
+              {f.icon === "star" && (
+                <svg
+                  class="w-[15px] h-[15px] shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+              )}
+              {f.icon === "clock" && (
+                <svg
+                  class="w-[15px] h-[15px] shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              )}
+              {f.icon === "monitor" && (
+                <svg
+                  class="w-[15px] h-[15px] shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              )}
+              {f.icon === "globe" && (
+                <svg
+                  class="w-[15px] h-[15px] shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+              )}
+              {f.label}
             </div>
-        </section>
+          ))
+        }
+      </div>
+    </section>
 
-        <ProductFeatures 
-            title={keyFeatures.title}
-            features={keyFeatures.points}
-        />
+    <!-- What is Section -->
+    <section class="py-16 bg-[#f8fafc] relative overflow-hidden" id="explore">
+      <div
+        class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"
+      >
+      </div>
+      <div
+        class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4"
+      >
+      </div>
 
-        <ProductIndustries 
-            title={applications.title}
-            items={applications.items}
-        />
-
-        <!-- UHF RFID Frequency Ranges by Region -->
-        <section class="py-20 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">UHF RFID Frequency Ranges by Region/Country</h2>
-                </div>
-                <div class="overflow-hidden rounded-3xl border border-gray-200 shadow-xl bg-white">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-900 text-white">
-                                <th class="px-6 py-5 font-bold text-lg">Region / Country</th>
-                                <th class="px-6 py-5 font-bold text-lg text-blue-400">UHF RFID Frequency Range</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100">
-                            {[
-                                { region: "India", freq: "865 – 867 MHz" },
-                                { region: "USA", freq: "902 – 928 MHz" },
-                                { region: "Europe (EU)", freq: "865 – 868 MHz" },
-                                { region: "Africa", freq: "865 – 868 MHz" },
-                                { region: "Asia (General)", freq: "865 – 867 MHz / 920 – 925 MHz" },
-                                { region: "Australia", freq: "920 – 926 MHz" },
-                                { region: "China", freq: "920 – 925 MHz" },
-                            ].map((row) => (
-                                <tr class="hover:bg-blue-50/30 transition-colors">
-                                    <td class="px-6 py-5 font-bold text-gray-700">{row.region}</td>
-                                    <td class="px-6 py-5 font-semibold text-blue-600">{row.freq}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div
+            class="lg:col-span-7 bg-white/60 backdrop-blur-xl rounded-[48px] p-8 md:p-12 lg:p-16 border border-white shadow-2xl shadow-slate-200/50"
+          >
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-1 bg-[#2067e2] rounded-full"></div>
+              <p
+                class="text-sm font-black text-blue-600 uppercase tracking-widest"
+              >
+                About UHF Readers
+              </p>
             </div>
-        </section>
+            <h2
+              class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-8"
+            >
+              {whatData.title}
+            </h2>
+            <div
+              class="space-y-6 text-lg text-slate-600 leading-relaxed font-medium"
+            >
+              {whatData.desc.map((paragraph) => <p>{paragraph}</p>)}
+            </div>
+            <div class="mt-8 grid grid-cols-2 gap-3">
+              {
+                whatData.bullets.map((point) => (
+                  <div class="flex items-center gap-3 bg-blue-50 rounded-xl px-4 py-3">
+                    <div class="w-2 h-2 rounded-full bg-blue-600 flex-shrink-0" />
+                    <p class="text-slate-700 font-semibold text-sm">{point}</p>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+          <div class="lg:col-span-5 relative group mt-8 lg:mt-0">
+            <div
+              class="relative w-full rounded-[48px] overflow-hidden shadow-2xl border border-white transform transition-all duration-700 group-hover:scale-[1.02] bg-white p-6"
+            >
+              <img
+                src="/headerImages/cards/UHF-Reader.webp"
+                alt={whatData.title}
+                class="w-full h-auto object-contain transform transition-transform duration-1000 group-hover:scale-105"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <WhyChooseNialabs 
-            title={whyChooseData.title}
-            points={whyChooseData.desc}
-            image="/headerImages/cards/UHF-Reader.webp"
-        />
-
-        <!-- CTA Section -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="relative rounded-[40px] bg-blue-600 p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-500/20">
-                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"></div>
-                    
-                    <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
-                                Ready to automate at scale <br/> with UHF RFID?
-                            </h2>
-                            <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
-                                Talk to our experts and get the right UHF reader for your facility.Whether you need attendance automation, asset tracking, or vehicle access control, NiaLabs’ UHF RFID Readers deliver unmatched speed, accuracy, and reliability.
-                            </p>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="/contactUs" class="open-contact-modal-btn cursor-pointer px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl">
-                                    Book a Demo
-                                </a>
-                            </div>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
-                            <ul class="space-y-6">
-                                {[
-                                    "Read range up to 12 meters",
-                                    "Multi-tag simultaneous scanning",
-                                    "Pan-India delivery & support"
-                                ].map((point) => (
-                                    <li class="flex items-center text-white text-xl font-semibold">
-                                        <div class="w-10 h-10 rounded-xl bg-green-400/20 flex items-center justify-center mr-4 text-green-400">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                                        </div>
-                                        {point}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+    <!-- How It Works Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-6">
+              How Nialabs UHF RFID Reader Works
+            </h2>
+            <ul class="space-y-6">
+              {
+                howItWorks.map((step, index) => (
+                  <li class="flex items-start">
+                    <div class="flex-none bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold mr-4 mt-1">
+                      {index + 1}
                     </div>
-                </div>
-            </div>
-        </section>
+                    <p class="text-gray-600 text-lg">{step}</p>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <div
+            class="bg-gray-50 p-8 rounded-3xl shadow-lg border border-gray-100"
+          >
+            <img
+              src="/headerImages/cards/reader-work.png"
+              alt="UHF RFID Reader Working"
+              class="rounded-2xl w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <Faq 
-            faqs={faqData}
-            title="Frequently Asked Questions"
-        />
-    </main>
+    <ProductFeatures title={keyFeatures.title} features={keyFeatures.points} />
+
+    <ProductIndustries title={applications.title} items={applications.items} />
+
+    <!-- UHF RFID Frequency Ranges by Region -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">
+            UHF RFID Frequency Ranges by Region/Country
+          </h2>
+        </div>
+        <div
+          class="overflow-hidden rounded-3xl border border-gray-200 shadow-xl bg-white"
+        >
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-slate-900 text-white">
+                <th class="px-6 py-5 font-bold text-lg">Region / Country</th>
+                <th class="px-6 py-5 font-bold text-lg text-blue-400"
+                  >UHF RFID Frequency Range</th
+                >
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              {
+                [
+                  { region: "India", freq: "865 – 867 MHz" },
+                  { region: "USA", freq: "902 – 928 MHz" },
+                  { region: "Europe (EU)", freq: "865 – 868 MHz" },
+                  { region: "Africa", freq: "865 – 868 MHz" },
+                  {
+                    region: "Asia (General)",
+                    freq: "865 – 867 MHz / 920 – 925 MHz",
+                  },
+                  { region: "Australia", freq: "920 – 926 MHz" },
+                  { region: "China", freq: "920 – 925 MHz" },
+                ].map((row) => (
+                  <tr class="hover:bg-blue-50/30 transition-colors">
+                    <td class="px-6 py-5 font-bold text-gray-700">
+                      {row.region}
+                    </td>
+                    <td class="px-6 py-5 font-semibold text-blue-600">
+                      {row.freq}
+                    </td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <WhyChooseNialabs
+      title={whyChooseData.title}
+      points={whyChooseData.desc}
+      image="/headerImages/cards/UHF-Reader.webp"
+    />
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="relative rounded-[40px] bg-blue-600 p-8 md:p-16 overflow-hidden shadow-2xl shadow-blue-500/20"
+        >
+          <div
+            class="absolute top-0 right-0 w-[500px] h-[500px] bg-white/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/4"
+          >
+          </div>
+
+          <div
+            class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          >
+            <div>
+              <h2
+                class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight"
+              >
+                Ready to automate at scale <br /> with UHF RFID?
+              </h2>
+              <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
+                Talk to our experts and get the right UHF reader for your
+                facility.Whether you need attendance automation, asset tracking,
+                or vehicle access control, NiaLabs’ UHF RFID Readers deliver
+                unmatched speed, accuracy, and reliability.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="/contactUs"
+                  class="open-contact-modal-btn cursor-pointer px-8 py-4 bg-white text-blue-600 font-extrabold rounded-2xl hover:bg-slate-50 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 shadow-xl"
+                >
+                  Book a Demo
+                </a>
+              </div>
+            </div>
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20"
+            >
+              <ul class="space-y-6">
+                {
+                  [
+                    "Read range up to 12 meters",
+                    "Multi-tag simultaneous scanning",
+                    "Pan-India delivery & support",
+                  ].map((point) => (
+                    <li class="flex items-center text-white text-xl font-semibold">
+                      <div class="w-10 h-10 rounded-xl bg-green-400/20 flex items-center justify-center mr-4 text-green-400">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      </div>
+                      {point}
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Faq faqs={faqData} title="Frequently Asked Questions" />
+  </main>
 </Layout>
