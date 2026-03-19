@@ -1,0 +1,120 @@
+---
+import { getCollection } from 'astro:content';
+import docsMeta from '../content/docs/_meta.json';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const { entry } = Astro.props;
+
+const allDocs = await getCollection('docs');
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
+
+// Get all doc IDs
+const allIds = allDocs.map(d => d.id);
+const metaKeys = Object.keys(docsMeta);
+
+// Items defined in meta
+const metaItems = metaKeys.map(key => {
+  if (key === '---') {
+    return { type: 'separator' };
+  }
+  
+  const label = (docsMeta as any)[key];
+  const slug = key === 'index' ? '' : key;
+  const href = `/docs/${slug}`.replace(/\/$/, '') || '/docs';
+  
+  return {
+    label: typeof label === 'string' ? label : label.title || key,
+    href,
+    slug: key,
+    type: 'link'
+  };
+});
+
+// Items NOT in meta (if any)
+const otherIds = allIds.filter(id => !metaKeys.includes(id === '' ? 'index' : id));
+const otherItems = otherIds.map(id => {
+  const href = `/docs/${id}`.replace(/\/$/, '') || '/docs';
+  return {
+    label: id.charAt(0).toUpperCase() + id.slice(1).replace(/-/g, ' '),
+    href,
+    slug: id,
+    type: 'link'
+  };
+});
+
+const navigationItems = [...metaItems, ...otherItems].filter(item => item.type === 'link');
+
+// Use currentPath to find current item, but handle trailing slashes and base path
+const cleanedCurrentPath = currentPath.replace(/\/$/, '') || '/docs';
+const currentIndex = navigationItems.findIndex(item => item.href === cleanedCurrentPath);
+
+const prev = currentIndex > 0 ? navigationItems[currentIndex - 1] : null;
+const next = currentIndex < navigationItems.length - 1 ? navigationItems[currentIndex + 1] : null;
+
+// Get last updated date
+let lastUpdated = '';
+try {
+  const filePath = path.join(process.cwd(), 'src/content/docs', entry.id === 'index' ? 'index.md' : `${entry.id}.md`);
+  if (fs.existsSync(filePath)) {
+    const stats = fs.statSync(filePath);
+    lastUpdated = stats.mtime.toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    });
+  }
+} catch (e) {
+  console.error('Error getting file stats:', e);
+}
+---
+
+<div class="mt-12 pt-8 border-t border-slate-200">
+  {lastUpdated && (
+    <div class="flex justify-end mb-8">
+      <span class="text-sm text-slate-500">
+        Last updated on {lastUpdated}
+      </span>
+    </div>
+  )}
+  
+  <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div class="w-full sm:w-auto">
+      {prev && (
+        <a 
+          href={prev.href}
+          class="inline-flex items-center text-base font-semibold text-slate-900 hover:text-blue-600 transition-colors group"
+        >
+          <svg 
+            class="mr-2 w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          {prev.label}
+        </a>
+      )}
+    </div>
+    
+    <div class="w-full sm:w-auto text-right">
+      {next && (
+        <a 
+          href={next.href}
+          class="inline-flex items-center text-base font-semibold text-slate-900 hover:text-blue-600 transition-colors group"
+        >
+          {next.label}
+          <svg 
+            class="ml-2 w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      )}
+    </div>
+  </div>
+</div>

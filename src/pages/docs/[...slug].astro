@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import DocsLayout from '../../layouts/DocsLayout.astro';
 import docsMeta from '../../content/docs/_meta.json';
+import DocsPagination from '../../components/DocsPagination.astro';
 
 export async function getStaticPaths() {
   const docsEntries = await getCollection('docs');
@@ -16,7 +17,7 @@ const { Content } = await render(entry);
 
 // Find the label from meta
 const idKey = entry.id === 'index' ? 'index' : entry.id;
-const pageTitle = docsMeta[idKey as keyof typeof docsMeta] || entry.data.title || entry.id;
+const pageTitle = (docsMeta as any)[idKey] || entry.data.title || entry.id;
 
 const breadcrumbs = [
   { label: pageTitle }
@@ -29,4 +30,5 @@ const breadcrumbs = [
   breadcrumbs={breadcrumbs}
 >
   <Content />
+  <DocsPagination entry={entry} />
 </DocsLayout>
