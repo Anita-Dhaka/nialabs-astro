@@ -1,0 +1,23 @@
+---
+const { items } = Astro.props;
+---
+
+<nav class="flex text-sm text-slate-500 mb-6" aria-label="Breadcrumb">
+  <ol class="flex items-center space-x-2">
+    <li>
+      <div class="flex items-center">
+        <a href="/docs" class="hover:text-slate-900 transition-colors font-medium">Docs</a>
+      </div>
+    </li>
+    {items && items.map((item, index) => (
+      <li class="flex items-center">
+        <svg class="h-4 w-4 flex-shrink-0 text-slate-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
+        </svg>
+        <span class={`ml-2 font-medium ${index === items.length - 1 ? 'text-slate-900 font-semibold' : 'hover:text-slate-900'}`}>
+          {item.label}
+        </span>
+      </li>
+    ))}
+  </ol>
+</nav>
