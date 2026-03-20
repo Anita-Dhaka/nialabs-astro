@@ -6,7 +6,7 @@ interface Props {
   badge?: string;
   primaryButtonText?: string;
   primaryButtonLink?: string;
-  download?: boolean;
+  download?: boolean | string;
   secondaryButtonText?: string;
   secondaryButtonLink?: string;
   splitWord?: number;
@@ -19,7 +19,7 @@ const {
   badge = "Smart Product",
   primaryButtonText = "Book a Demo",
   primaryButtonLink = "/contactUs",
-  download = "false",
+  download = false,
   secondaryButtonText,
   secondaryButtonLink = "/contactUs",
   splitWord = 2,
@@ -72,13 +72,21 @@ const {
         <div class="flex flex-wrap gap-6 animate-slide-up animation-delay-400">
           <a 
             href={primaryButtonLink} 
-            download={download ? true : undefined}
+            download={download === true ? "" : (typeof download === 'string' ? download : undefined)}
+            target={download ? "_blank" : undefined}
+            rel={download ? "noopener noreferrer" : undefined}
             class="px-8 py-4 bg-[#2067e2] hover:bg-blue-700 text-white font-extrabold text-lg rounded-2xl shadow-xl shadow-blue-500/25 transform transition-all active:scale-[0.98] flex items-center gap-3 group"
           >
             {primaryButtonText}
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
+            {download ? (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            )}
           </a>
           
           {secondaryButtonText ? (
