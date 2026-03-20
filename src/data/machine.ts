@@ -3,7 +3,7 @@ export const PRODUCTDETAILS = [
         id: '1',
         metaTitle: "N- AI10 Bus Attendance Machine | Biometric & GPS Tracking",
         metaDesc: "Nialabs Bus Attendance Machine offers AI face recognition, biometric attendance, and GPS tracking for secure and automated school bus management.",
-        title: 'N-AI10 Bus Attendance Machine with AI Face Recognition & GPS',
+        title: 'Bus Attendance Machine with AI Face Recognition & GPS',
         img: '/product/ai10/235.webp',
         images: ['/product/ai10/238.webp', '/product/ai10/237.webp', '/product/ai10/239.webp', '/product/ai10/240.webp'],
         bgColor: '#E9FFFD',

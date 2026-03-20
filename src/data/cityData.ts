@@ -3052,7 +3052,7 @@ export const cityData: CityData[] = [
           icon: "/product/ai09/239.webp",
           title: "Multimodal Bus Attendance System",
           machine: "N-AI10",
-          desc: "N-AI10 Bus Attendance Machine with AI Face Recognition & GPS, ideal for tracking real-time student activity.",
+          desc: "Bus Attendance Machine with AI Face Recognition & GPS, ideal for tracking real-time student activity.",
         },
       ]
     },
